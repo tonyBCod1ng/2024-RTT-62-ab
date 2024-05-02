@@ -8,7 +8,7 @@ public class ScannerClasswrk {
         System.out.println("Pick a number: ");
         int number = scanner.nextInt();
 
-        System.out.println(number);
+        System.out.println("The numbers you typed were: " + number);
     }
 
 }
