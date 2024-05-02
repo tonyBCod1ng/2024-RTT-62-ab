@@ -42,7 +42,7 @@ public class VariableHW {
         int first = 10;
         int second = 21;
         double sum = (double) first / (double) second;
-        System.out.println(sum);
+        System.out.println("the result is: " + sum);
         //print sum cast as an Integer
         System.out.println((int) sum);
     }
@@ -55,7 +55,8 @@ public class VariableHW {
         int y = 6;
         int q = y / x;
         System.out.println(q);
-     /* To successfully print out q without errors after casting y as a double you can manually cast the results of y/x like so: int q = (int) (y/x);
+     /* To successfully print out q without errors after casting y as a double you can manually cast the results of y/x like below:
+        int q = (int) (y/x);
         System.out.println(q);
       */
     }
