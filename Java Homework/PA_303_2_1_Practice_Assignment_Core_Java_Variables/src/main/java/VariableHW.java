@@ -1,5 +1,5 @@
 public class VariableHW {
-
+   final static double SALES_TAX = 0.07;
     public static void main(String[] args) {
         summer();
         doubleSum();
@@ -76,7 +76,7 @@ public class VariableHW {
     public static void cafeShoppe() {
         double subTotal;
         double totalSale;
-        double SALES_TAX = 0.07;
+
         class Item {
             String name;
             double price;
