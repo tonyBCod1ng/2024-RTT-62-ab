@@ -21,13 +21,16 @@ public class ForLoopDemo {
         list.add("A");// pos 0
         list.add("B");
         list.add("C");
-
+        list = list.reversed();
         //old style of loop
-        for(int i = 0; i < list.size(); i--) {
+        for(int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         };
         //new way to loop
         for(String s : list) {
+            if(s == "A"){
+                continue;//does not print "A"
+            }
             System.out.println(s);
         }
     }
