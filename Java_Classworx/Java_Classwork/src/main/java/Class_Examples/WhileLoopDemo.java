@@ -4,6 +4,7 @@ public class WhileLoopDemo {
     public static void main(String[] args) {
         whereTheWhileOnesAre();
     }
+
     public static void whereTheWhileOnesAre() {
         int i = 1;
         while (i <= 10) {

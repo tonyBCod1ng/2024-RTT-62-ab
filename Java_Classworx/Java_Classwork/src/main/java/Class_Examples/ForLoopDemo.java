@@ -16,6 +16,7 @@ public class ForLoopDemo {
             }
         }
     }
+
     public static void listaLaVista() {
         List<String> list = new ArrayList<>();
         list.add("A");// pos 0
@@ -23,12 +24,13 @@ public class ForLoopDemo {
         list.add("C");
         list = list.reversed();
         //old style of loop
-        for(int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
-        };
+        }
+        ;
         //new way to loop
-        for(String s : list) {
-            if(s == "A"){
+        for (String s : list) {
+            if (s == "A") {
                 continue;//does not print "A"
             }
             System.out.println(s);
