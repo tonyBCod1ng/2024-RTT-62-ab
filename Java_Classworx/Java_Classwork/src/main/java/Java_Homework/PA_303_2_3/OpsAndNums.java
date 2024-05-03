@@ -1,4 +1,4 @@
-package Java_Homework_PA_303_2_3;
+package Java_Homework.PA_303_2_3;
 
 public class OpsAndNums {
     public static void main(String[] args) {
