@@ -3,11 +3,11 @@ package Java_Homework.PA_303_5_1;
 import java.util.Scanner;
 
 public class LoopHW {
-
+    public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         timeTable();
         daGreatest();
-        //twoTimer(); commented out to prevent threading conflict if enabled, comment out the "daGreatest" func
+        twoTimer();
     }
 
     //region -Write a program that uses nested for loops to print a multiplication table.
@@ -32,12 +32,12 @@ public class LoopHW {
     //You know number 1 is a common divisor, but it may not be the gcd.
     //Check whether k (for k = 2, 3, 4, and so on) is a common divisor for n1 and n2, until k is greater than n1 or n2.
     public static void daGreatest() {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter 1st number:");
-        int n1 = scanner.nextInt();
+         int n1 = scanner.nextInt();
         System.out.println("Enter 2nd number:");
         int n2 = scanner.nextInt();
-        scanner.close();
+
         int smll = Math.min(n1, n2);
         int lrg = Math.max(n1, n2);
         if (lrg % smll == 0) {
@@ -58,7 +58,7 @@ public class LoopHW {
 // every year. In how many years will the tuition be doubled?
 
     public static void twoTimer() {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter tuition:");
         double staringAmt = scanner.nextDouble();
         System.out.println("Enter percentage as a whole number:");

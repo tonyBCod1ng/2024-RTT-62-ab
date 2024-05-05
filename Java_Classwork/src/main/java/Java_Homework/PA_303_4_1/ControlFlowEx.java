@@ -3,7 +3,7 @@ package Java_Homework.PA_303_4_1;
 import java.util.Scanner;
 
 public class ControlFlowEx {
-
+    public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
         lessThanTen();
@@ -11,8 +11,7 @@ public class ControlFlowEx {
         greaterThnEqlTo();
         chzGrader();
         rangerDave();
-        //commented out due to threading conflict
-        //dazeOfTheWeek();
+        dazeOfTheWeek();
 
     }
 
@@ -81,10 +80,8 @@ public class ControlFlowEx {
     //Use the Scanner class to accept a number score from the user to determine the letter grade.
     // Print out “Score out of range” if the score is less than 0 or greater than 100.
     public static void chzGrader() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Score: ");
         int score = scanner.nextInt();
-        scanner.close();
         if (score > 90 && score <= 100) {
             System.out.println("Grade: A");
         } else if (score < 90 && score >= 80) {
@@ -106,7 +103,7 @@ public class ControlFlowEx {
     // Print “Out of range” if the number is less than 1 or greater than 7.
     // Do not forget to include “break” statements in each of your cases.
     public static void dazeOfTheWeek() {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter number between 1 and 7: ");
         int selection = scanner.nextInt();
 
