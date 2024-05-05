@@ -3,22 +3,34 @@ package Java_Homework.PA_303_5_1;
 import java.util.Scanner;
 
 public class LoopHW {
+
     public static void main(String[] args) {
         timeTable();
         daGreatest();
-        twoTimer();
+        //twoTimer(); commented out to prevent threading conflict if enabled, comment out the "daGreatest" func
     }
 
+    //region -Write a program that uses nested for loops to print a multiplication table.
     public static void timeTable() {
         int leftSide = 0;
         for (int j = 1; j <= 13; j++) {
-            for (int i = 0; i <= 12; i++) {
-                System.out.println(leftSide + "X" + i + " = " + leftSide * i);
+            for (int count = 0; count <= 12; count++) {
+                System.out.println(leftSide + "X" + count + " = " + leftSide * count);
             }
             leftSide++;
         }
     }
+    //endregion
 
+    //region -Write a program that prompts the user to enter two positive integers,
+    // and find their greatest common divisor (GCD).
+    //Examples:
+    //Enter 2 and 4. The gcd is 2.
+    //Enter 16 and 24.  The gcd is 8.
+    //How do you find the gcd?
+    //Name the two input integers n1 and n2.
+    //You know number 1 is a common divisor, but it may not be the gcd.
+    //Check whether k (for k = 2, 3, 4, and so on) is a common divisor for n1 and n2, until k is greater than n1 or n2.
     public static void daGreatest() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 1st number:");
@@ -28,10 +40,11 @@ public class LoopHW {
         scanner.close();
         int smll = Math.min(n1, n2);
         int lrg = Math.max(n1, n2);
-        if(lrg % smll == 0) {
+        if (lrg % smll == 0) {
             System.out.println("GCD is " + smll);
             return;
         }
+
         while (lrg % smll != 0) {
             int remainder = lrg % smll;
             lrg = smll;
@@ -39,17 +52,30 @@ public class LoopHW {
         }
         System.out.println("GCD is " + smll);
     }
+    //endregion
+
+    //region -Suppose the tuition for a university is $10,000 for the current year and increases by 7 percent
+// every year. In how many years will the tuition be doubled?
+
     public static void twoTimer() {
-        int staringAmt = 10000;
-        int goalAmt = staringAmt * 2;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter tuition:");
+        double staringAmt = scanner.nextDouble();
+        System.out.println("Enter percentage as a whole number:");
+        double rate = scanner.nextInt();
+        scanner.close();
+        double goalAmt = staringAmt + staringAmt;
         int yearsNeeded = 0;
 
         while (staringAmt <= goalAmt) {
-            //takes last amount and add it to seven percent of itself
-            staringAmt += staringAmt * 0.07;
             yearsNeeded++;
+            staringAmt += staringAmt * rate / 100;
+
+
         }
 
-        System.out.println("It will be " + yearsNeeded + " years before tuition doubles to " + staringAmt);
+        System.out.println("Increasing at a rate of " + rate + "% per year, It will be " + yearsNeeded + " years before tuition doubles.");
     }
+
+    //endregion
 }
