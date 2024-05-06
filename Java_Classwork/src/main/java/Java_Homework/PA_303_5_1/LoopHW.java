@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class LoopHW {
     public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         timeTable();
         daGreatest();
@@ -34,7 +35,7 @@ public class LoopHW {
     public static void daGreatest() {
 
         System.out.println("Enter 1st number:");
-         int n1 = scanner.nextInt();
+        int n1 = scanner.nextInt();
         System.out.println("Enter 2nd number:");
         int n2 = scanner.nextInt();
 
