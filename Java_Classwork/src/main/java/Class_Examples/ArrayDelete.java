@@ -28,6 +28,7 @@ public class ArrayDelete {
                 newArray[i] = ogArray[i + 1];
             }
         }
-        System.out.println("The new array is: " + Arrays.stream(newArray).toList());
+        System.out.println("Changing Array from: " + Arrays.toString(ogArray));
+        System.out.println("To: " + Arrays.toString(newArray));
     }
 }
