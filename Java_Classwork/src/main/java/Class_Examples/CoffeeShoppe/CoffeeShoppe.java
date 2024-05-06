@@ -13,7 +13,7 @@ public class CoffeeShoppe {
     public static void addItem() {
         System.out.println("Welcome to Coffee Shopping System!");
         System.out.println("What product do you want to add?");
-        String addedProduct = sc.nextLine();
+        String addedProduct = sc.next();
         System.out.println("What is the price of this item?");
         double itemPrice = sc.nextDouble();
         System.out.println("Is this a beverage item? 1 = yes, 2 = no");
