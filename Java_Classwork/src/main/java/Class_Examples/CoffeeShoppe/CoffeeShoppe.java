@@ -21,7 +21,7 @@ public class CoffeeShoppe {
 
         Product newItem = new Product(addedProduct, itemPrice, itemBeverage);
         products.add(newItem);
-            System.out.println("Added product " + addedProduct + " with price " + String.format("%.2f", newItem.getPrice()));
+        System.out.println("Added product " + addedProduct + " with price " + String.format("%.2f", newItem.getPrice()));
     }
 
     public static void printMenu(List<Product> menu) {

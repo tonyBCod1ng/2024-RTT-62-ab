@@ -5,11 +5,13 @@ public class Product {
     private String name;
     private double price;
     private boolean isBeverage;
+
     public Product(String name, double price, boolean isBeverage) {
         this.name = name;
         this.price = price;
         this.isBeverage = isBeverage;
     }
+
     public String getName() {
         return name;
     }
