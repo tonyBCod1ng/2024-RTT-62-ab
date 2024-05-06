@@ -27,7 +27,8 @@ public class CoffeeShoppe {
     public static void printMenu(List<Product> menu) {
         for (Product product : menu) {
             System.out.println("..........Menu..........");
-            System.out.println(product.getName() + "....$" + String.format("%.2f", product.getPrice()));
+            System.out.println(product.getName() + "            $" + String.format("%.2f", product.getPrice()));
+            System.out.println("........................");
         }
     }
 }
