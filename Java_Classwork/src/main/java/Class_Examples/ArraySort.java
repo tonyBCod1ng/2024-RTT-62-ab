@@ -12,7 +12,7 @@ public class ArraySort {
             for(int outer = 0; outer < array.length; outer++) {
             boolean swapped = false;
                 for(int pos = 0; pos < array.length - 1; pos++) {
-                
+
                     if(array[pos] > array[pos+1]) {
                         swapped = true;
                         int temp = array[pos];
