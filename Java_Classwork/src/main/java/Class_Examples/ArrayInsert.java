@@ -1,6 +1,7 @@
 package Class_Examples;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,12 +28,9 @@ public class ArrayInsert {
             System.out.println(value);
         }
 
-        // this is an example of abstraction because we dont care how the array list manages the array and memory
-        // we only care that we can insert an item at position 0 after the list has been filled.
-        List<String> stringList = new ArrayList<>();
-        stringList.add("String 1");
-        stringList.add("String 2");
-        stringList.add(0, "String 0");
+
+        System.out.println("Old Array: " + Arrays.toString(source));
+        System.out.println("New Array: " + Arrays.toString(result));
         return result;
 
     }
