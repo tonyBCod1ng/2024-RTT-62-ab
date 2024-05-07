@@ -1,6 +1,6 @@
-package Class_Examples.GLAB_303_2_1;
+package Java_Homework.GLAB_303_2_1;
 
-public class AssignmentOperatorsDemo {
+ class AssignmentOperatorsDemo {
 public static void main(String[] args) {
     //   Assigning Primitive Values
     int j, k;

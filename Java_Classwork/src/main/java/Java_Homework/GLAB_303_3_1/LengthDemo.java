@@ -1,6 +1,6 @@
 package Java_Homework.GLAB_303_3_1;
 
-public class LengthDemo {
+ class LengthDemo {
     public static void main(String[] args) {
         String str1 = "Java";
         String str2 = "";

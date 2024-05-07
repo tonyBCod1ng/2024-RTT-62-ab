@@ -1,6 +1,6 @@
-package Class_Examples.GLAB_303_2_2;
+package Java_Homework.GLAB_303_2_2;
 
-public class AutoTypeConversion {
+ class AutoTypeConversion {
     public static void main(String[] args) {
         int x = 20;
         double y = 40.5;

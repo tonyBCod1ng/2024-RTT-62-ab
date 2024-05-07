@@ -1,6 +1,6 @@
-package Class_Examples.GLAB_303_2_1;
+package Java_Homework.GLAB_303_2_1;
 
-public class RelationalOperatorsDemo {
+ class RelationalOperatorsDemo {
     public static void main(String[] args) {
         int x = 10, y = 5;
         System.out.println("x > y : " + (x > y));

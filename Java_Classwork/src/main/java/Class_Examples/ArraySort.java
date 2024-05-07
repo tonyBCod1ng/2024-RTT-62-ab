@@ -2,7 +2,7 @@ package Class_Examples;
 
 import java.util.Arrays;
 
-public class ArraySort {
+ class ArraySort {
     public static void main(String[] args) {
         letsSortThisOut();
         }

@@ -1,6 +1,6 @@
 package Java_Homework.GLAB_303_3_1;
 
-public class DemoReplaceAll {
+ class DemoReplaceAll {
     public static void main(String[] args) {
         String str1 = "Java123is456fun";
 

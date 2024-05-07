@@ -1,6 +1,6 @@
-package Class_Examples.GLAB_303_2_1;
+package Java_Homework.GLAB_303_2_1;
 
-public class TernaryOperatorDemo {
+ class TernaryOperatorDemo {
     public static void main(String[] args) {
         int age = 18;
         String result = age < 100 ?

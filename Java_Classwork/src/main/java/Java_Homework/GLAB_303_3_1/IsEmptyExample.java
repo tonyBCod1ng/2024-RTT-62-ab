@@ -1,6 +1,6 @@
 package Java_Homework.GLAB_303_3_1;
 
-public class IsEmptyExample {
+ class IsEmptyExample {
     public static void main(String[] args) {
         String s1="";
         String s2="hello";

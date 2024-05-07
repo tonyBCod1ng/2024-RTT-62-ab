@@ -1,6 +1,6 @@
-package Class_Examples.GLAB_303_2_1;
+package Java_Homework.GLAB_303_2_1;
 
-public class LogicalOperatorsDemo {
+ class LogicalOperatorsDemo {
     public static void main(String[] args)
     {
         boolean x = true;

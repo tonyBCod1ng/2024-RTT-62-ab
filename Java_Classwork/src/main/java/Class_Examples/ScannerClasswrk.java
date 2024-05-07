@@ -2,7 +2,7 @@ package Class_Examples;
 
 import java.util.Scanner;
 
-public class ScannerClasswrk {
+ class ScannerClasswrk {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

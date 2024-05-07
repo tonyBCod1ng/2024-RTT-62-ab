@@ -1,6 +1,6 @@
 package Class_Examples;
 
-public class WhileLoopDemo {
+ class WhileLoopDemo {
     public static void main(String[] args) {
         whereTheWhileOnesAre();
     }

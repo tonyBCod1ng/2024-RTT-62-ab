@@ -1,6 +1,6 @@
 package Java_Homework.GLAB_303_3_1;
 
-public class ConcatDemo {
+ class ConcatDemo {
     public static void main(String[] args) {
         //------By using concat method----
         String str1 = "Learn ";

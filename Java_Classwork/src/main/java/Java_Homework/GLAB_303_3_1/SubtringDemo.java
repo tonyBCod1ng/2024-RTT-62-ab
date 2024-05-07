@@ -1,6 +1,6 @@
 package Java_Homework.GLAB_303_3_1;
 
-public class SubtringDemo {
+ class SubtringDemo {
   public static void main(String[] args) {
       String str1 = "java is fun";
 

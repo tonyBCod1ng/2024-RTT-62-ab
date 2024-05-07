@@ -2,11 +2,11 @@ package Java_Homework.PA_303_2_3;
 
 public class OpsAndNums {
     public static void main(String[] args) {
-       // lefty();
-        //righty();
-       // yesAnd();
-        //incrementos();
-        //allOfTheIncre();
+        lefty();
+        righty();
+        yesAnd();
+        incrementos();
+        allOfTheIncre();
         fixItInPost();
     }
 

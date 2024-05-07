@@ -1,6 +1,6 @@
 package Java_Homework.GLAB_303_3_1;
 
-public class FindString {
+ class FindString {
     public static void main(String[] args) {
         String str1 = "Java is fun";
         int result;

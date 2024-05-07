@@ -3,7 +3,7 @@ package Class_Examples;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ForLoopDemo {
+ class ForLoopDemo {
     public static void main(String[] args) {
         forWhtItsWrth();
         listaLaVista();

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import static Class_Examples.CoffeeShoppe.Main.products;
 
-public class CoffeeShoppe {
+ class CoffeeShoppe {
     public static Scanner sc = new Scanner(System.in);
 
 

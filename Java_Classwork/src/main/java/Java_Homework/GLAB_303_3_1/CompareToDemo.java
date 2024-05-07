@@ -1,6 +1,6 @@
 package Java_Homework.GLAB_303_3_1;
 
-public class CompareToDemo {
+ class CompareToDemo {
     public static void main(String[] args) {
         String s1="hello";
         String s2="hello";

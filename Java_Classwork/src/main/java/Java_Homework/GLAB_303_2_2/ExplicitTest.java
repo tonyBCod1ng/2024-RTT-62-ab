@@ -1,6 +1,6 @@
-package Class_Examples.GLAB_303_2_2;
+package Java_Homework.GLAB_303_2_2;
 
-public class ExplicitTest {
+ class ExplicitTest {
     public static void main(String[] args) {
         double d = 100.04;
         // explicit type casting

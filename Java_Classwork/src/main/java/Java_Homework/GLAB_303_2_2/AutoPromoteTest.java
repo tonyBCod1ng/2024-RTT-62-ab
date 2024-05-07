@@ -1,6 +1,6 @@
-package Class_Examples.GLAB_303_2_2;
+package Java_Homework.GLAB_303_2_2;
 
-public class AutoPromoteTest {
+ class AutoPromoteTest {
     public static void main(String[] args)
     {
         byte b = 42;

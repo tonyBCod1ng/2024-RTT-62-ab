@@ -2,7 +2,7 @@ package Class_Examples;
 
 import org.w3c.dom.ranges.Range;
 
-public class SwitchGears {
+ class SwitchGears {
     static int num = 3;
 
     public static void main(String[] args) {

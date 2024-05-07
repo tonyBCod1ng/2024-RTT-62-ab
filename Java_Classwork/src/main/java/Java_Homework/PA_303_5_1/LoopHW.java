@@ -2,7 +2,7 @@ package Java_Homework.PA_303_5_1;
 
 import java.util.Scanner;
 
-public class LoopHW {
+ class LoopHW {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {

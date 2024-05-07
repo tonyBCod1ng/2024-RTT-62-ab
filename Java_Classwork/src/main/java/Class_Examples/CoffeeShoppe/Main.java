@@ -6,7 +6,7 @@ import java.util.List;
 
 import static Class_Examples.CoffeeShoppe.CoffeeShoppe.sc;
 
-public class Main {
+ class Main {
     public static List<Product> products = new ArrayList<>();
     static CoffeeShoppe coffeeShoppe = new CoffeeShoppe();
 

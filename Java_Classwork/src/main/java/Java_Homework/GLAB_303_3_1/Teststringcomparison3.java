@@ -1,6 +1,6 @@
 package Java_Homework.GLAB_303_3_1;
 
-public class Teststringcomparison3 {
+ class Teststringcomparison3 {
     public static void main(String[] args) {
         String s1="Perscholas";
         String s2="Perscholas";

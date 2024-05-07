@@ -1,6 +1,6 @@
 package Class_Examples;
 
-public class ArrayBianNites {
+ class ArrayBianNites {
     public static void main(String[] args) {
         errbodyLuvzArraymond();
     }

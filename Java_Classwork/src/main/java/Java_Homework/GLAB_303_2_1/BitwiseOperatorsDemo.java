@@ -1,6 +1,6 @@
-package Class_Examples.GLAB_303_2_1;
+package Java_Homework.GLAB_303_2_1;
 
-public class BitwiseOperatorsDemo {
+ class BitwiseOperatorsDemo {
     public static void main(String[] args)
     {
         int x = 58; //111010

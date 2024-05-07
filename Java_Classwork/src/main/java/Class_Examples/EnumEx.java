@@ -1,6 +1,6 @@
 package Class_Examples;
 
-public class EnumEx {
+ class EnumEx {
     public static void main(String[] args) {
         Car car = Car.BMW;
         switch (car) {
