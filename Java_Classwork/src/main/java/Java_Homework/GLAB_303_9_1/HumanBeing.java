@@ -1,4 +1,4 @@
-package Class_Examples;
+package Java_Homework.GLAB_303_9_1;
 
 public class HumanBeing {
 
