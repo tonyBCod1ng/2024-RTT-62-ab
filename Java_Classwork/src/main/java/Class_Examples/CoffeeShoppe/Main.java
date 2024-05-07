@@ -22,10 +22,10 @@ class Main {
                     shopKeeper.addItem();
                     break;
                 case 2:
-                    System.out.println("Removed Item");
+
                     break;
                 case 3:
-                    System.out.println("Edited Item");
+                    shopKeeper.editProduct();
                     break;
                 case 4:
                     shopKeeper.printMenu();
