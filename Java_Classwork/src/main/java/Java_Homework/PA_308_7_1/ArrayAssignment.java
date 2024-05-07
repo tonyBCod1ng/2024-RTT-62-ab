@@ -3,10 +3,10 @@ package Java_Homework.PA_308_7_1;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayAssignment {
+  class ArrayAssignment {
     static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         arrayOfHope();
         arraysToTheFinish();
         arrayOfColor();
@@ -22,7 +22,7 @@ public class ArrayAssignment {
 
     //region - arrayOfHope(): Write a program that creates an array of integers with a length of 3.
     // Assign the values 1, 2, and 3 to the indexes. Print out each array element.
-    public static void arrayOfHope() {
+     static void arrayOfHope() {
         int[] arr = new int[3];
         arr[0] = 1;
         arr[1] = 2;
@@ -36,7 +36,7 @@ public class ArrayAssignment {
     //region -arraysToTheFinish(): Write a program that returns the middle element in an array.
     // Give the following values to the integer array: {13, 5, 7, 68, 2}
     // and produce the following output: 7
-    public static void arraysToTheFinish() {
+     static void arraysToTheFinish() {
         int[] arr = {13, 5, 7, 68, 2};
 
         System.out.println(arr[2]);
@@ -48,7 +48,7 @@ public class ArrayAssignment {
     // Print out the array length. Make a copy using the clone( ) method.
     // Use the Arrays.toString( ) method on the new array to verify that the original array
     // was copied.
-    public static void arrayOfColor() {
+     static void arrayOfColor() {
         String[] arr = {"red", "green", "blue", "yellow"};
         System.out.println(arr.length);
         String[] clonedArr = arr.clone();
@@ -63,7 +63,7 @@ public class ArrayAssignment {
     // Notice the type of exception which is produced.
     // Now try to assign a value to the array index 5.
     // You should get the same type of exception.
-    public static void arrayLength() {
+     static void arrayLength() {
         int[] arr = new int[5];
         System.out.println(arr[0]);
         System.out.println(arr[arr.length - 1]);
@@ -75,7 +75,7 @@ public class ArrayAssignment {
     //region - arrayLoop(): Write a program where you create an integer array with a length of 5.
     // Loop through the array and assign the value of the loop control variable (e.g., i)
     // to the corresponding index in the array.
-    public static void arrayLoop() {
+     static void arrayLoop() {
         int[] arr = new int[5];
         for (int count = 0; count < arr.length; count++) {
             arr[count] = count;
@@ -87,7 +87,7 @@ public class ArrayAssignment {
     //region -arrayMultLoop(): Write a program where you create an integer array of 5 numbers.
     // Loop through the array and assign the value of the loop control variable
     // multiplied by 2 to the corresponding index in the array.
-    public static void arrayMultLoop() {
+     static void arrayMultLoop() {
         int[] arr = new int[5];
         for (int count = 0; count < arr.length; count++) {
             arr[count] = count * 2;
@@ -98,7 +98,7 @@ public class ArrayAssignment {
 
     //region -skipMalcolm(): Write a program where you create an array of 5 elements.
     // Loop through the array and print the value of each element, except for the middle (index 2) element.
-    public static void skipMalcolm() {
+     static void skipMalcolm() {
         int[] arr = {1, 2, 3, 4, 5};
 
         for (int count = 0; count < arr.length; count++) {
@@ -112,7 +112,7 @@ public class ArrayAssignment {
 
     //region - stringArray(): Write a program that creates a String array of 5 elements
     // and swaps the first element with the middle element without creating a new array.
-    public static void stringArray() {
+     static void stringArray() {
         String[] arr = {"red", "green", "blue", "yellow"};
         String temp;
         temp = arr[0];
@@ -128,7 +128,7 @@ public class ArrayAssignment {
     //Array in ascending order: 0, 1, 2, 4, 9, 13
     //The smallest number is 0
     //The biggest number is 13
-    public static void orderArray() {
+     static void orderArray() {
         int[] arr = {4, 2, 9, 13, 1, 0};
         Arrays.sort(arr);
         System.out.println("Ordered array is:" + Arrays.toString(arr));
@@ -138,7 +138,7 @@ public class ArrayAssignment {
     //endregion
 
     //region -multiArray(): Create an array that includes an integer, 3 strings, and 1 double. Print the array.
-    public static void multiArray() {
+     static void multiArray() {
         Object[] arr = {1, "green", "blue", "yellow", 2.2};
         System.out.println(Arrays.toString(arr));
     }
@@ -148,7 +148,7 @@ public class ArrayAssignment {
     // Based on their answer, you should create a String array of the correct size.
     // Then ask the user to enter the things and store them in the array you created.
     // Finally, print out the contents of the array.
-    public static void whatDoYouLike() {
+     static void whatDoYouLike() {
         System.out.println("How many things do you like to do?");
         int numOfThings = scanner.nextInt();
         String[] arr = new String[numOfThings];
