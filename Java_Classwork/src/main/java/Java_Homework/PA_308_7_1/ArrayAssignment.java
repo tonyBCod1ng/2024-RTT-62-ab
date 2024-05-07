@@ -1,8 +1,10 @@
 package Java_Homework.PA_308_7_1;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArrayAssignment {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         arrayOfHope();
         arraysToTheFinish();
@@ -13,6 +15,8 @@ public class ArrayAssignment {
         skipMalcolm();
         stringArray();
         orderArray();
+        multiArray();
+        whatDoYouLike();
     }
 
     //region -Task 1: Write a program that creates an array of integers with a length of 3.
@@ -129,6 +133,31 @@ public class ArrayAssignment {
         System.out.println("Ordered array is:" + Arrays.toString(arr));
         System.out.println("Smallest number is: " + arr[0]);
         System.out.println("Largest number is: " + arr[arr.length - 1]);
+    }
+    //endregion
+
+    //region -Create an array that includes an integer, 3 strings, and 1 double. Print the array.
+    public static void multiArray() {
+        Object[] arr = {1, "green", "blue", "yellow", 2.2};
+        System.out.println(Arrays.toString(arr));
+    }
+    //endregion
+
+    //region -Write some Java code that asks the user how many favorite things they have.
+    // Based on their answer, you should create a String array of the correct size.
+    // Then ask the user to enter the things and store them in the array you created.
+    // Finally, print out the contents of the array.
+    public static void whatDoYouLike() {
+        System.out.println("How many things do you like to do?");
+        int numOfThings = scanner.nextInt();
+        String[]arr = new String[numOfThings];
+        scanner.nextLine();
+        for (int i = 0; i < numOfThings; i++) {
+            System.out.println("What is something you like to do?");
+            String item = scanner.next();
+            arr[i] = item;
+        }
+        System.out.println("Here is a list of what you like to do: " + Arrays.toString(arr));
     }
     //endregion
 }
