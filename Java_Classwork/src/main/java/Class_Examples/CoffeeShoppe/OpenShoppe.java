@@ -3,11 +3,12 @@ package Class_Examples.CoffeeShoppe;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Class_Examples.CoffeeShoppe.CoffeeShoppe.sc;
+import static Class_Examples.CoffeeShoppe.ShopKeeper.sc;
 
 public class OpenShoppe {
-    public static List<Product> products = new ArrayList<>();
-    public static void openShoppe() {
+    List<Product> products;
+    public void run() {
+        products = new ArrayList<>();
         System.out.println("Welcome to Coffee Shoppe Inventory!");
         System.out.println("What do you want to do?");
         System.out.println("1. Add product");
@@ -18,7 +19,7 @@ public class OpenShoppe {
         int choice = sc.nextInt();
         switch (choice) {
             case 1:
-                CoffeeShoppe.addItem();
+                ShopKeeper.addItem();
                 break;
             case 2:
                 System.out.println("Removed Item");
@@ -27,10 +28,13 @@ public class OpenShoppe {
                 System.out.println("Edited Item");
                 break;
             case 4:
-                CoffeeShoppe.printMenu(products);
+                ShopKeeper.printMenu(products);
                 break;
             case 5:
                 System.exit(0);
+                break;
+
         }
     }
+
 }

@@ -1,18 +1,12 @@
 package Class_Examples.CoffeeShoppe;
 
-import java.util.ArrayList;
-import java.util.List;
+class Main {
 
-
-import static Class_Examples.CoffeeShoppe.CoffeeShoppe.sc;
-
- class Main {
-
-    static CoffeeShoppe coffeeShoppe = new CoffeeShoppe();
+    static ShopKeeper shopKeeper = new ShopKeeper();
      public static void main(String[] args) {
 
          while (true) {
-             OpenShoppe.openShoppe();
+             shopKeeper.openShoppe.run();
          }
 
      }
