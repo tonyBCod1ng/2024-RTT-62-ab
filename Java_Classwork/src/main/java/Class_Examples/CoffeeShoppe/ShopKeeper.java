@@ -1,15 +1,17 @@
 package Class_Examples.CoffeeShoppe;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 
 
  public class ShopKeeper {
-    public static Scanner sc = new Scanner(System.in);
-    static OpenShoppe openShoppe = new OpenShoppe();
+    public  Scanner sc = new Scanner(System.in);
 
-    public static void addItem() {
+      List<Product> products = new ArrayList<>(0);
+    public void addItem() {
+
         System.out.println("Welcome to Coffee Inventory System!");
         System.out.println("What product do you want to add?");
         String addedProduct = sc.next();
@@ -19,15 +21,17 @@ import java.util.Scanner;
         boolean itemBeverage = sc.nextInt() == 1;
 
         Product newItem = new Product(addedProduct, itemPrice, itemBeverage);
-        openShoppe.products.add(newItem);
-        System.out.println("Added product " + addedProduct + " with price " + String.format("%.2f", newItem.getPrice()));
+        products.add(newItem);
+        System.out.println("Added product " + addedProduct + " with price " + String.format("$%.2f", newItem.getPrice()));
     }
 
     public static void printMenu(List<Product> menu) {
+        System.out.println("..........Menu..........");
         for (Product product : menu) {
-            System.out.println("..........Menu..........");
+
             System.out.println(product.getName() + "            $" + String.format("%.2f", product.getPrice()));
-            System.out.println("........................");
+
         }
+        System.out.println("........................");
     }
 }
