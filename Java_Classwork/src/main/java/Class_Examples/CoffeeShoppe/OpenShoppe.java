@@ -6,6 +6,7 @@ import java.util.List;
 import static Class_Examples.CoffeeShoppe.ShopKeeper.sc;
 
 public class OpenShoppe {
+    static ShopKeeper shopKeeper = new ShopKeeper();
     List<Product> products;
     public void run() {
         products = new ArrayList<>();
@@ -19,7 +20,7 @@ public class OpenShoppe {
         int choice = sc.nextInt();
         switch (choice) {
             case 1:
-                ShopKeeper.addItem();
+                shopKeeper.addItem();
                 break;
             case 2:
                 System.out.println("Removed Item");
@@ -28,7 +29,7 @@ public class OpenShoppe {
                 System.out.println("Edited Item");
                 break;
             case 4:
-                ShopKeeper.printMenu(products);
+                shopKeeper.printMenu(products);
                 break;
             case 5:
                 System.exit(0);
