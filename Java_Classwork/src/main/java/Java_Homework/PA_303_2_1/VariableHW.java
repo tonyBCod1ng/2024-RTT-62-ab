@@ -1,7 +1,8 @@
 package Java_Homework.PA_303_2_1;
 
 public class VariableHW {
-   final static double SALES_TAX = 0.07;
+    final static double SALES_TAX = 0.07;
+
     public static void main(String[] args) {
         summer();
         doubleSum();
@@ -10,6 +11,7 @@ public class VariableHW {
         xyDivider();
         constantine();
         cafeShoppe();
+
     }
     // I treated each task as a method within the public class and created a region for each one below
 

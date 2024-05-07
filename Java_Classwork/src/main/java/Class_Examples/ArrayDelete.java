@@ -3,13 +3,13 @@ package Class_Examples;
 import java.util.Arrays;
 import java.util.Scanner;
 
- class ArrayDelete {
+public class ArrayDelete {
     public static Scanner scanner = new Scanner(System.in);
     static String[] arr = {"A", "B", "C", "D", "E", "F"};
     public static void main(String[] args) {
-        System.out.println("Enter the position of the item to delete: ");
+       System.out.println("Enter the position of the item to delete: ");
         int position = scanner.nextInt();
-        miteDeleteLater(arr,position);
+        miteDeleteLater(arr,3);
     }
 
     public static void miteDeleteLater(String[] source, int atPos) {
@@ -20,11 +20,11 @@ import java.util.Scanner;
             return;
         }
         System.out.println("Ok, we are deleting, " + ogArray[atPos] + "!");
-        for (int i = 0; i < newArray.length; i++) {
-            if (i < atPos) {
-                newArray[i] = ogArray[i];
+        for (int count = 0; count < newArray.length; count++) {
+            if (count < atPos) {
+                newArray[count] = ogArray[count];
             } else {
-                newArray[i] = ogArray[i + 1];
+                newArray[count] = ogArray[count + 1];
             }
         }
         System.out.println("Changing Array from: " + Arrays.toString(ogArray));

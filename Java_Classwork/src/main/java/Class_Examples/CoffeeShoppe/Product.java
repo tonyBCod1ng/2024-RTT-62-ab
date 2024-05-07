@@ -1,6 +1,6 @@
 package Class_Examples.CoffeeShoppe;
 
- class Product {
+ public class Product {
 
     private String name;
     private double price;
