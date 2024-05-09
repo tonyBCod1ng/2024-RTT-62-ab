@@ -28,10 +28,12 @@ public class SBA1Practice {
 
         //region - print the given array of strings into integers
         String[] nums = {"2", "4", "5", "6", "7", "8", "10"};
-
+        int sum2 = 0;
         for(String num : nums){
             System.out.println(Integer.parseInt(num));
+            sum2 += Integer.parseInt(num);
         }
+        System.out.println("The sum is: " + sum2);
         //endregion
     }
 }
