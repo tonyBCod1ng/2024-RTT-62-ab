@@ -1,14 +1,14 @@
 package Java_Homework.GLAB_303_10_3;
 
-public class Circle extends Shape {
+ class Circle extends Shape {
     protected double radius;
     private final double PI = Math.PI;
 
-    public Circle(double radius) {
+     Circle(double radius) {
         this.radius = radius;
     }
 
-    public Circle(double radius, double height) {
+     Circle(double radius, double height) {
         this.radius = radius;
         super.height = height;
     }
