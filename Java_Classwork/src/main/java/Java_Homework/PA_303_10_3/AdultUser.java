@@ -4,7 +4,7 @@ package Java_Homework.PA_303_10_3;
     int age;
     String bookType;
 
-    @Override
+
     public void registerAccount() {
         if (age >= 12) {
             System.out.println("You have successfully registered under an Adult Account.");
@@ -13,7 +13,7 @@ package Java_Homework.PA_303_10_3;
         }
     }
 
-    @Override
+
     public void requestBook() {
         if (bookType == "Fiction") {
             System.out.println("successfully, please return the book within 7 days.");
