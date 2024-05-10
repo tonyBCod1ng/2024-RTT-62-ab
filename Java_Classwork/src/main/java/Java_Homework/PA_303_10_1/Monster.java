@@ -2,7 +2,7 @@ package Java_Homework.PA_303_10_1;
 
 class Monster {
 static String idNum;
-public Monster(String idNum) {
+ Monster(String idNum) {
     this.idNum = idNum;
 }
     String attack(){

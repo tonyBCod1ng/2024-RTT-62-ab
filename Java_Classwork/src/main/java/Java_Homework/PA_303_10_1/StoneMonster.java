@@ -1,7 +1,7 @@
 package Java_Homework.PA_303_10_1;
 
-public class StoneMonster extends Monster {
-    public StoneMonster(String idNum) {
+ class StoneMonster extends Monster {
+     StoneMonster(String idNum) {
         super(idNum);
     }
 

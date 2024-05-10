@@ -1,6 +1,6 @@
 package Java_Homework.PA_303_10_3;
 
-public class AdultUser implements LibraryUser {
+ class AdultUser implements LibraryUser {
     int age;
     String bookType;
 

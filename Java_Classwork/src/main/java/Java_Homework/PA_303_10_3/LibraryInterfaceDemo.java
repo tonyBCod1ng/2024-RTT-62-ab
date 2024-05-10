@@ -1,6 +1,6 @@
 package Java_Homework.PA_303_10_3;
 
-public class LibraryInterfaceDemo {
+ class LibraryInterfaceDemo {
     public static void main(String[] args) {
         KidUser kiddo = new KidUser();
         AdultUser grownUp = new AdultUser();

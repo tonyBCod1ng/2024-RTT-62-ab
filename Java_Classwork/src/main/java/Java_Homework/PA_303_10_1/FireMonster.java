@@ -1,7 +1,7 @@
 package Java_Homework.PA_303_10_1;
 
-public class FireMonster extends Monster {
-    public FireMonster(String idNum) {
+ class FireMonster extends Monster {
+     FireMonster(String idNum) {
         super(idNum);
     }
 

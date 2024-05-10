@@ -1,6 +1,6 @@
 package Java_Homework.PA_303_10_1;
 
-public class TestMonster {
+ class TestMonster {
     public static void main(String[] args) {
         // Program at the "interface" defined in the superclass.
         // Declare instances of the superclass, substituted by subclasses.

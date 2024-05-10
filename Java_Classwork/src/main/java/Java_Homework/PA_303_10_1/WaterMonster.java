@@ -1,7 +1,7 @@
 package Java_Homework.PA_303_10_1;
 
-public class WaterMonster extends Monster {
-    public WaterMonster(String idNum) {
+ class WaterMonster extends Monster {
+     WaterMonster(String idNum) {
         super(idNum);
     }
 
