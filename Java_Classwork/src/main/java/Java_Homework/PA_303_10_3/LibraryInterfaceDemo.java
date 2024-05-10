@@ -1,8 +1,17 @@
 package Java_Homework.PA_303_10_3;
 
-public class Demo {
+public class LibraryInterfaceDemo {
     public static void main(String[] args) {
+        KidUser kiddo = new KidUser();
         AdultUser grownUp = new AdultUser();
+        kiddo.age = 10;
+        kiddo.registerAccount();
+        kiddo.age = 23;
+        kiddo.registerAccount();
+        kiddo.bookType = "Kids";
+        kiddo.requestBook();
+        kiddo.bookType = "Fiction";
+        kiddo.requestBook();
         grownUp.age = 5;
         grownUp.registerAccount();
         grownUp.age = 23;
