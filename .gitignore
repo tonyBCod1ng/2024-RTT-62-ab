@@ -22,3 +22,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+cars.csv
+CourseData.csv
+file1.txt
+nioOutput.txt
+nioOutput2.txt
+file2.txt
