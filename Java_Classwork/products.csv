@@ -1,0 +1,8 @@
+Product_Name,Price,Quantity_Available,Is_Beverage
+Chai Latte,2.99,10,true
+Bottled Water,9.99,20,true
+Americano,4.99,50,true
+Espresso,5.99,25,true
+Chips,2.50,50,false
+Pop,2.90,60,true
+
