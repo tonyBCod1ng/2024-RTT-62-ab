@@ -7,6 +7,7 @@ import java.util.List;
     public static void main(String[] args) {
         forWhtItsWrth();
         listaLaVista();
+        System.out.println("");
     }
 
     public static void forWhtItsWrth() {
