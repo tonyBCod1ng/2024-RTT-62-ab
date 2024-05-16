@@ -1,15 +1,29 @@
 package Class_Examples.CoffeeShoppe;
 
- public class Product {
+public class Product {
 
     private String name;
     private double price;
     private boolean isBeverage;
+    private int quantityAvailable;
 
-    public Product(String name, double price, boolean isBeverage) {
+    public Product() {
+
+    }
+
+    public Product(String name, double price, boolean isBeverage, int quantityAvailable) {
         this.name = name;
         this.price = price;
         this.isBeverage = isBeverage;
+        this.quantityAvailable = quantityAvailable;
+    }
+
+    public int getQuantityAvailable() {
+        return quantityAvailable;
+    }
+
+    public void setQuantityAvailable(int quantityAvailable) {
+        this.quantityAvailable = quantityAvailable;
     }
 
     public String getName() {
