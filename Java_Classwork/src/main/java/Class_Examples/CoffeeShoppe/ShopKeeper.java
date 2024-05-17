@@ -17,7 +17,6 @@ public class ShopKeeper {
            FileReader inventoryFileReader = new FileReader(inventoryFile);
            BufferedReader bufferedReader= new BufferedReader(inventoryFileReader);
            String line = bufferedReader.readLine();
-            line = bufferedReader.readLine();
 
            while (line != null) {
                Product p = parseProduct(line);
@@ -32,12 +31,23 @@ public class ShopKeeper {
            e.printStackTrace();
         }
     }
-    public void addItem() throws IOException {
-        FileWriter fileWriter = new FileWriter(inventoryFile, true);
+    public void updateLedger() throws IOException {
+        FileWriter fileWriter = new FileWriter(inventoryFile, false);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-        System.out.println("Welcome to Coffee Inventory System!");
+        //create new file to replace
+        inventoryFile.createNewFile();
+        for (Product p : productList){
+            bufferedWriter.write(p.getName() + "," + p.getPrice() + "," + p.getQuantityAvailable() + "," + p.isBeverage());
+            bufferedWriter.newLine();
+
+        }
+        bufferedWriter.close();
+
+    }
+    public void addItem() throws IOException {
+
         System.out.println("What product do you want to add?");
-        String addedProduct = scanner.next();
+        String addedProduct = scanner.nextLine();
         System.out.println("What is the price of this item?");
         double itemPrice = scanner.nextDouble();
         System.out.println("Is this a beverage item? 1 = yes, 2 = no");
@@ -45,14 +55,13 @@ public class ShopKeeper {
         System.out.println("Item ready to add! How many are we adding?");
         int quantity = scanner.nextInt();
         Product newItem = new Product(addedProduct, itemPrice, itemBeverage, quantity);
-        bufferedWriter.write(newItem.getName() + "," + newItem.getPrice() + "," + newItem.getQuantityAvailable() + "," + newItem.isBeverage());
-        bufferedWriter.newLine();
-        bufferedWriter.close();
-        productList.add(newItem);
 
+        productList.add(newItem);
+        updateLedger();
         System.out.println("Added product " + addedProduct + " with price " + String.format("$%.2f", newItem.getPrice()));
+        scanner.nextLine();
     }
-public void editProduct() {
+public void editProduct() throws IOException {
         if (productList.isEmpty()) {
             System.out.println("Nothing to edit");
             return;
@@ -60,11 +69,27 @@ public void editProduct() {
         System.out.println("What product do you want to edit?");
         printMenu();
         Product selectedItem = (Product) productList.toArray()[scanner.nextInt() -1];
-        System.out.println("What is the new price of this item?");
-        selectedItem.setPrice(scanner.nextDouble());
-        System.out.println("The new price of " + selectedItem.getName() + " item is " + String.format("$%.2f", selectedItem.getPrice()));
+        System.out.println("What do you want to change about this item?");
+        System.out.println("1.) Price");
+        System.out.println("2.) Quantity");
+        int choice = scanner.nextInt();
+        if(choice == 1) {
+            System.out.println("What is the new price of this item?");
+            selectedItem.setPrice(scanner.nextDouble());
+            updateLedger();
+            System.out.println("The new price of " + selectedItem.getName() + " item is " + String.format("$%.2f", selectedItem.getPrice()));
+
+        } else if (choice == 2) {
+            System.out.println("What is the new quantity of this item?");
+            selectedItem.setQuantityAvailable(scanner.nextInt());
+            updateLedger();
+            System.out.println("The new quantity of " + selectedItem.getName() + " item is " + selectedItem.getQuantityAvailable());
+
+        } else {
+            System.out.println("Invalid input");
+        }
 }
-public void removeItem() {
+public void removeItem() throws IOException {
         if (productList.isEmpty()) {
             System.out.println("Nothing to remove");
             return;
@@ -73,7 +98,9 @@ public void removeItem() {
         printMenu();
         Product selectedItem = (Product) productList.toArray()[scanner.nextInt() -1];
         productList.remove(selectedItem);
+
         System.out.println(selectedItem.getName() + " removed from the inventory!");
+        updateLedger();
         printMenu();
 }
     public void printMenu() {
@@ -81,7 +108,7 @@ public void removeItem() {
         System.out.println("..........Menu..........");
         for (Product product : productList) {
 
-            System.out.println((index + 1) + ".) " + product.getName() + "            $" + String.format("%.2f", product.getPrice() +  product.getQuantityAvailable()) + " Amt: " + product.getQuantityAvailable());
+            System.out.println((index + 1) + ".) " + product.getName() + "            " + String.format("$%.2f", product.getPrice())  + " Amt: " + product.getQuantityAvailable());
         index++;
         }
         System.out.println("........................");

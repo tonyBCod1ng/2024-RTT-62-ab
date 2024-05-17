@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 
 class Main {
-    private Scanner scanner = new Scanner(System.in);
-    private ShopKeeper shopKeeper = new ShopKeeper();
+     Scanner scanner = new Scanner(System.in);
+     ShopKeeper shopKeeper = new ShopKeeper();
 
 
     public static void main(String[] args) throws IOException {
