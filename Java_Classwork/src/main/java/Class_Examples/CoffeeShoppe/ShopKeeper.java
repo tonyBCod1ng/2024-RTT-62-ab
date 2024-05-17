@@ -106,7 +106,7 @@ public void removeItem() throws IOException {
     public void printMenu() {
         int index = 0;
         System.out.println("..........Menu..........");
-        for (Product product : productList) {
+        for(Product product : productList) {
 
             System.out.println((index + 1) + ".) " + product.getName() + "            " + String.format("$%.2f", product.getPrice())  + " Amt: " + product.getQuantityAvailable());
         index++;
