@@ -17,8 +17,8 @@ class Delimiter {
       ArrayList<String[]> data = new ArrayList<String[]>();
       while (input.hasNextLine()) {
        String Line = input.nextLine();
-       String[] splitedLine = Line.split(",");
-       data.add(splitedLine);
+       String[] splitLine = Line.split(",");
+       data.add(splitLine);
       }
       for (String[] line : data) {
        //System.out.println(line[0] + "|" + line[1] + "|" + line[2] + "|" + line[3]  + line[4] + "|" + line[5] + "|" + line[6] + "|" + line[7] + "|" + line[8]);

@@ -114,8 +114,7 @@ public void removeItem() throws IOException {
         System.out.println("........................");
     }
     private Product parseProduct(String line) {
-        //     0     , 1  , 2, 3
-        // Chai Latte,2.99,10,true
+
         Product result = new Product();
 
         String[] column = line.split(",");

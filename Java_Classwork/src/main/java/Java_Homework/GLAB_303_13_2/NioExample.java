@@ -1,17 +1,18 @@
 package Java_Homework.GLAB_303_13_2;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 public class NioExample {
     public static void main(String[] args) throws IOException {
         // initializing two files in Array;
-        String[] inputFiles = {"/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Java_Classwork/file1.txt",
-                "/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Java_Classwork/file2.txt"};
+        String[] inputFiles = {"/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Java_Classwork/file1.txt", "/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Java_Classwork/file2.txt"};
 
         // Specify out file with path location
-//Files contents will be written in these files
+        //Files contents will be written in these files
         String outputFile = "/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Java_Classwork/nioOutput.txt";
 
         // Get Channel for destination or outputFile
