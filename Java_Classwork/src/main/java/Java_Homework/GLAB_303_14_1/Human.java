@@ -9,4 +9,6 @@ package Java_Homework.GLAB_303_14_1;
     static void sayHello(){
         System.out.println("Hello. *static method*");
     }
+
+    ;
 }
