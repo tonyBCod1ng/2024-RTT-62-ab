@@ -1,11 +1,16 @@
 package Class_Examples;
 
- class ArrayBianNites {
+import java.awt.*;
+import java.util.Arrays;
+import java.util.Collections;
+
+class ArrayBianNites {
     public static void main(String[] args) {
         errbodyLuvzArraymond();
     }
     public static void errbodyLuvzArraymond() {
         String [] arrayOfSunshine = new String[10];
+
         System.out.println(arrayOfSunshine.length);
         String[] arrayStotle = {"Hey", "you", "guys!"};
         double [] arraysToTheTop = new double [10];
