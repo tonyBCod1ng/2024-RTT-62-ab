@@ -2,17 +2,26 @@ package Class_Examples.KBAPractice;
 
 import java.util.ArrayList;
 
-public class Main {
-    public static void main(String[] args) {
+interface MyList {
+    void convert(String[] a);
+
+    void replaceWith(int index);
+
+    ArrayList<String> compact();
+}
+
+class Main {
+    public static void main(String[] args) throws InvalidStringException  {
         ArrayToList arrayToList = new ArrayToList();
-       String[] arrayStuff = {"A", "B", "C", "D", "E", "F", "G", "H"};
-       arrayToList.convert(arrayStuff);
-       arrayToList.replaceWith(1);
-       arrayToList.replaceWith(3);
-       System.out.println(arrayToList.compact());
+        String[] arrayStuff = {"A", "B", "C", "D", "E", "F", "G", "H"};
+        arrayToList.convert(arrayStuff);
+        arrayToList.replaceWith(1);
+        arrayToList.replaceWith(3);
+        System.out.println(arrayToList.compact());
 
     }
 }
+//Created ArrayToList class and implemented methods from Interface
 class ArrayToList implements MyList {
     ArrayList<String> arrayList;
 
@@ -43,20 +52,17 @@ class ArrayToList implements MyList {
         for (String item : arrayList) {
             if (item.isEmpty()) {
                 continue;
-            };
+            }
+            ;
             result.add(item);
         }
 
         return result;
     };
 }
+// - Created custom exception
 class InvalidStringException extends Exception {
     InvalidStringException(String message) {
         super(message);
     }
-}
-interface MyList {
-    void convert(String[] a);
-    void replaceWith(int index);
-    ArrayList<String> compact();
 }
