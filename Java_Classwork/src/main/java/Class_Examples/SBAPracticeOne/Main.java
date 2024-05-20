@@ -2,25 +2,27 @@ package Class_Examples.SBAPracticeOne;
 
 import java.util.ArrayList;
 
+//Created interface
 interface MyList {
     void convert(String[] a);
 
-    void replaceWith(int index);
+    void replace(int index);
 
     ArrayList<String> compact();
 }
 
 class Main {
-    public static void main(String[] args) throws InvalidStringException  {
+    public static void main(String[] args) throws InvalidStringException {
         ArrayToList arrayToList = new ArrayToList();
         String[] arrayStuff = {"A", "B", "C", "D", "E", "F", "G", "H"};
         arrayToList.convert(arrayStuff);
-        arrayToList.replaceWith(1);
-        arrayToList.replaceWith(3);
+        arrayToList.replace(1);
+        arrayToList.replace(3);
         System.out.println(arrayToList.compact());
 
     }
 }
+
 //Created ArrayToList class and implemented methods from Interface
 class ArrayToList implements MyList {
     ArrayList<String> arrayList;
@@ -38,7 +40,7 @@ class ArrayToList implements MyList {
     }
 
     @Override
-    public void replaceWith(int idx) {
+    public void replace(int idx) {
         System.out.println("I have replaced the string: " + arrayList.get(idx) + " with a null string");
         arrayList.set(idx, "");
 
@@ -58,8 +60,12 @@ class ArrayToList implements MyList {
         }
 
         return result;
-    };
+    }
+
+    ;
 }
+
+
 // - Created custom exception
 class InvalidStringException extends Exception {
     InvalidStringException(String message) {

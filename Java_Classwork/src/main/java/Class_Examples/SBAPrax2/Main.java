@@ -2,6 +2,10 @@ package Class_Examples.SBAPrax2;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
+ interface Sport {
+    void calculateAvgAge(int[] age);
+    void retirePlayer(int id);
+}
 
 class Main {
     static Cricket cricket4 = new Cricket();
@@ -42,8 +46,8 @@ class Cricket implements Sport {
             result += age[player];
         }
         double avg = (double) result / (double) age.length;
-        DecimalFormat df = new DecimalFormat("0.00");
-        System.out.println("The average age of the team is " + df.format(avg));
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+        System.out.println("The average age of the team is " + decimalFormat.format(avg));
     }
 
     @Override
