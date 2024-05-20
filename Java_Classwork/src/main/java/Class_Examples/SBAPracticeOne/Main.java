@@ -1,4 +1,4 @@
-package Class_Examples.KBAPractice;
+package Class_Examples.SBAPracticeOne;
 
 import java.util.ArrayList;
 
