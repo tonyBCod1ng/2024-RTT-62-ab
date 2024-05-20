@@ -2,8 +2,10 @@ package Class_Examples.SBAPrax2;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
- interface Sport {
+
+interface Sport {
     void calculateAvgAge(int[] age);
+
     void retirePlayer(int id);
 }
 
@@ -28,7 +30,7 @@ class Main {
 }
 
 class Cricket implements Sport {
-    private int[] playerIds;
+    private final int[] playerIds;
 
     Cricket() {
         playerIds = new int[12];
@@ -55,18 +57,18 @@ class Cricket implements Sport {
 
         if (playerIds[id] == -1) {
             System.out.println("Player " + id + " has already been retired");
-            return;
         } else {
 
             System.out.println("Player " + id + " has been retired");
             playerIds[id] = -1;
         }
 
-    };
+    }
+
 }
 
 class FootBall extends Cricket {
-    private int[] playerIds;
+    private final int[] playerIds;
 
     FootBall() {
         playerIds = new int[12];
