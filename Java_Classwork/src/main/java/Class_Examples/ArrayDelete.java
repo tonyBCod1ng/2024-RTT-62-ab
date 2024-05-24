@@ -3,10 +3,13 @@ package Class_Examples;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayDelete {
-    public static Scanner scanner = new Scanner(System.in);
-    static String[] arr = {"A", "B", "C", "D", "E", "F"};
+ class ArrayDelete {
+
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String test = System.getenv("TEST_URL1");
+        System.out.println(test);
+        String[] arr = {"A", "B", "C", "D", "E", "F"};
        System.out.println("Enter the position of the item to delete: ");
         int position = scanner.nextInt();
         miteDeleteLater(arr,3);

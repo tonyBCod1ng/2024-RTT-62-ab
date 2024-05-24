@@ -2,6 +2,8 @@ package Class_Examples.Generic_HandsOn;
 
 public class MainEntry {
     public static void main(String[] args) {
+        String test = System.getenv("TEST_URL");
+        System.out.println(test);
         int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         Calc add = argsSum -> {
             int sum = 0;
