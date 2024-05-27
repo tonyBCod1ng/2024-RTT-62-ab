@@ -5,7 +5,7 @@ SELECT pl.id, pl.product_line, COUNT(*) total_products
 FROM productlines pl, products p
 WHERE pl.id = p.productline_id
 GROUP BY pl.id
-Order by total_products DESC;
+ORDER BY total_products DESC;
 -- question 0.2
 -- I want to see a list of employees and all of the customers for that employee.   Employee name will be duplicated in the result set.   I want to see the employee first and last name
 -- and the customer contact first and last name as well as the customer name
@@ -31,7 +31,7 @@ GROUP BY job_title;
 -- I want to see a list of all payments each customer has made.  Order the list by custoemr name ascending, then by the payment amount descending
 SELECT c.customer_name, p.customer_id, p.check_number, p.payment_date, p.amount
 FROM payments p, customers c
-ORDER BY p.customer_id asc, p.amount desc;
+ORDER BY p.customer_id ASC, p.amount DESC;
 -- question 0.6
 -- I want to see a list of products that have never been sold.   use ... not in ( select product_id from order_details ) in your where clause
 SELECT *
@@ -45,36 +45,36 @@ SELECT product_id from orderdetails
 SELECT *
 FROM customers c
 WHERE c.id NOT IN (
-SELECT customer_id from orders
+SELECT customer_id FROM orders
 );
 
 -- Question 1
 -- How many customer are handled by each office.  I want to see the office name and the count of the number of customers in that office.
 SELECT e.office_id,  COUNT(*) "Active Customers"
 FROM employees e, customers c
-Where c.sales_rep_employee_id = e.id
+WHERE c.sales_rep_employee_id = e.id
 GROUP BY e.office_id;
 -- Question 2
 -- I want to see the products with the most margin at the top of the table.  Include the product name, buy price, msrp, and margin in the results.  Margin is calculated (MSPR - buy_price) 
-select p.product_name, 
+SELECT p.product_name, 
 p.buy_price, msrp, 
 (p.msrp - p.buy_price) margin 
-from products p
-ORDER BY margin desc
+FROM products p
+ORDER BY margin DESC
 LIMIT 5;
 -- Question 2.5
 -- I want to see the top 5 customers in each state based on margin 
-select c.state, t.*
-from(
-select rank() over(PARTITION BY c.state order by sum(od.price_each * od.quantity_ordered) desc) state_rank,
+SELECT t.*
+FROM(
+SELECT  c.state, RANK() OVER(PARTITION BY c.state ORDER BY sum(od.price_each * od.quantity_ordered) DESC) state_rank, c.customer_name, c.id,
 sum(od.price_each * od.quantity_ordered) total_spent
-from customers c, orderdetails od, orders o
-where c.id = o.customer_id and o.id = od.order_id and c.country = 'USA'
+FROM customers c, orderdetails od, orders o
+WHERE c.id = o.customer_id AND o.id = od.order_id AND c.country = 'USA'
 GROUP BY c.id
-limit 5
-)t, customers c
-GROUP BY c.state, t.total_spent
-order by c.state, state_rank;
+)t
+GROUP BY t.total_spent, t.customer_name, t.id
+HAVING t.state_rank < 6
+ORDER BY t.state, state_rank;
 
 -- Question 3
 --  I want to see the top 5 salesmen in the company based on the total amount sold
@@ -86,7 +86,7 @@ order by c.state, state_rank;
 -- I want to see all of the orders that happened in 2004.   You can use a function called year(order_date) = 2004
 SELECT *
 FROM orders
-where year(order_date) = 2004;
+WHERE year(order_date) = 2004;
 -- Question 6
 -- I want to see the total amount of all orders grouped by the year
 SELECT year(o.order_date), COUNT(*)
