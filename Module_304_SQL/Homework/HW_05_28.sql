@@ -48,15 +48,33 @@ WHERE c.id NOT IN (
 SELECT customer_id from orders
 );
 
-
 -- Question 1
 -- How many customer are handled by each office.  I want to see the office name and the count of the number of customers in that office.
-
+SELECT e.office_id,  COUNT(*) "Active Customers"
+FROM employees e, customers c
+Where c.sales_rep_employee_id = e.id
+GROUP BY e.office_id;
 -- Question 2
 -- I want to see the products with the most margin at the top of the table.  Include the product name, buy price, msrp, and margin in the results.  Margin is calculated (MSPR - buy_price) 
-
+select p.product_name, 
+p.buy_price, msrp, 
+(p.msrp - p.buy_price) margin 
+from products p
+ORDER BY margin desc
+LIMIT 5;
 -- Question 2.5
 -- I want to see the top 5 customers in each state based on margin 
+select c.state, t.*
+from(
+select rank() over(PARTITION BY c.state order by sum(od.price_each * od.quantity_ordered) desc) state_rank,
+sum(od.price_each * od.quantity_ordered) total_spent
+from customers c, orderdetails od, orders o
+where c.id = o.customer_id and o.id = od.order_id and c.country = 'USA'
+GROUP BY c.id
+limit 5
+)t, customers c
+GROUP BY c.state, t.total_spent
+order by c.state, state_rank;
 
 -- Question 3
 --  I want to see the top 5 salesmen in the company based on the total amount sold
@@ -66,10 +84,15 @@ SELECT customer_id from orders
 
 -- Question 5 
 -- I want to see all of the orders that happened in 2004.   You can use a function called year(order_date) = 2004
-
+SELECT *
+FROM orders
+where year(order_date) = 2004;
 -- Question 6
 -- I want to see the total amount of all orders grouped by the year
-
+SELECT year(o.order_date), COUNT(*)
+FROM orders o
+GROUP BY year(o.order_date)
+ORDER BY year(order_date) desc;
 -- Question 7
 -- I want to see the top 5 products based on quantity sold across all orders
 
