@@ -64,15 +64,15 @@ ORDER BY margin DESC
 LIMIT 5;
 -- Question 2.5
 -- I want to see the top 5 customers in each state based on margin 
-SELECT t.*
+SELECT *
 FROM(
-SELECT  c.state, RANK() OVER(PARTITION BY c.state ORDER BY sum(od.price_each * od.quantity_ordered) DESC) state_rank, c.customer_name, c.id,
-sum(od.price_each * od.quantity_ordered) total_spent
-FROM customers c, orderdetails od, orders o
-WHERE c.id = o.customer_id AND o.id = od.order_id AND c.country = 'USA'
+SELECT  c.state, RANK() OVER(PARTITION BY c.state ORDER BY sum((p.msrp - p.buy_price) * od.quantity_ordered) DESC) state_rank, c.customer_name, c.id,
+sum((p.msrp - p.buy_price) * od.quantity_ordered) total_margin
+FROM customers c, orderdetails od, orders o, products p
+WHERE c.id = o.customer_id AND o.id = od.order_id AND p.id = od.product_id AND c.country = 'USA'
 GROUP BY c.id
 )t
-GROUP BY t.total_spent, t.customer_name, t.id
+GROUP BY t.total_margin, t.customer_name, t.id
 HAVING t.state_rank < 6
 ORDER BY t.state, state_rank;
 
