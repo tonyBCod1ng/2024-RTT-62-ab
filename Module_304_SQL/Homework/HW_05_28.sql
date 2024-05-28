@@ -11,8 +11,7 @@ ORDER BY total_products DESC;
 -- and the customer contact first and last name as well as the customer name
 SELECT CONCAT(e.lastname,", ", e.firstname) employee_name,
 c.customer_name,
-c.contact_firstname, 
-c.contact_lastname 
+CONCAT(c.contact_firstname, ", " ,c.contact_lastname ) contact_name
 FROM customers c, employees e
 WHERE c.sales_rep_employee_id = e.id
 ORDER BY e.id;
@@ -31,7 +30,8 @@ GROUP BY job_title;
 -- I want to see a list of all payments each customer has made.  Order the list by custoemr name ascending, then by the payment amount descending
 SELECT c.customer_name, p.customer_id, p.check_number, p.payment_date, p.amount
 FROM payments p, customers c
-ORDER BY p.customer_id ASC, p.amount DESC;
+WHERE p.customer_id = c.id 
+ORDER BY c.customer_name  ASC, p.amount DESC;
 -- question 0.6
 -- I want to see a list of products that have never been sold.   use ... not in ( select product_id from order_details ) in your where clause
 SELECT *
@@ -113,25 +113,38 @@ ORDER BY year(order_date) desc;
 -- Question 7
 -- I want to see the top 5 products based on quantity sold across all orders
 SELECT od.product_id ,sum(od.quantity_ordered) total_sold
-FROM orderdetails od
+FROM orderdetails od, orders o 
+WHERE od.order_id = o.id and o.status = 'Shipped'
 GROUP BY od.product_id
 ORDER BY total_sold desc
 LIMIT 5;
 -- question 7.5
 -- how many times has each product appeared in an order reguardless of how many were purchased.
 SELECT od.product_id, COUNT(*)
-from orderdetails od
+from orderdetails od, orders o 
 Group by od.product_id;
 -- question 7.6
 -- how many products would be out of stock baed on the amount sold acrosss tiem.  -- not sure if the data will spoort this .. basically 
 -- looking for any product where the sum of the quantity sold is greater than the quantity in stock
-
+select product_id, p.product_name, sum(quantity_ordered) as total_ordered, p.quantity_in_stock
+from orderdetails od, products p
+where p.id = od.product_id
+group by od.product_id
+having total_ordered > ( select quantity_in_stock from products pp where pp.id = od.product_id);
 -- question 7.9
 -- I want to see the distinct order status ordered alphabetically
+SELECT DISTINCT o.status 
+FROM orders o 
+order by o.status ASC;
 
 -- Question 8
 -- I want to see the office name and the distinct product lines that have been sold in that office.  This will require joining almost all of the tables.  
-
-
-
+SELECT DISTINCT ofc.city, pl.product_line 
+FROM offices ofc, employees e, customers c, orders o, orderdetails od, products p, productlines pl
+WHERE ofc.id  = e.office_id 
+AND c.sales_rep_employee_id = e.id 
+AND  o.customer_id = c.id 
+AND  od.order_id = o.id 
+AND od.product_id = p.id
+AND p.productline_id = pl.id;
 
