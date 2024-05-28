@@ -78,10 +78,27 @@ ORDER BY t.state, state_rank;
 
 -- Question 3
 --  I want to see the top 5 salesmen in the company based on the total amount sold
+SELECT t.id, sum(t.total_margin)
+from(
+SELECT e.id, c.customer_name, sum(od.price_each * od.quantity_ordered) total_margin
+FROM employees e, customers c, products p, orderdetails od, orders o
+where c.sales_rep_employee_id = e.id and c.id = o.customer_id AND o.id = od.order_id AND p.id = od.product_id
+GROUP BY e.id, c.customer_name
+order by e.id)t
+GROUP BY t.id
+LIMIT 5;
 
 -- Question 4
 -- I want to see the top 5 salesmen based on overall profit (margin)
-
+SELECT t.id, sum(t.total_margin)
+from(
+SELECT e.id, c.customer_name, sum((p.msrp - p.buy_price) * od.quantity_ordered) total_margin
+FROM employees e, customers c, products p, orderdetails od, orders o
+where c.sales_rep_employee_id = e.id and c.id = o.customer_id AND o.id = od.order_id AND p.id = od.product_id
+GROUP BY e.id, c.customer_name
+order by e.id)t
+GROUP BY t.id
+LIMIT 5;
 -- Question 5 
 -- I want to see all of the orders that happened in 2004.   You can use a function called year(order_date) = 2004
 SELECT *
