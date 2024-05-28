@@ -112,14 +112,16 @@ GROUP BY year(o.order_date)
 ORDER BY year(order_date) desc;
 -- Question 7
 -- I want to see the top 5 products based on quantity sold across all orders
-SELECT od.product_id ,COUNT(*)
+SELECT od.product_id ,sum(od.quantity_ordered) total_sold
 FROM orderdetails od
 GROUP BY od.product_id
-ORDER BY od.product_id ASC
+ORDER BY total_sold desc
 LIMIT 5;
 -- question 7.5
 -- how many times has each product appeared in an order reguardless of how many were purchased.
-SELECT
+SELECT od.product_id, COUNT(*)
+from orderdetails od
+Group by od.product_id;
 -- question 7.6
 -- how many products would be out of stock baed on the amount sold acrosss tiem.  -- not sure if the data will spoort this .. basically 
 -- looking for any product where the sum of the quantity sold is greater than the quantity in stock
