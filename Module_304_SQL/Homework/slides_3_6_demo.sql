@@ -67,3 +67,98 @@ INNER JOIN products p ON
 	p.id = od.product_id
 GROUP BY
 	od.id;
+
+SELECT
+	c.id,
+	c.customer_name,
+	o.id,
+	o.status
+FROM
+	customers c
+LEFT JOIN orders o ON
+	c.id = o.customer_id;
+
+SELECT
+	c.id,
+	c.customer_name,
+	o.id ,
+	o.status
+FROM
+	customers c
+LEFT JOIN orders o ON
+	c.id = o.customer_id
+WHERE
+	o.id IS NULL;
+
+SELECT
+	lastname,
+	firstname,
+	customer_name,
+	check_number,
+	amount
+FROM
+	employees e
+LEFT JOIN customers c ON
+	e.id = c.sales_rep_employee_id
+LEFT JOIN payments p ON
+	p.customer_id = c.id
+ORDER BY
+	c.customer_name,
+	p.check_number;
+
+SELECT
+	c.id ,
+	c.sales_rep_employee_id
+FROM
+	employees e
+RIGHT JOIN customers c
+ON
+	e.id = c.sales_rep_employee_id
+ORDER BY
+	c.customer_name;
+
+SELECT
+	m.id AS ManagerID,
+	m.lastname AS Manager,
+	e.lastname AS 'employee',
+	e.id AS EmployeeID
+FROM
+	employees e
+LEFT JOIN employees m ON
+	m.id = e.reports_to
+ORDER BY
+	m.id;
+-- another way to write the query above excluding the left join affect (will exclude the employee Murphy due to them not having a value in reports_to field)
+SELECT
+	m.id ManagerId,
+	m.lastname Manager,
+	e.lastname 'employee',
+	e.id EmployeeId
+FROM
+	employees e,
+	employees m
+WHERE
+	m.id = e.reports_to
+ORDER BY
+	m.id;
+
+SELECT
+	c1.city,
+	c1.customer_name,
+	c2.customer_name
+FROM
+	customers c1
+INNER JOIN customers c2 
+  ON
+	c1.city = c2.city
+	AND c1.customer_name > c2.customer_name
+ORDER BY
+	c1.city;
+
+SELECT firstname, lastname
+FROM employees 
+UNION 
+SELECT contact_firstname, contact_lastname
+FROM customers;
+
+
