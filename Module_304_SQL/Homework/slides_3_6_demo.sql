@@ -128,7 +128,9 @@ LEFT JOIN employees m ON
 	m.id = e.reports_to
 ORDER BY
 	m.id;
--- another way to write the query above excluding the left join affect (will exclude the employee Murphy due to them not having a value in reports_to field)
+-- another way to write the query above excluding the left join affect 
+-- (will exclude the employee Murphy due to them not having a value in reports_to field)
+
 SELECT
 	m.id ManagerId,
 	m.lastname Manager,
@@ -156,7 +158,7 @@ ORDER BY
 	c1.city;
 
 SELECT firstname, lastname
-FROM employees 
+FROM employees
 UNION 
 SELECT contact_firstname, contact_lastname
 FROM customers;
