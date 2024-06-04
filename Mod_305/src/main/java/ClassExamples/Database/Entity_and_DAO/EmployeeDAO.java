@@ -12,7 +12,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 class EmployeeDAO {
-    public List<Employee> findByFirstName(String firstName) {
+     List<Employee> findByFirstName(String firstName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         //code goes to run query
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -25,7 +25,7 @@ class EmployeeDAO {
         return result;
     }
 
-    public List<Employee> findByLastName(String lastName) {
+     List<Employee> findByLastName(String lastName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         //code goes to run query
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -38,7 +38,7 @@ class EmployeeDAO {
         return result;
     }
 
-    public Employee findById(Integer id) {
+     Employee findById(Integer id) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         //code goes to run query
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();

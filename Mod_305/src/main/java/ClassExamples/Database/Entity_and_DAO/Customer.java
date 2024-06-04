@@ -1,5 +1,7 @@
 package ClassExamples.Database.Entity_and_DAO;
-
+import jakarta.persistence.TypedQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+
 
 @Getter
 @Setter
