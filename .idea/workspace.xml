@@ -2,193 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02fef3a5-0c1b-4101-a69d-8a8334b46de3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/.idea/dictionaries/tonybcod1ng.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/products.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/BinaryConversionMech/BinaryToInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/ArrayBianNites.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/ArrayDelete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/ArrayInsert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/ArraySort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/CoffeeShoppe/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/CoffeeShoppe/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/CoffeeShoppe/ShopKeeper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/EnumEx.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/FileExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/FileReaderDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/FileWriterExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/ForEach.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/ForLoopDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/Generic_HandsOn/Calc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/Generic_HandsOn/MainEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/HashMapExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/Hero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/InterfacingUrFears/KBAWork.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/InterfacingUrFears/MyFuncInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/LeapYear.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/Lesson_303_11/Examples.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/MorePractice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/PerimeterInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/SBA1Practice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/SBAPracticeOne/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/SBAPrax2/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/ScannerClasswrk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/StringBufferEx.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/StringExmpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/SwitchGears.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Class_Examples/WhileLoopDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_1/Boy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_1/Girl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_1/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_1/TestPeople.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_2/Circle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_2/Rectangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_2/Shape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_2/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_3/Circle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_3/MyRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_3/Rectangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_3/Shape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_3/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_4/Circle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_4/Movable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_4/MyRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_4/Rectangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_4/Shape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_10_4/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_1/DemoClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_1/GMultipleDatatype/GMultipleDatatype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_1/GMultipleDatatype/MyRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_1/MyRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_2/AccessElementsFromArrayListExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_2/CreateArrayListExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_2/CreateArrayListFromCollectionExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_2/IterateOverArrayList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_2/RemoveElementsFromArrayList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_2/SearchElementsInArrayListExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_3/AddDataToArrayList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_3/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_3/ShowData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_4/LinkedListExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_4/LinkedListSortExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/Cities_Comparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/ExampleFour.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/ExampleOne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/ExampleThree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/ExampleTwo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/TreeSetExampleCom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/TreeSetExampleOne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/TreeSetExampleThree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_5/TreeSetExampleTwo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_6/CustomComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_6/CustomComparator_Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_6/ExampleOneHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_6/ExampleTreemapOne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_6/ExampleTreemapTwo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_6/ExampletwoHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_7/PhoneDirectoryWithTreeMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_11_7/TestPhoneDirectory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_13_1/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_13_1/Delimiter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_13_1/MyRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_13_2/NioExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_13_2/NioExampleTwo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/FuncInterfaceExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/Generic_functionInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/MyCalcRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/MyComparingClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/MyComparorRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/MyRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_14_1/NormalClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_1/ArithmeticOperatorsDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_1/AssignmentOperatorsDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_1/BitwiseOperatorsDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_1/LogicalOperatorsDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_1/RelationalOperatorsDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_1/TernaryOperatorDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_1/UnaryOperator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_2/AutoPromoteTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_2/AutoTypeConversion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_2_2/ExplicitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/CharAtDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/CompareToDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/ConcatDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/ContainExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/DemoReplaceAll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/FindString.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/IsEmptyExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/LengthDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/ReplaceDemoMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/SplitDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/StringLowerExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/StringTrimExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/StringUpperExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/SubtringDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/TestStringComparison.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/Teststringcomparison2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_3_1/Teststringcomparison3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_9_1/HumanBeing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_9_2/Doctor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_9_2/Hospital.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/GLAB_303_9_2/Surgeon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/HackerRank/CompareStrings.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/HackerRank/Java SubString.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/HackerRank/String Introduction.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/HackerRank/StringReverse.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/HackerRank/StringTokens.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/HackerRank/stdin_Stdout II.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/HackerRank/stdin_std.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_1/FireMonster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_1/Monster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_1/StoneMonster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_1/TestMonster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_1/WaterMonster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_2/PA_303_10_2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_3/AdultUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_3/KidUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_3/LibraryInterfaceDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_10_3/LibraryUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_12_1/Java_Exception_Handling(Try-Catch).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_12_1/Java_Exception_Handling.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_2_1/VariableHW.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_2_3/OpsAndNums.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_4_1/ControlFlowEx.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_5_1/LoopHW.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_9_1/Java Inheritance I.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_9_1/Java Inheritance II.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_9_1/Java Method Overriding 2 (Super Keyword).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_303_9_1/Java Method Overriding.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/PA_308_7_1/ArrayAssignment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/Slide_303_9_DebugAssignment/Demonic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/Slide_303_9_DebugAssignment/myMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/Java_Homework/file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Classwork/src/main/java/SYnthesizer/TestSynth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Class_Examples/SBA_Prax.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Class_Examples/SQL_Classwork.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Class_Examples/classic_models.mwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/GLAB_304_4_1.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/GLAB_304_6_1.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/GLAB_304_6_2.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/GLAB_304_7_1.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/HW_05_28.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/PA_304_4_1.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/SBA_Tinkerange.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/SBA_review_notes.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/classic_models.mwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_304_SQL/Homework/slides_3_6_demo.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mod_305/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mod_305/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mod_305/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mod_305/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +26,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tonybcod1ng/Desktop/2024-RTT-62-ab&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -224,6 +41,8 @@
       <updated>1717523065200</updated>
       <workItem from="1717523066202" duration="7000" />
       <workItem from="1717523394724" duration="19000" />
+      <workItem from="1717525150245" duration="13000" />
+      <workItem from="1717525805714" duration="4000" />
     </task>
     <servers />
   </component>
