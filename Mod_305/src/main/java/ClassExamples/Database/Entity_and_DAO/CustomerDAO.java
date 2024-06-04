@@ -24,22 +24,22 @@ public class CustomerDAO {
         } finally {
             session.close();
         }
-    };
-     Customer findByContactFirstName(String firstName) {
+    }
+
+    ;
+
+    List<Customer> findByContactFirstName(String firstName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         //code goes to run query
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
-        String hql = "SELECT c.contactFirstname FROM Customer c WHERE c.contactFirstname = :contactFirstName";
-        try {
-            TypedQuery<Customer> query = session.createQuery(hql, Customer.class);
-            query.setParameter("contactFirstName", firstName);
-            Customer result = query.getSingleResult();
-            return result;
-        } catch (Exception e) {
-            return null;
-        } finally {
-            session.close();
-        }
+        String hql = "SELECT c FROM Customer c WHERE c.contactFirstname = :contactFirstName and c.salesRepEmployeeId IS NOT null";
+
+        TypedQuery<Customer> query = session.createQuery(hql, Customer.class);
+        query.setParameter("contactFirstName", firstName);
+        List<Customer> result = query.getResultList();
+        session.close();
+        return result;
+
     }
 }
