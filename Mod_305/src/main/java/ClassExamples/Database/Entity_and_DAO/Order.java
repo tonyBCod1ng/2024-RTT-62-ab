@@ -28,5 +28,7 @@ public class Order {
     private Date requiredDate;
     @Column(name = "status")
     private String status;
+    @Column(name = "comments",columnDefinition = "Text")
+    private String comment;
 
 }
