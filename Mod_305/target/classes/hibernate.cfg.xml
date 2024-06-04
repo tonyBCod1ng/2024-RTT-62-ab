@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- setting up hibernate for MySQL -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Database connection setup -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/classic_models</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Safe+!st</property>
+
+        <!-- adjust connection pool size here -->
+        <property name="connection.pool_size">3</property>
+
+        <!-- shows which queries are running -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <!-- hibernate validation -->
+        <property name="hbm2ddl.auto">validate</property>
+        <mapping class="ClassExamples.Database.Entity_and_DAO.Employee"/>
+        <mapping class="ClassExamples.Database.Entity_and_DAO.Customer"/>
+        <mapping class="ClassExamples.Database.Entity_and_DAO.OrderDetail"/>
+        <mapping class="ClassExamples.Database.Entity_and_DAO.Product"/>
+        <mapping class="ClassExamples.Database.Entity_and_DAO.Order"/>
+    </session-factory>
+</hibernate-configuration>
