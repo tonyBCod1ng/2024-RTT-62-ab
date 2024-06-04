@@ -1,5 +1,4 @@
 package ClassExamples.Database.Entity_and_DAO;
-//comment
 
 import java.util.ArrayList;
 import java.util.List;
