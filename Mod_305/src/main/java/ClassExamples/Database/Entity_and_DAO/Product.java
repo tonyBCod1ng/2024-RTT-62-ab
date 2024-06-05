@@ -35,6 +35,6 @@ public class Product {
     private Short quantityInStock;
     @Column(name = "buy_price")
     private BigDecimal buyPrice;
-    @Column(name = "msrp")
-    private BigDecimal msrp;
+    @Column(name = "msrp", columnDefinition = "Decimal")
+    private float msrp;
 }

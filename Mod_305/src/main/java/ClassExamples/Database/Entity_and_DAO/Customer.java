@@ -44,7 +44,7 @@ class Customer {
    private String country;
     @Column(name = "sales_rep_employee_id")
    private int salesRepEmployeeId;
-    @Column(name = "credit_limit")
-    private BigDecimal creditLimit;
+    @Column(name = "credit_limit", columnDefinition = "Decimal")
+    private float creditLimit;
 
 }
