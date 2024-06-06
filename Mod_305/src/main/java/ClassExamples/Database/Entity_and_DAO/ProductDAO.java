@@ -12,8 +12,17 @@ import java.util.Scanner;
 class ProductDAO {
     private SessionFactory factory = new Configuration().configure().buildSessionFactory();
     private String hql = "";
+    void update(Product product) {
+        Session session = factory.openSession();
+        session.getTransaction().begin();
 
-     void insert(Product product) {
+        // this is the only line that changed
+        session.merge(product);
+
+        session.getTransaction().commit();
+        session.close();
+    }
+    void insert(Product product) {
         Session session = factory.openSession();
 
         // begin the transaction
@@ -46,11 +55,23 @@ class ProductDAO {
 
     }
 
+    String gatherStringFromUser(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter name: ");
+        String input = scanner.nextLine();
+        scanner.close();
+        return input;
+    }
+    Integer gatherIntegerFromUser(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter amount: ");
+        Integer input = scanner.nextInt();
+        scanner.close();
+        return input;
+    }
     List<Product> findByName() {
         Session session = factory.openSession();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter product name: ");
-        String productName = scanner.nextLine();
+        String productName = gatherStringFromUser();
         String hql = "SELECT p FROM Product p WHERE p.productName =:productName";
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
         query.setParameter("productName", productName);
@@ -61,11 +82,20 @@ class ProductDAO {
 
     }
 
+    void listAll() {
+        Session session = factory.openSession();
+        String hql = "SELECT p FROM Product p";
+        TypedQuery<Product> query = session.createQuery(hql, Product.class);
+        List<Product> products = query.getResultList();
+        session.close();
+        for (Product product : products) {
+            System.out.println(product.getId() + " .) " + product.getProductName() + "Amt in stock:" + product.getQuantityInStock());
+        }
+    }
+
     List<Product> findByNameLikeness() {
         Session session = factory.openSession();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter product name: ");
-        String productName = scanner.nextLine();
+        String productName = gatherStringFromUser();
         String hql = "SELECT p FROM Product p WHERE lower(p.productName) LIKE lower(CONCAT('%',:productName,'%'))";
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
         query.setParameter("productName", productName);
@@ -76,4 +106,17 @@ class ProductDAO {
 
     }
 
+    void updateStock() {
+        listAll();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter product id: ");
+        int id = scanner.nextInt();
+        Product product = findByID(id);
+        int amount = gatherIntegerFromUser();
+        product.setQuantityInStock(amount);
+        update(product);
+        System.out.println("Done! Quantity updated to: " + product.getQuantityInStock());
+
+    }
 }
+

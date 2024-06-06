@@ -18,6 +18,7 @@ class JDMCDemo_ProdDAO {
         product.setQuantityInStock(500);
         productDAO.insert(product);*/
         //productDAO.findByName();
-        productDAO.findByNameLikeness();
+        //productDAO.findByNameLikeness();
+        productDAO.updateStock();
     }
 }
