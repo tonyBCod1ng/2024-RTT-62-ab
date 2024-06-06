@@ -17,7 +17,8 @@ import java.math.BigDecimal;
 @Table(name = "customers")
 class Customer {
     @Id
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ToString.Exclude
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sales_rep_employee_id", nullable = false)
     private Employee employee;
     @Column(name = "id")

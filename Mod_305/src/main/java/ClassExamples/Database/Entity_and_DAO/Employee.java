@@ -1,9 +1,6 @@
 package ClassExamples.Database.Entity_and_DAO;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -14,6 +11,7 @@ import java.util.List;
 @Entity
 @Table(name = "employees")
 public class Employee {
+ @ToString.Exclude
  @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 private List<Customer> customers;
  @Id
