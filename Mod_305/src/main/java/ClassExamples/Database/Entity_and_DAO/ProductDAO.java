@@ -7,11 +7,13 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import java.util.List;
+import java.util.Scanner;
 
-public class ProductDAO {
+class ProductDAO {
     private SessionFactory factory = new Configuration().configure().buildSessionFactory();
-    private  String hql = "";
-    public void insert(Product product) {
+    private String hql = "";
+
+     void insert(Product product) {
         Session session = factory.openSession();
 
         // begin the transaction
@@ -44,8 +46,11 @@ public class ProductDAO {
 
     }
 
-    List<Product> findByName(String productName) {
+    List<Product> findByName() {
         Session session = factory.openSession();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter product name: ");
+        String productName = scanner.nextLine();
         String hql = "SELECT p FROM Product p WHERE p.productName =:productName";
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
         query.setParameter("productName", productName);
@@ -56,9 +61,11 @@ public class ProductDAO {
 
     }
 
-    List<Product> findByNameLikeness(String productName) {
+    List<Product> findByNameLikeness() {
         Session session = factory.openSession();
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter product name: ");
+        String productName = scanner.nextLine();
         String hql = "SELECT p FROM Product p WHERE lower(p.productName) LIKE lower(CONCAT('%',:productName,'%'))";
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
         query.setParameter("productName", productName);

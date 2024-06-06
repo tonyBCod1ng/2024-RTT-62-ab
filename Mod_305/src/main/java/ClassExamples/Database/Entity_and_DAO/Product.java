@@ -29,10 +29,10 @@ public class Product {
     private String productVendor;
     @Column(name = "product_description")
     private String productDescription;
-    @Column(name = "quantity_in_stock")
-    private Short quantityInStock;
-    @Column(name = "buy_price")
-    private BigDecimal buyPrice;
-    @Column(name = "msrp", columnDefinition = "Decimal")
+    @Column(name = "quantity_in_stock", columnDefinition = "SMALLINT")
+    private Integer quantityInStock;
+    @Column(name = "buy_price", columnDefinition = "Decimal", precision = 2)
+    private float buyPrice;
+    @Column(name = "msrp", columnDefinition = "Decimal", precision = 2)
     private float msrp;
 }
