@@ -25,7 +25,7 @@ class JDBCDemo_CustDAO {
 //        customer.setPostalCode("12315");
 //        customer.setSalesRepEmployeeId(1088);
 //        customerDAO.insert(customer);
-        customerDAO.findCustomerById();
+        customerDAO.updateContact();
 
     }
     // System.out.println(customerByName.isEmpty() ? "No records" : customerByName.getFirst().getCustomerName());

@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDMCDemo_ProdDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/ProductDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mod_305.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mod_305.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/CustomerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_CustDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_CustDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +46,9 @@
     "Application.JDBCDemo.executor": "Run",
     "Application.JDBCDemo_CustDAO.executor": "Run",
     "Application.JDBCDemo_EmpDAO.executor": "Run",
+    "Application.JDMCDemo_ProdDAO.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Mod_305",
     "node.js.detected.package.eslint": "true",
@@ -47,8 +56,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -61,7 +76,7 @@
       <updated>1717526239225</updated>
       <workItem from="1717526240159" duration="16457000" />
       <workItem from="1717551727773" duration="991000" />
-      <workItem from="1717679653022" duration="1932000" />
+      <workItem from="1717679653022" duration="9660000" />
     </task>
     <servers />
   </component>

@@ -42,6 +42,6 @@ class Customer {
     @Column(name = "sales_rep_employee_id")
    private Integer salesRepEmployeeId;
     @Column(name = "credit_limit", columnDefinition = "Decimal")
-    private float creditLimit;
+    private Double creditLimit;
 
 }
