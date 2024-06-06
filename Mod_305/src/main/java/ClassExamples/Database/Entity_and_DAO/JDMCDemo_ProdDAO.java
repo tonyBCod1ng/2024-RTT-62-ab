@@ -19,6 +19,7 @@ class JDMCDemo_ProdDAO {
         productDAO.insert(product);*/
         //productDAO.findByName();
         //productDAO.findByNameLikeness();
-        productDAO.updateStock();
+        //productDAO.updateStock();
+        productDAO.findProductById();
     }
 }
