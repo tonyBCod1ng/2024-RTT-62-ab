@@ -8,9 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_CustDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_CustDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +25,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2hQVMGQBKGaF8Poa87s2027G3QN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,6 +38,7 @@
   "keyToString": {
     "Application.JDBCDemo.executor": "Run",
     "Application.JDBCDemo_CustDAO.executor": "Run",
+    "Application.JDBCDemo_EmpDAO.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Mod_305",
@@ -48,6 +47,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -59,7 +59,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717526239225</updated>
-      <workItem from="1717526240159" duration="16027000" />
+      <workItem from="1717526240159" duration="16457000" />
+      <workItem from="1717551727773" duration="991000" />
+      <workItem from="1717679653022" duration="1932000" />
     </task>
     <servers />
   </component>

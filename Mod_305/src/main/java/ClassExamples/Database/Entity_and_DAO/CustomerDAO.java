@@ -97,7 +97,7 @@ class CustomerDAO {
         String lastName = scanner.next();
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
-        String hql = "SELECT c FROM Customer c WHERE c.id = :id and c.salesRepEmployeeId IS NOT null";
+        String hql = "SELECT c FROM Customer c WHERE c.id = :id";
 
         TypedQuery<Customer> query = session.createQuery(hql, Customer.class);
         query.setParameter("id", customerId);

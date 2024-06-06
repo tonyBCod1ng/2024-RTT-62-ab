@@ -1,12 +1,9 @@
 package ClassExamples.Database.Entity_and_DAO;
 import jakarta.persistence.TypedQuery;
+import lombok.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 
@@ -15,13 +12,13 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Entity
 @Table(name = "customers")
 class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-   private int id;
+   private Integer id;
     @Column(name = "customer_name")
    private String customerName;
     @Column(name = "contact_firstname")
@@ -43,7 +40,7 @@ class Customer {
     @Column(name = "country")
    private String country;
     @Column(name = "sales_rep_employee_id")
-   private int salesRepEmployeeId;
+   private Integer salesRepEmployeeId;
     @Column(name = "credit_limit", columnDefinition = "Decimal")
     private float creditLimit;
 

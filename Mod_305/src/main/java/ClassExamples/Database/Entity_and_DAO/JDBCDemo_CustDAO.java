@@ -8,22 +8,23 @@ class JDBCDemo_CustDAO {
         CustomerDAO customerDAO = new CustomerDAO();
 //         List<Customer> customerByName = customerDAO.findByCustomerName("Herkku Gifts") == null ? new ArrayList<>(0) : customerDAO.findByCustomerName("Herkku Gifts");
 //         List<Customer> contact = customerDAO.findByContactFirstName("Roland");
+//         System.out.println(contact);
 //         for (Customer customer : contact) {
 //             System.out.println(customer.getCustomerName());
-        Customer customer = new Customer();
-        customer.setId(8888);
-        customer.setCustomerName("John Doe Industries");
-        customer.setContactFirstname("John");
-        customer.setContactLastname("Doe");
-        customer.setPhone("123-456-7890");
-        customer.setCreditLimit(5555.00f);
-        customer.setAddressLine1("123 Side Ave.");
-        customer.setCity("Krapopolis");
-        customer.setState("Realanoy");
-        customer.setCountry("Brunited States");
-        customer.setPostalCode("12345");
-        customer.setSalesRepEmployeeId(1088);
-       // customerDAO.insert(customer);
+//        Customer customer = new Customer();
+//        customer.setId(888);
+//        customer.setCustomerName("Dark Industries");
+//        customer.setContactFirstname("Tony");
+//        customer.setContactLastname("Dark");
+//        customer.setPhone("213-416-7890");
+//        customer.setCreditLimit(55550.00f);
+//        customer.setAddressLine1("1273 Dolby Ave.");
+//        customer.setCity("Racx");
+//        customer.setState("Wynoming");
+//        customer.setCountry("Brunited States");
+//        customer.setPostalCode("12315");
+//        customer.setSalesRepEmployeeId(1088);
+//        customerDAO.insert(customer);
         customerDAO.findCustomerById();
 
     }
