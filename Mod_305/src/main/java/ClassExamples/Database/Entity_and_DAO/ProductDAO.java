@@ -134,9 +134,7 @@ void findProductById(){
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
         List<Product> products = query.getResultList();
         session.close();
-        for (Product product : products) {
-            System.out.println(product.getId() + " .) " + product.getProductName() + "Amt in stock:" + product.getQuantityInStock());
-        }
+
     }
 
     List<Product> findByNameLikeness() {
@@ -147,9 +145,15 @@ void findProductById(){
         query.setParameter("productName", selectedProductName);
         List<Product> products = query.getResultList();
         session.close();
-        System.out.println("Likeness name list: " + products);
+        System.out.println("Likeness name list: ");
+        if (products.size() > 0) {
+            for (Product product : products) {
+                System.out.println(product.getId() + ".) " + product.getProductName() + " | Amt in stock: " + product.getQuantityInStock());
+            }
+        } else {
+            System.out.println("No relevant product found");
+        }
         return products;
-
     }
 
     void updateStock() {
