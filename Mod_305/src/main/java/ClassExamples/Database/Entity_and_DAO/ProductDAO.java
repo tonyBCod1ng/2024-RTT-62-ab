@@ -77,18 +77,19 @@ void findProductById(){
 
     }
 
-    String gatherStringFromUser(){
-       while (true) {
-           try {
-               System.out.println("Enter name: ");
-               String input = scanner.nextLine();
-               scanner.close();
-               return input;
-           } catch (Exception e) {
-               System.out.println("Please enter a string.");
-               scanner.nextLine();
-           }
-       }
+
+    String getString() {
+        while (true) {
+            try {
+                System.out.println("Enter name: ");
+                String input = scanner.nextLine();
+                scanner.close();
+                return input;
+            } catch (Exception e) {
+                System.out.println("Please enter a string.");
+                scanner.nextLine();
+            }
+        }
     }
     Integer gatherIntegerFromUser(){
         while (true) {
@@ -117,7 +118,7 @@ void findProductById(){
     }
     List<Product> findByName() {
         Session session = factory.openSession();
-        String selectedProductName = gatherStringFromUser();
+        String selectedProductName = getString();
         String hql = "SELECT p FROM Product p WHERE p.productName =:productName";
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
         query.setParameter("productName", selectedProductName);
@@ -139,7 +140,7 @@ void findProductById(){
 
     List<Product> findByNameLikeness() {
         Session session = factory.openSession();
-        String selectedProductName = gatherStringFromUser();
+        String selectedProductName = getString();
         String hql = "SELECT p FROM Product p WHERE lower(p.productName) LIKE lower(CONCAT('%',:productName,'%'))";
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
         query.setParameter("productName", selectedProductName);

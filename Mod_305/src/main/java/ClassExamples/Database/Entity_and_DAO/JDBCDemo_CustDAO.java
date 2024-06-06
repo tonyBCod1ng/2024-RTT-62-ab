@@ -6,9 +6,10 @@ import java.util.List;
 class JDBCDemo_CustDAO {
     public static void main(String[] args) {
         CustomerDAO customerDAO = new CustomerDAO();
-//         List<Customer> customerByName = customerDAO.findByCustomerName("Herkku Gifts") == null ? new ArrayList<>(0) : customerDAO.findByCustomerName("Herkku Gifts");
-//         List<Customer> contact = customerDAO.findByContactFirstName("Roland");
-//         System.out.println(contact);
+         List<Customer> customerByName = customerDAO.findByCustomerName("Herkku Gifts") == null ? new ArrayList<>(0) : customerDAO.findByCustomerName("Herkku Gifts");
+         System.out.println(customerByName);
+         /*List<Customer> contact = customerDAO.findByContactFirstName("Roland");
+        System.out.println(contact);*/
 //         for (Customer customer : contact) {
 //             System.out.println(customer.getCustomerName());
 //        Customer customer = new Customer();
@@ -25,7 +26,7 @@ class JDBCDemo_CustDAO {
 //        customer.setPostalCode("12315");
 //        customer.setSalesRepEmployeeId(1088);
 //        customerDAO.insert(customer);
-        customerDAO.updateContact();
+       // customerDAO.updateContact();
 
     }
     // System.out.println(customerByName.isEmpty() ? "No records" : customerByName.getFirst().getCustomerName());

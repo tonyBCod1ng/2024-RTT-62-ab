@@ -16,7 +16,7 @@ class JDBCDemo_EmpDAO {
         List<Employee> employeesByFirst = employeeDAO.findByFirstName(input);
         List<Employee> employeesByLast = employeeDAO.findByLastName(inputLastName);
         Employee employeesById = employeeDAO.findById(id);
-        System.out.println( employeesById.getLastname() + ", " + employeesById.getFirstname() + " | " + employeesById.getId());
+        System.out.println(employeesById == null ? "No Records" : employeesById.getLastname() + ", " + employeesById.getFirstname() + " | " + employeesById.getId());
 
     }
 }
