@@ -10,8 +10,8 @@
 
         <!-- Database connection setup -->
         <property name="connection.url">jdbc:mysql://localhost:3306/classic_models</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">Safe+!st</property>
+        <property name="connection.username">dev</property>
+        <property name="connection.password">steelkitten642!</property>
         <property name="hibernate.enable_lazy_load_no_trans">true</property>
         <!-- adjust connection pool size here -->
         <property name="connection.pool_size">3</property>
