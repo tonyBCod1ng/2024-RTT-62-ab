@@ -87,7 +87,7 @@ class OrderDAO {
                 Integer input = scanner.nextInt();
                 return input;
             } catch (Exception e) {
-                System.out.println("Please enter a valid Order ID (should be a string).");
+                System.out.println("Please enter a valid Order ID (should be a number).");
                 scanner.nextLine();
             }
         }

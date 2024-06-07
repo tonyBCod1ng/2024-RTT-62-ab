@@ -7,17 +7,21 @@ public class JDBCDemo_OrderDAO {
         OrderDAO orderDAO = new OrderDAO();
       /* Order pulledOrder = orderDAO.findOrderById();
        System.out.println(pulledOrder);*/
-       /* List<Order> pulledOrderList = orderDAO.findByCustID();
+        List<Order> pulledOrderList = orderDAO.findByCustID();
         System.out.println(" __________________________________________________");
         System.out.println("|Customer ID | Order Date | Order Status | Comment |");
         System.out.println("|__________________________________________________|");
-        for (Order order : pulledOrderList) {
-            System.out.println("| " + order.getCustomerId() + "        | " + order.getOrderDate() + " | " + order.getStatus() + "      |" + order.getComment() + "     |");
-            //System.out.println("|                           |");
+        if (pulledOrderList.isEmpty()) {
+            System.out.println("                 No orders found");
+        } else {
+            for (Order order : pulledOrderList) {
+                System.out.println("| " + order.getCustomerId() + "        | " + order.getOrderDate() + " | " + order.getStatus() + "      |" + order.getComment() + "     |");
+                //System.out.println("|                           |");
+            }
         }
-        System.out.println("___________________________________________________");*/
+        System.out.println("___________________________________________________");
 
-        orderDAO.commentOrder();
+        //orderDAO.commentOrder();
 
     }
 }
