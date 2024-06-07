@@ -26,7 +26,7 @@ class OrderDAO {
         session.close();
     }
 
-    Order findOrderById() {
+    Order gracefulFindById() {
         Order foundOrder = null;
         while (foundOrder == null) {
             foundOrder = findByID();

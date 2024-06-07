@@ -17,7 +17,7 @@ class run {
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
-                Order pulledOrder = orderDAO.findOrderById();
+                Order pulledOrder = orderDAO.gracefulFindById();
                 System.out.println(pulledOrder);
                 break;
             case 2:

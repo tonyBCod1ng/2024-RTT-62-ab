@@ -40,7 +40,7 @@ class ProductDAO {
         session.close();
     }
 
-Product findProductById(){
+Product gracefulFindById(){
     Product foundProduct = null;
     while (foundProduct == null) {
         foundProduct = findByID();

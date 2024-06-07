@@ -8,18 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/envo.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDetailDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetailDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a/storage_v2/_src_/schema/classic_models.t8b23w.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDetailDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetailDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/ProductDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
@@ -86,7 +82,7 @@
       <workItem from="1717551727773" duration="991000" />
       <workItem from="1717679653022" duration="34762000" />
       <workItem from="1717732440680" duration="9162000" />
-      <workItem from="1717768687767" duration="9582000" />
+      <workItem from="1717768687767" duration="17293000" />
     </task>
     <servers />
   </component>

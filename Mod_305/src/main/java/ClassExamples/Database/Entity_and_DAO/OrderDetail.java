@@ -23,16 +23,17 @@ public class OrderDetail {
     @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    @Column(name = "id")
-    private Integer id;
+    private int id;
    @Column(name = "order_id", insertable = false, updatable = false)
-    private Integer orderID;
+    private int orderID;
    @Column(name = "product_id", insertable = false, updatable = false)
-    private Integer productID;
+    private int productID;
    @Column(name = "quantity_ordered")
-    private Integer quantityOrdered;
-   @Column(name = "price_each", columnDefinition = "Decimal", precision = 2)
-    private Double priceEach;
-   @Column(name = "order_line_number", columnDefinition = "SMALLINT")
-    private Integer orderLineNumber;
+    private int quantityOrdered;
+    @Column(name = "price_each", columnDefinition = "Decimal", precision = 2)
+    private double priceEach = 0.00;
+
+    @Column(name = "order_line_number", columnDefinition = "SMALLINT")
+    private int orderLineNumber;
 
 }
