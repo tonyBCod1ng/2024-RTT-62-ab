@@ -85,7 +85,7 @@ public class OrderDetailDAO {
     OrderDetail findByID() {
 
         Session session = factory.openSession();
-        Integer orderDetailId = getOrderId();
+        Integer orderDetailId = getOrderIdFromUsr();
         String hql = "select od from OrderDetail od where od.id = :orderDetailId";
 
         // this is setting up the query (essentially this is using a prepared statement inside)
@@ -112,7 +112,7 @@ public class OrderDetailDAO {
 
     }
 
-    Integer getOrderId() {
+    Integer getOrderIdFromUsr() {
         while (true) {
             try {
                 System.out.println("Enter Order ID: ");

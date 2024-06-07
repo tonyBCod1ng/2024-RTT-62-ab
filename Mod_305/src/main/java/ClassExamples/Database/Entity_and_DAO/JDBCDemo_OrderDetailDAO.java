@@ -37,10 +37,13 @@ public class JDBCDemo_OrderDetailDAO {
             System.out.println(orderDetail1);
             orderDetailDAO.update(orderDetail1);
         }
-        //System.out.println("Done! Added " + orderDetail + " to the table.");
-        /*for (OrderDetail od : orderDetails){
-            System.out.println(od);
-        }*/
+        System.out.println("Done! Added " + orderDetail1 + " to the table.");
+        System.out.println("________________________________________________________________________");
+        System.out.println("|    Order Id    |    Product ID    |    Amt Ordered    |     Price     |");
+        System.out.println("________________________________________________________________________");
+        for (OrderDetail od : order.getOrderDetails()){
+            System.out.println("|    " + od.getOrderID() + "       |       " + od.getProductID() + "          |       " + od.getQuantityOrdered() + "       |       " + od.getPriceEach());
+        }
     }
     public static void main(String[] args) {
         JDBCDemo_OrderDetailDAO dao = new JDBCDemo_OrderDetailDAO();

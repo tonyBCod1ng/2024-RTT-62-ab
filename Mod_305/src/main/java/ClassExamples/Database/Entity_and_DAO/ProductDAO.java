@@ -108,7 +108,7 @@ Product gracefulFindById(){
     Integer gatherIDFromUser(){
         while (true) {
             try {
-                System.out.println("Enter ID: ");
+                System.out.println("Enter product ID: ");
                 Integer input = scanner.nextInt();
                 return input;
             } catch (Exception e) {
