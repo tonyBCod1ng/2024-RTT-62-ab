@@ -12,7 +12,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 class EmployeeDAO {
-    public void insert(Employee employee) {
+     void insert(Employee employee) {
         // these 2 lines of code prepare the hibernate session for use
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();

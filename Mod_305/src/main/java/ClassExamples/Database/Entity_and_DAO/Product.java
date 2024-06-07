@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -17,6 +19,9 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
+    @ToString.Exclude
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    List<OrderDetail> orderDetails;
     @Column(name = "product_code")
     private String productCode;
     @Column(name = "product_name")
@@ -31,8 +36,8 @@ public class Product {
     private String productDescription;
     @Column(name = "quantity_in_stock", columnDefinition = "SMALLINT")
     private Integer quantityInStock;
-    @Column(name = "buy_price", columnDefinition = "Decimal", precision = 2)
-    private float buyPrice;
-    @Column(name = "msrp", columnDefinition = "Decimal", precision = 2)
-    private float msrp;
+    @Column(name = "buy_price", columnDefinition = "Decimal")
+    private Double buyPrice;
+    @Column(name = "msrp", columnDefinition = "Decimal")
+    private Double msrp;
 }

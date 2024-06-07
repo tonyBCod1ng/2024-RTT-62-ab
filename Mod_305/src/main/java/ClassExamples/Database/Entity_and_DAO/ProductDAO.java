@@ -40,12 +40,13 @@ class ProductDAO {
         session.close();
     }
 
-void findProductById(){
+Product findProductById(){
     Product foundProduct = null;
     while (foundProduct == null) {
         foundProduct = findByID();
         if (foundProduct == null) { System.out.println("No relevant product found");}
     }
+    return foundProduct;
 }
     Product findByID() {
 
