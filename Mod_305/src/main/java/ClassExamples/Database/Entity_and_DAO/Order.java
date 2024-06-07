@@ -13,10 +13,14 @@ import java.util.Date;
 @Entity
 @Table(name = "orders")
 public class Order {
+    @ToString.Exclude
+   @ManyToOne(fetch = FetchType.LAZY)
+   @JoinColumn(name = "customer_id", nullable = false)
+   private Customer customer;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "customer_id")
+    @Column(name = "customer_id", insertable = false, updatable = false)
     private int customerId;
     @Column(name = "order_date")
     @Temporal(TemporalType.DATE)
