@@ -7,7 +7,6 @@
     <session-factory>
         <!-- setting up hibernate for MySQL -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
         <!-- Database connection setup -->
         <property name="connection.url">jdbc:mysql://localhost:3306/classic_models</property>

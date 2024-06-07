@@ -17,14 +17,14 @@ import java.util.List;
 @Entity
 @Table(name = "customers")
 class Customer {
-    @Id
+    @ToString.Exclude
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Order> orders;
     @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sales_rep_employee_id", nullable = false)
     private Employee employee;
-    @ToString.Exclude
-    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Order> orders;
+    @Id
     @Column(name = "id")
    private Integer id;
     @Column(name = "customer_name")
