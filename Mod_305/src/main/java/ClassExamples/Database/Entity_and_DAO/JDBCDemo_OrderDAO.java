@@ -1,5 +1,7 @@
 package ClassExamples.Database.Entity_and_DAO;
 
+import jdk.jshell.Snippet;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,7 +23,10 @@ class RunOrderDao {
         switch (choice) {
             case 1:
                 Order pulledOrder = orderDAO.gracefulFindById();
-                System.out.println(pulledOrder);
+                System.out.println(" _____________________________________________________________");
+                System.out.println("|Customer ID | Order ID | Order Date | Order Status | Comment |");
+                System.out.println("|_____________________________________________________________|");
+                System.out.println("|   " + pulledOrder.getCustomerId() + "      | " + pulledOrder.getId() + "    | " + pulledOrder.getOrderDate() + " | " + pulledOrder.getStatus() + "      | " + pulledOrder.getComment() + " |");
                 break;
             case 2:
                 List<Order> pulledOrderList = orderDAO.findByCustID();

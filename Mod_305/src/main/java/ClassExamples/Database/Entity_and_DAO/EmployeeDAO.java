@@ -12,9 +12,20 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 class EmployeeDAO {
+    SessionFactory factory = new Configuration().configure().buildSessionFactory();
+
+    void delete(Employee employee) {
+        Session session = factory.openSession();
+        session.getTransaction().begin();
+
+        // this is the only line that changed
+        session.delete(employee);
+
+        session.getTransaction().commit();
+        session.close();
+    }
      void insert(Employee employee) {
         // these 2 lines of code prepare the hibernate session for use
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
 
         // begin the transaction
@@ -33,8 +44,7 @@ class EmployeeDAO {
     List<Employee> findByFirstName(String firstName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         //code goes to RunOrderDao query
-        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-        Session session = sessionFactory.openSession();
+        Session session = factory.openSession();
         String hql = "SELECT e FROM Employee e WHERE e.firstname = :firstName";
         TypedQuery<Employee> query = session.createQuery(hql, Employee.class);
         query.setParameter("firstName", firstName);
@@ -46,8 +56,7 @@ class EmployeeDAO {
      List<Employee> findByLastName(String lastName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         //code goes to RunOrderDao query
-        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-        Session session = sessionFactory.openSession();
+        Session session = factory.openSession();
         String hql = "SELECT e FROM Employee e WHERE e.lastname = :lastName";
         TypedQuery<Employee> query = session.createQuery(hql, Employee.class);
         query.setParameter("lastName", lastName);
@@ -59,8 +68,7 @@ class EmployeeDAO {
      Employee findById(Integer id) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         //code goes to RunOrderDao query
-        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-        Session session = sessionFactory.openSession();
+        Session session = factory.openSession();
         String hql = "SELECT e FROM Employee e WHERE e.id = :id";
         TypedQuery<Employee> query = session.createQuery(hql, Employee.class);
         query.setParameter("id", id);

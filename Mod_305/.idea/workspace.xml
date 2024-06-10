@@ -4,22 +4,19 @@
     <option name="ANALYZE_INJECTED_CODE" value="false" />
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ClassExamples/Database/Entity_and_DAO/CustomerDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a/storage_v2/_src_/schema/classic_models.t8b23w.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDetailDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetailDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,33 +42,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.JDBCDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDBCDemo_CustDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDBCDemo_EmpDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDBCDemo_OrderDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDBCDemo_OrderDetailDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDMCDemo_ProdDAO.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Mod_305&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.JDBCDemo.executor": "Run",
+    "Application.JDBCDemo_CustDAO.executor": "Run",
+    "Application.JDBCDemo_EmpDAO.executor": "Run",
+    "Application.JDBCDemo_OrderDAO.executor": "Run",
+    "Application.JDBCDemo_OrderDetailDAO.executor": "Run",
+    "Application.JDMCDemo_ProdDAO.executor": "Run",
+    "JUnit.ClassExamples.Database.Entity_and_DAO in Mod_305.executor": "Run",
+    "JUnit.CustomerDAOTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/tonybcod1ng/Desktop/2024-RTT-62-ab/Mod_305",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "build.tools",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="JUnit.ClassExamples.Database.Entity_and_DAO in Mod_305">
+    <configuration name="ClassExamples.Database.Entity_and_DAO in Mod_305" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mod_305" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ClassExamples.Database.Entity_and_DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ClassExamples.Database.Entity_and_DAO" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mod_305" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ClassExamples.Database.Entity_and_DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ClassExamples.Database.Entity_and_DAO" />
+      <option name="MAIN_CLASS_NAME" value="ClassExamples.Database.Entity_and_DAO.CustomerDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ClassExamples.Database.Entity_and_DAO in Mod_305" />
+        <item itemvalue="JUnit.CustomerDAOTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +123,7 @@
       <workItem from="1717732440680" duration="9162000" />
       <workItem from="1717768687767" duration="21497000" />
       <workItem from="1717975240572" duration="2402000" />
-      <workItem from="1717977659909" duration="7999000" />
+      <workItem from="1717977659909" duration="19601000" />
     </task>
     <servers />
   </component>
@@ -107,5 +144,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

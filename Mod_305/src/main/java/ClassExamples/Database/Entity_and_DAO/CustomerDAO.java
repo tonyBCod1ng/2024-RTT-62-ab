@@ -10,9 +10,10 @@ import java.util.List;
 import java.util.Scanner;
 
 class CustomerDAO {
-     void insert(Customer customer) {
+    private SessionFactory factory = new Configuration().configure().buildSessionFactory();
+
+    void insert(Customer customer) {
         // these 2 lines of code prepare the hibernate session for use
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
 
         // begin the transaction
@@ -29,7 +30,6 @@ class CustomerDAO {
     }
 
     void update(Customer customer) {
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         session.getTransaction().begin();
 
@@ -41,7 +41,6 @@ class CustomerDAO {
     }
 
     void delete(Customer customer) {
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         session.getTransaction().begin();
 
@@ -54,8 +53,7 @@ class CustomerDAO {
 
      List<Customer> findByCustomerName(String customerName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
-        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-        Session session = sessionFactory.openSession();
+        Session session = factory.openSession();
         String hql = "SELECT c FROM Customer c WHERE c.customerName = :customerName";
         try {
             TypedQuery<Customer> query = session.createQuery(hql, Customer.class);
@@ -73,8 +71,7 @@ class CustomerDAO {
     List<Customer> findByContactFirstName(String firstName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         //code goes to RunOrderDao query
-        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-        Session session = sessionFactory.openSession();
+        Session session = factory.openSession();
         String hql = "SELECT c FROM Customer c WHERE c.contactFirstname = :contactFirstName";
 
         TypedQuery<Customer> query = session.createQuery(hql, Customer.class);
@@ -108,6 +105,29 @@ class CustomerDAO {
             session.close();
         }
     }
+
+    Customer findCustomerById(Integer id) {
+        System.out.println("-------- MySQL JDBC Connection Demo -------------");
+        System.out.println("|  ID   |   Customer Name   |    Contact Name   |");
+        System.out.println("-------------------------------------------------");
+        //code goes to RunOrderDao query
+
+        Session session = factory.openSession();
+        String hql = "SELECT c FROM Customer c WHERE c.id = :id";
+
+        TypedQuery<Customer> query = session.createQuery(hql, Customer.class);
+        query.setParameter("id", id);
+        try {
+            Customer result = query.getSingleResult();
+            System.out.println("|  " + result.getId() + "  |   " + result.getCustomerName()  + "   |  "+ result.getContactLastname() + ", " + result.getContactFirstname() + " |");
+            return result;
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            session.close();
+        }
+    }
+
 
     void updateContact() {
         Customer customer = findCustomerById();
