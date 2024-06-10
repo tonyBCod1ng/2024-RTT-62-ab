@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "orderdetails")
-public class OrderDetail {
+ class OrderDetail {
     @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY)
     private Product product;

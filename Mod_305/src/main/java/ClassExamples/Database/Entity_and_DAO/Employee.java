@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "employees")
-public class Employee {
+ class Employee {
  @ToString.Exclude
  @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 private List<Customer> customers;

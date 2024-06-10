@@ -6,12 +6,15 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.List;
 import java.util.Scanner;
 
-public class OrderDetailDAO {
+
+ class OrderDetailDAO {
     private SessionFactory factory = new Configuration().configure().buildSessionFactory();
     private Scanner scanner = new Scanner(System.in);
-
+    private ProductDAO productDAO = new ProductDAO();
+    private OrderDAO orderDAO = new OrderDAO();
     void insert(OrderDetail orderDetail) {
         // these 2 lines of code prepare the hibernate session for use
         Session session = factory.openSession();
@@ -28,6 +31,35 @@ public class OrderDetailDAO {
         // cleanup the session
         session.close();
     }
+     void insert(OrderDetail orderDetail, Order order) {
+         // these 2 lines of code prepare the hibernate session for use
+         Session session = factory.openSession();
+
+         // begin the transaction
+         session.getTransaction().begin();
+
+         // insert the employee to the database
+         session.save(orderDetail);
+
+         /// commit our transaction
+         session.getTransaction().commit();
+
+         session.close();
+         System.out.println("________________________________________________________________________");
+         System.out.println("|    Order Id    |    Product ID    |    Amt Ordered    |     Price     |");
+         System.out.println("________________________________________________________________________");
+         List<OrderDetail> burnOrder = orderDetail.getOrder().getOrderDetails();
+         orderDetail.setOrderID(orderDetail.getOrder().getId());
+         orderDetail.setProductID(orderDetail.getProduct().getId());
+         orderDetail.setQuantityOrdered(orderDetail.getQuantityOrdered());
+         orderDetail.setPriceEach(orderDetail.getPriceEach());
+         orderDetail.setProduct(orderDetail.getProduct());
+         burnOrder.add(orderDetail);
+         for (OrderDetail od : orderDetail.getOrder().getOrderDetails()){
+             System.out.println("|    " + od.getOrderID() + "       |       " + od.getProductID() + "          |       " + od.getQuantityOrdered() + "       |       " + od.getPriceEach());
+         }
+         // cleanup the session
+     }
 
     OrderDetail gracefulFindById() {
         OrderDetail foundOrder = null;
@@ -111,7 +143,26 @@ public class OrderDetailDAO {
 
 
     }
+void updateProductOrderDetail(Order order, Product product) {
+    Customer customer = order.getCustomer();
+    OrderDetail foundOrderDetail = findByIdAndProductId(order.getId(), product.getId());
+    if(foundOrderDetail == null){
+        foundOrderDetail = new OrderDetail();
+        foundOrderDetail.setOrder(order);
+        foundOrderDetail.setProduct(product);
+        foundOrderDetail.setOrderLineNumber(order.getOrderDetails().toArray().length + 1);
+        foundOrderDetail.setQuantityOrdered(1);
+        foundOrderDetail.setPriceEach(product.getMsrp());
+        insert(foundOrderDetail, order);
+    } else {
+        foundOrderDetail.setQuantityOrdered(foundOrderDetail.getQuantityOrdered() + 1);
+        System.out.println(foundOrderDetail);
+        update(foundOrderDetail, order);
+        System.out.println("Done!");
 
+    }
+
+}
     Integer getOrderIdFromUsr() {
         while (true) {
             try {
@@ -133,6 +184,23 @@ public class OrderDetailDAO {
 
         session.getTransaction().commit();
         session.close();
+
     }
+     void update(OrderDetail orderDetail, Order order) {
+         Session session = factory.openSession();
+         session.getTransaction().begin();
+
+         // this is the only line that changed
+         session.merge(orderDetail);
+         session.getTransaction().commit();
+         System.out.println("________________________________________________________________________");
+         System.out.println("|    Order Id    |    Product ID    |    Amt Ordered    |     Price     |");
+         System.out.println("________________________________________________________________________");
+         for (OrderDetail od : order.getOrderDetails()){
+             System.out.println("|    " + od.getOrderID() + "       |       " + od.getProductID() + "          |       " + od.getQuantityOrdered() + "       |       " + od.getPriceEach());
+         }
+         session.close();
+
+     }
 
 }

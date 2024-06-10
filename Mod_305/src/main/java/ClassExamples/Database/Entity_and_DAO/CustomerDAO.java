@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 class CustomerDAO {
-    public void insert(Customer customer) {
+     void insert(Customer customer) {
         // these 2 lines of code prepare the hibernate session for use
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
@@ -52,7 +52,7 @@ class CustomerDAO {
         session.close();
     }
 
-    public List<Customer> findByCustomerName(String customerName) {
+     List<Customer> findByCustomerName(String customerName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
@@ -60,7 +60,7 @@ class CustomerDAO {
         try {
             TypedQuery<Customer> query = session.createQuery(hql, Customer.class);
             query.setParameter("customerName", customerName);
-            //code goes to run  and assign result to variable
+            //code goes to RunOrderDao  and assign result to variable
             List<Customer> result = query.getResultList();
             return result;
         } catch (Exception e) {
@@ -72,7 +72,7 @@ class CustomerDAO {
 
     List<Customer> findByContactFirstName(String firstName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
-        //code goes to run query
+        //code goes to RunOrderDao query
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         String hql = "SELECT c FROM Customer c WHERE c.contactFirstname = :contactFirstName";
@@ -87,7 +87,7 @@ class CustomerDAO {
 
     Customer findCustomerById() {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
-        //code goes to run query
+        //code goes to RunOrderDao query
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Customer ID: ");
         Integer customerId = scanner.nextInt();

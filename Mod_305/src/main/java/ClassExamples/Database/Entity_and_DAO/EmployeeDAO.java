@@ -32,7 +32,7 @@ class EmployeeDAO {
 
     List<Employee> findByFirstName(String firstName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
-        //code goes to run query
+        //code goes to RunOrderDao query
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         String hql = "SELECT e FROM Employee e WHERE e.firstname = :firstName";
@@ -45,7 +45,7 @@ class EmployeeDAO {
 
      List<Employee> findByLastName(String lastName) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
-        //code goes to run query
+        //code goes to RunOrderDao query
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         String hql = "SELECT e FROM Employee e WHERE e.lastname = :lastName";
@@ -58,7 +58,7 @@ class EmployeeDAO {
 
      Employee findById(Integer id) {
         System.out.println("-------- MySQL JDBC Connection Demo ------------");
-        //code goes to run query
+        //code goes to RunOrderDao query
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         String hql = "SELECT e FROM Employee e WHERE e.id = :id";
