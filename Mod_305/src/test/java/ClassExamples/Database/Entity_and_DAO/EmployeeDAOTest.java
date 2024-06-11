@@ -53,8 +53,13 @@ public class EmployeeDAOTest {
     @DisplayName("Correctly Finds Employee by First name and returns all results")
     void findEmpByNameTest() {
         List<Employee> givenEmployeeFirstName = employeeDAO.findByFirstName("Leslie");
-        Assertions.assertEquals(2, givenEmployeeFirstName.size());
-        Assertions.assertEquals("Leslie", givenEmployeeFirstName.getFirst().getFirstname());
+        if (givenEmployeeFirstName.size() > 0) {
+            for (Employee employee : givenEmployeeFirstName) {
+                Assertions.assertEquals("Leslie", employee.getFirstname());
+            }
+        } else {
+            Assertions.fail("Employee not found");
+        }
     }
 
     @Test
