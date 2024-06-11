@@ -21,10 +21,10 @@
         <property name="format_sql">true</property>
         <!-- hibernate validation -->
         <property name="hbm2ddl.auto">validate</property>
-        <mapping class="ClassExamples.Database.Entity_and_DAO.Employee"/>
-        <mapping class="ClassExamples.Database.Entity_and_DAO.Customer"/>
-        <mapping class="ClassExamples.Database.Entity_and_DAO.OrderDetail"/>
-        <mapping class="ClassExamples.Database.Entity_and_DAO.Product"/>
-        <mapping class="ClassExamples.Database.Entity_and_DAO.Order"/>
+        <mapping class="ClassExamples.Database.entity.Employee"/>
+        <mapping class="ClassExamples.Database.entity.Customer"/>
+        <mapping class="ClassExamples.Database.entity.OrderDetail"/>
+        <mapping class="ClassExamples.Database.entity.Product"/>
+        <mapping class="ClassExamples.Database.entity.Order"/>
     </session-factory>
 </hibernate-configuration>
