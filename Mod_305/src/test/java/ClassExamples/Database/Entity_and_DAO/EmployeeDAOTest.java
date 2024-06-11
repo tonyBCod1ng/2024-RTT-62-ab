@@ -26,7 +26,6 @@ public class EmployeeDAOTest {
 
     @AfterAll
     static void tearDown() {
-        employeeDAO = new EmployeeDAO();
         List<Employee> needToDelete = employeeDAO.findByFirstName("Tester");
         if (needToDelete.size() > 0) {
             for (Employee employee : needToDelete) {
