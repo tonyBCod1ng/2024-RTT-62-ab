@@ -42,13 +42,18 @@ class EmployeeDAO {
     }
 
     List<Employee> findByFirstName(String firstName) {
-        System.out.println("-------- MySQL JDBC Connection Demo ------------");
+        System.out.println("_____________________________________________________________");
+        System.out.println("|    Employee Id    |    Office Id    |    Employee Name    |");
+        System.out.println("_____________________________________________________________");
         //code goes to RunOrderDao query
         Session session = factory.openSession();
         String hql = "SELECT e FROM Employee e WHERE e.firstname = :firstName";
         TypedQuery<Employee> query = session.createQuery(hql, Employee.class);
         query.setParameter("firstName", firstName);
         List<Employee> result = query.getResultList();
+        for (Employee e : result){
+            System.out.println("|    " + e.getId() + "       |       " + e.getOfficeId() + "          |       " + e.getLastname() + ", " +e.getFirstname() + "       |" );
+        }
         session.close();
         return result;
     }
@@ -66,14 +71,17 @@ class EmployeeDAO {
     }
 
      Employee findById(Integer id) {
-        System.out.println("-------- MySQL JDBC Connection Demo ------------");
-        //code goes to RunOrderDao query
+         System.out.println("_____________________________________________________________");
+         System.out.println("|    Employee Id    |    Office Id    |    Employee Name    |");
+         System.out.println("_____________________________________________________________");        //code goes to RunOrderDao query
         Session session = factory.openSession();
         String hql = "SELECT e FROM Employee e WHERE e.id = :id";
         TypedQuery<Employee> query = session.createQuery(hql, Employee.class);
         query.setParameter("id", id);
         try {
             Employee result = query.getSingleResult() == null ? new Employee() : query.getSingleResult();
+            System.out.println("|    " + result.getId() + "       |       " + result.getOfficeId() + "          |       " + result.getLastname() + ", " + result.getFirstname() + "       |" );
+
             return result;
         } catch (Exception e) {
             return null;

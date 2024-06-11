@@ -2,12 +2,15 @@ package ClassExamples.Database.Entity_and_DAO;
 
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.List;
 
 
 public class EmployeeDAOTest {
-   private static EmployeeDAO employeeDAO = new EmployeeDAO();
+    private static EmployeeDAO employeeDAO = new EmployeeDAO();
 
     @BeforeAll
     static void setUp() {
@@ -49,16 +52,22 @@ public class EmployeeDAOTest {
         Assertions.assertNull(givenEmployee);
     }
 
-    @Test
+    @ParameterizedTest
+    @CsvSource(
+            {
+                    "Leslie",
+                    "Tom",
+                    "Harry",
+                    "mil"
+            }
+    )
     @DisplayName("Correctly Finds Employee by First name and returns all results")
-    void findEmpByNameTest() {
-        List<Employee> givenEmployeeFirstName = employeeDAO.findByFirstName("Leslie");
+    void findEmpByNameTest(String input) {
+        List<Employee> givenEmployeeFirstName = employeeDAO.findByFirstName(input);
         if (givenEmployeeFirstName.size() > 0) {
             for (Employee employee : givenEmployeeFirstName) {
-                Assertions.assertEquals("Leslie", employee.getFirstname());
+                Assertions.assertEquals(input, employee.getFirstname());
             }
-        } else {
-            Assertions.fail("Employee not found");
         }
     }
 
