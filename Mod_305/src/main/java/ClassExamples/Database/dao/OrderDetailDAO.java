@@ -36,7 +36,7 @@ import java.util.Scanner;
         session.close();
     }
      void insert(OrderDetail orderDetail, Order order) {
-
+        session = factory.openSession();
          // begin the transaction
          session.getTransaction().begin();
 
@@ -97,7 +97,7 @@ import java.util.Scanner;
 
 
 public void updateProductOrderDetail(Order order, Product product) {
-    Customer customer = order.getCustomer();
+         Customer customer = order.getCustomer();
     OrderDetail foundOrderDetail = findByIdAndProductId(order.getId(), product.getId());
     if(foundOrderDetail == null){
         foundOrderDetail = new OrderDetail();
@@ -118,7 +118,8 @@ public void updateProductOrderDetail(Order order, Product product) {
 }
 
     void update(OrderDetail orderDetail) {
-        session.getTransaction().begin();
+        session = factory.openSession();
+         session.getTransaction().begin();
 
         // this is the only line that changed
         session.merge(orderDetail);
@@ -128,6 +129,7 @@ public void updateProductOrderDetail(Order order, Product product) {
 
     }
      void update(OrderDetail orderDetail, Order order) {
+         session = factory.openSession();
          session.getTransaction().begin();
 
          // this is the only line that changed

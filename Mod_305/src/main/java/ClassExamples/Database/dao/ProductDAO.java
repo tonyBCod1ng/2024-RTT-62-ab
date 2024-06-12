@@ -1,6 +1,5 @@
 package ClassExamples.Database.dao;
 
-import ClassExamples.Database.DAOHelper;
 import ClassExamples.Database.entity.Product;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
@@ -43,7 +42,7 @@ public class ProductDAO {
 
 
     public Product findByID(int productId) {
-
+        session = factory.openSession();
         String hql = "select p from Product p where p.id = :productId";
 
         // this is setting up the query (essentially this is using a prepared statement inside)
@@ -71,39 +70,26 @@ public class ProductDAO {
     }
 
 
-    String getString() {
-        while (true) {
-            try {
-                System.out.println("Enter name: ");
-                String input = scanner.nextLine();
-                scanner.close();
-                return input;
-            } catch (Exception e) {
-                System.out.println("Please enter a string.");
-                scanner.nextLine();
-            }
-        }
-    }
 
 
-    List<Product> findByName() {
-        String selectedProductName = getString();
+
+    List<Product> findProductByName(String productName) {
         String hql = "SELECT p FROM Product p WHERE p.productName =:productName";
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
-        query.setParameter("productName", selectedProductName);
+        query.setParameter("productName", productName);
         List<Product> products = query.getResultList();
         session.close();
-        System.out.println("Specified name list: " + products);
         return products;
 
     }
 
-    void listAll() {
+    public List<Product> listAllProducts() {
+        session = factory.openSession();
         String hql = "SELECT p FROM Product p";
         TypedQuery<Product> query = session.createQuery(hql, Product.class);
         List<Product> products = query.getResultList();
         session.close();
-
+        return products;
     }
 
     public List<Product> findByNameLikeness(String selectedProductName) {
@@ -124,7 +110,7 @@ public class ProductDAO {
     }
 
     void updateStock() {
-        listAll();
+        listAllProducts();
         int id = daoHelper.gatherProductIDFromUser();
         Product selectedProduct = findByID(id);
         int amount = daoHelper.gatherIntegerFromUser();

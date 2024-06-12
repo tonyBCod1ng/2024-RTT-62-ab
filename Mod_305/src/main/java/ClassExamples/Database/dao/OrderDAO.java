@@ -1,7 +1,6 @@
 package ClassExamples.Database.dao;
 
 
-import ClassExamples.Database.DAOHelper;
 import ClassExamples.Database.entity.Order;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
@@ -19,7 +18,7 @@ public class OrderDAO {
     private Session session = factory.openSession();
     private DAOHelper daoHelper = new DAOHelper();
     void update(Order order) {
-
+        session = factory.openSession();
         session.getTransaction().begin();
 
         // this is the only line that changed
@@ -34,7 +33,7 @@ public class OrderDAO {
 
 
     public Order findOrderByID(int orderId) {
-
+        session = factory.openSession();
         String hql = "select o from Order o where o.id = :orderId";
 
         // this is setting up the query (essentially this is using a prepared statement inside)
@@ -62,7 +61,7 @@ public class OrderDAO {
     }
 
     public List<Order> findOrderByCustID(int customerId) {
-
+        session = factory.openSession();
         String hql = "select o from Order o where o.customerId = :customerId";
 
         // this is setting up the query (essentially this is using a prepared statement inside)
@@ -81,7 +80,6 @@ public class OrderDAO {
     public void commentOrder() {
         Order order = null;
         while (order == null) {
-           session = factory.openSession();
             order = findOrderByID(daoHelper.gatherOrderIDFromUser());
             if (order == null) {
                 System.out.println("Order not found");

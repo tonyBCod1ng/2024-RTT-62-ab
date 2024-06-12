@@ -8,13 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/DAOHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a/storage_v2/_src_/schema/classic_models.t8b23w.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDetailDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDMCDemo_ProdDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDMCDemo_ProdDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/DAOHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/DAOHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_CustDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_EmpDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDetailDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDMCDemo_ProdDAO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" afterDir="false" />
@@ -55,6 +57,7 @@
     "Application.JDBCDemo_OrderDAO.executor": "Run",
     "Application.JDBCDemo_OrderDetailDAO.executor": "Run",
     "Application.JDMCDemo_ProdDAO.executor": "Run",
+    "Application.Main.executor": "Run",
     "JUnit.ClassExamples in Mod_305.executor": "Run",
     "JUnit.ClassExamples.Database in Mod_305.executor": "Run",
     "JUnit.ClassExamples.Database.Entity_and_DAO in Mod_305.executor": "Run",
@@ -104,7 +107,7 @@
       <module name="Mod_305" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ClassExamples.Database.*" />
+          <option name="PATTERN" value="ClassExamples.Database.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,6 +172,7 @@
       <workItem from="1717977659909" duration="19682000" />
       <workItem from="1718113722431" duration="14521000" />
       <workItem from="1718210535855" duration="6419000" />
+      <workItem from="1718226617055" duration="1335000" />
     </task>
     <servers />
   </component>
