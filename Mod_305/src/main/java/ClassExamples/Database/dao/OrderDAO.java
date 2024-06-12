@@ -1,6 +1,7 @@
 package ClassExamples.Database.dao;
 
 
+import ClassExamples.Database.DAOHelper;
 import ClassExamples.Database.entity.Order;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
@@ -15,9 +16,10 @@ import java.util.Scanner;
 public class OrderDAO {
     private SessionFactory factory = new Configuration().configure().buildSessionFactory();
     private Scanner scanner = new Scanner(System.in);
-
+    private Session session = factory.openSession();
+    private DAOHelper daoHelper = new DAOHelper();
     void update(Order order) {
-        Session session = factory.openSession();
+
         session.getTransaction().begin();
 
         // this is the only line that changed
@@ -27,34 +29,12 @@ public class OrderDAO {
         session.close();
     }
 
-    public Order gracefulFindById() {
-        Order foundOrder = null;
-        while (foundOrder == null) {
-            foundOrder = findByID();
-            if (foundOrder == null) {
-                System.out.println("No relevant order found");
-            }
-        }
-        return foundOrder;
-    }
 
-    Integer getCustId() {
-        while (true) {
-            try {
-                System.out.println("Enter Customer ID: ");
-                Integer input = scanner.nextInt();
-                return input;
-            } catch (Exception e) {
-                System.out.println("Please enter a valid Order ID (should be a string).");
-                scanner.nextLine();
-            }
-        }
-    }
 
-    Order findByID() {
 
-        Session session = factory.openSession();
-        Integer orderId = getOrderId();
+
+    public Order findOrderByID(int orderId) {
+
         String hql = "select o from Order o where o.id = :orderId";
 
         // this is setting up the query (essentially this is using a prepared statement inside)
@@ -81,23 +61,8 @@ public class OrderDAO {
 
     }
 
-    Integer getOrderId() {
-        while (true) {
-            try {
-                System.out.println("Enter Order ID: ");
-                Integer input = scanner.nextInt();
-                return input;
-            } catch (Exception e) {
-                System.out.println("Please enter a valid Order ID (should be a number).");
-                scanner.nextLine();
-            }
-        }
-    }
+    public List<Order> findOrderByCustID(int customerId) {
 
-    public List<Order> findByCustID() {
-
-        Session session = factory.openSession();
-        Integer customerId = getCustId();
         String hql = "select o from Order o where o.customerId = :customerId";
 
         // this is setting up the query (essentially this is using a prepared statement inside)
@@ -111,16 +76,18 @@ public class OrderDAO {
         return orders;
     }
 
-    String getComment() {
-        System.out.println("Enter Order Comment: ");
-        String comment = scanner.nextLine();
-        return comment;
-    }
+
 
     public void commentOrder() {
-        Order order = findByID();
-        scanner.nextLine();
-        String comment = getComment();
+        Order order = null;
+        while (order == null) {
+           session = factory.openSession();
+            order = findOrderByID(daoHelper.gatherOrderIDFromUser());
+            if (order == null) {
+                System.out.println("Order not found");
+            }
+        }
+        String comment = daoHelper.getComment();
         order.setComment(comment);
         update(order);
     System.out.println("Comment updated!");

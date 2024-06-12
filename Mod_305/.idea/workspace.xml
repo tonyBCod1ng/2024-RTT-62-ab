@@ -8,33 +8,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/DAOHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a/storage_v2/_src_/schema/classic_models.t8b23w.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_CustDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_CustDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_EmpDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_EmpDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDBCDemo_OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDetailDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/JDMCDemo_ProdDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDMCDemo_ProdDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/entity/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Entity_and_DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ClassExamples/Database/Entity_and_DAO/CustomerDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ClassExamples/Database/main_classes/CustomerDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ClassExamples/Database/Entity_and_DAO/EmployeeDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ClassExamples/Database/main_classes/EmployeeDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDetailDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDMCDemo_ProdDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDMCDemo_ProdDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,8 +55,10 @@
     "Application.JDBCDemo_OrderDAO.executor": "Run",
     "Application.JDBCDemo_OrderDetailDAO.executor": "Run",
     "Application.JDMCDemo_ProdDAO.executor": "Run",
+    "JUnit.ClassExamples in Mod_305.executor": "Run",
     "JUnit.ClassExamples.Database in Mod_305.executor": "Run",
     "JUnit.ClassExamples.Database.Entity_and_DAO in Mod_305.executor": "Run",
+    "JUnit.ClassExamples.Database.main_classes in Mod_305.executor": "Run",
     "JUnit.CustomerDAOTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -91,7 +85,21 @@
       <recent name="ClassExamples.Database" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClassExamples.Database in Mod_305">
+  <component name="RunManager">
+    <configuration name="ClassExamples in Mod_305" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mod_305" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ClassExamples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ClassExamples" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClassExamples.Database in Mod_305" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mod_305" />
       <extension name="coverage">
@@ -137,8 +145,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClassExamples.Database in Mod_305" />
         <item itemvalue="JUnit.ClassExamples.Database.main_classes in Mod_305" />
+        <item itemvalue="JUnit.ClassExamples in Mod_305" />
+        <item itemvalue="JUnit.ClassExamples.Database in Mod_305" />
         <item itemvalue="JUnit.CustomerDAOTest" />
       </list>
     </recent_temporary>
@@ -158,7 +167,8 @@
       <workItem from="1717768687767" duration="21497000" />
       <workItem from="1717975240572" duration="2402000" />
       <workItem from="1717977659909" duration="19682000" />
-      <workItem from="1718113722431" duration="11685000" />
+      <workItem from="1718113722431" duration="14521000" />
+      <workItem from="1718210535855" duration="6419000" />
     </task>
     <servers />
   </component>
@@ -168,11 +178,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDMCDemo_ProdDAO.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
           <option name="timeStamp" value="2" />

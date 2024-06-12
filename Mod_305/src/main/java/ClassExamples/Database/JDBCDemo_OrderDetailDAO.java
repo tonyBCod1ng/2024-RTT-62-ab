@@ -10,9 +10,10 @@ class Run {
     OrderDetailDAO orderDetailDAO = new OrderDetailDAO();
     OrderDAO orderDAO = new OrderDAO();
     ProductDAO productDAO = new ProductDAO();
+    DAOHelper daoHelper = new DAOHelper();
     void start(){
-        Order order = orderDAO.gracefulFindById();
-        Product product = productDAO.gracefulFindById();
+        Order order = orderDAO.findOrderByID(daoHelper.gracefulGetOrderId());
+        Product product = productDAO.findByID(daoHelper.gatherProductIDFromUser());
         orderDetailDAO.updateProductOrderDetail(order, product);
     }
 }

@@ -9,9 +9,10 @@ import java.util.List;
 import java.util.Scanner;
 
  class RunOrderDao {
-    OrderDAO orderDAO = new OrderDAO();
-    OrderDetailDAO orderDetailDAO = new OrderDetailDAO();
-    ProductDAO productDAO = new ProductDAO();
+    private OrderDAO orderDAO = new OrderDAO();
+    private OrderDetailDAO orderDetailDAO = new OrderDetailDAO();
+   private ProductDAO productDAO = new ProductDAO();
+    private DAOHelper daoHelper = new DAOHelper();
     private Scanner scanner = new Scanner(System.in);
 
     void startMenu() {
@@ -25,14 +26,15 @@ import java.util.Scanner;
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
-                Order pulledOrder = orderDAO.gracefulFindById();
+                int orderId = daoHelper.gracefulGetOrderId();
+                Order pulledOrder = orderDAO.findOrderByID(orderId);
                 System.out.println(" _____________________________________________________________");
                 System.out.println("|Customer ID | Order ID | Order Date | Order Status | Comment |");
                 System.out.println("|_____________________________________________________________|");
                 System.out.println("|   " + pulledOrder.getCustomerId() + "      | " + pulledOrder.getId() + "    | " + pulledOrder.getOrderDate() + " | " + pulledOrder.getStatus() + "      | " + pulledOrder.getComment() + " |");
                 break;
             case 2:
-                List<Order> pulledOrderList = orderDAO.findByCustID();
+                List<Order> pulledOrderList = orderDAO.findOrderByCustID(daoHelper.getCustId());
                 System.out.println(" _____________________________________________________________");
                 System.out.println("|Customer ID | Order ID | Order Date | Order Status | Comment |");
                 System.out.println("|_____________________________________________________________|");
@@ -47,7 +49,7 @@ import java.util.Scanner;
                 System.out.println("|_____________________________________________________________|");
                 break;
             case 3:
-                orderDetailDAO.updateProductOrderDetail(orderDAO.gracefulFindById(), productDAO.gracefulFindById());
+                orderDetailDAO.updateProductOrderDetail(orderDAO.findOrderByID(daoHelper.gracefulGetOrderId()), productDAO.findByID(daoHelper.gatherProductIDFromUser()));
                 break;
             case 4:
                 orderDAO.commentOrder();

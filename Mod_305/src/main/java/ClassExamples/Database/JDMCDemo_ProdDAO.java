@@ -1,25 +1,21 @@
 package ClassExamples.Database;
 
 import ClassExamples.Database.dao.ProductDAO;
+import ClassExamples.Database.entity.Product;
 
- class JDMCDemo_ProdDAO {
-   private static ProductDAO productDAO = new ProductDAO();
-    public static void main(String[] args) {
-        /*Product product = new Product();
-        product.setId(150);
-        product.setProductName("JDMC Demo");
-        product.setProductDescription("JDMC Demo Description");
-        product.setProductCode("haallllaa");
-        product.setProductlineId(1);
-        product.setMsrp(2.454747748f);
-        product.setProductVendor("whodatnation");
-        product.setProductScale("1:4");
-        product.setBuyPrice(500.00000000f);
-        product.setQuantityInStock(500);
-        productDAO.insert(product);*/
-        //productDAO.findByName();
-        productDAO.findByNameLikeness();
-        //productDAO.updateStock();
-        //productDAO.findProductById();
+class JDMCDemo_ProdDAO {
+    DAOHelper daoHelper = new DAOHelper();
+    ProductDAO productDAO = new ProductDAO();
+    public Product gracefulFindById() {
+        Product foundProduct = null;
+        while (foundProduct == null) {
+            int productId = daoHelper.gatherProductIDFromUser();
+            foundProduct = productDAO.findByID(productId);
+            if (foundProduct == null) {
+                System.out.println("No relevant product found");
+            }
+        }
+        return foundProduct;
     }
+
 }
