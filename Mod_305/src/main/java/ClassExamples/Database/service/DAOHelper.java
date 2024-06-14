@@ -1,9 +1,6 @@
-package ClassExamples.Database;
+package ClassExamples.Database.service;
 
-import ClassExamples.Database.dao.OrderDAO;
 import ClassExamples.Database.dao.ProductDAO;
-import ClassExamples.Database.entity.Order;
-import ClassExamples.Database.entity.Product;
 
 import java.util.Scanner;
 
@@ -63,11 +60,12 @@ public class DAOHelper {
         }
         return foundOrder;
     }*/
-    Integer gracefulGetOrderId() {
+   public Integer gracefulGetOrderId() {
         while (true) {
             try {
                 System.out.println("Enter Order ID: ");
                 Integer input = scanner.nextInt();
+
                 return input;
             } catch (Exception e) {
                 System.out.println("Please enter a valid Order ID (should be a number).");
@@ -88,8 +86,22 @@ public class DAOHelper {
         }
     }
     public String getComment() {
+       scanner.nextLine();
         System.out.println("Enter Order Comment: ");
         String comment = scanner.nextLine();
         return comment;
+    }
+    public String getProductNameString() {
+        while (true) {
+            try {
+                System.out.println("Enter name of product: ");
+                String input = scanner.nextLine();
+                scanner.close();
+                return input;
+            } catch (Exception e) {
+                System.out.println("Please enter a string.");
+                scanner.nextLine();
+            }
+        }
     }
 }

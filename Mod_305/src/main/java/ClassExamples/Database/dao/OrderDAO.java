@@ -2,6 +2,7 @@ package ClassExamples.Database.dao;
 
 
 import ClassExamples.Database.entity.Order;
+import ClassExamples.Database.service.DAOHelper;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 import org.hibernate.Session;

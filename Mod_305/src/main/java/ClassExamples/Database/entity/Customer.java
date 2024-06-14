@@ -3,6 +3,7 @@ import lombok.*;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Objects;
 
 
 @Getter
@@ -48,4 +49,16 @@ public class Customer {
     @Column(name = "credit_limit", columnDefinition = "Decimal")
     private Double creditLimit;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(id, customer.id) && Objects.equals(customerName, customer.customerName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, customerName);
+    }
 }

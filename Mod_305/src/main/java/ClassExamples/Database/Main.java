@@ -1,6 +1,6 @@
 package ClassExamples.Database;
 
-import ClassExamples.Database.dao.DAOHelper;
+import ClassExamples.Database.service.DAOHelper;
 import ClassExamples.Database.dao.OrderDAO;
 import ClassExamples.Database.dao.OrderDetailDAO;
 import ClassExamples.Database.dao.ProductDAO;
