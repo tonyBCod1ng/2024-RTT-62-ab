@@ -1,6 +1,8 @@
 package ClassExamples.Database.service;
 
 import ClassExamples.Database.dao.ProductDAO;
+import ClassExamples.Database.entity.Order;
+import ClassExamples.Database.entity.OrderDetail;
 
 import java.util.Scanner;
 
@@ -83,6 +85,14 @@ public class DAOHelper {
                 System.out.println("Please enter a valid Order ID (should be a string).");
                 scanner.nextLine();
             }
+        }
+    }
+    public void printOrderDetails(Order order) {
+        System.out.println("________________________________________________________________________");
+        System.out.println("|    Order Id    |    Product ID    |    Amt Ordered    |     Price     |");
+        System.out.println("________________________________________________________________________");
+        for (OrderDetail od : order.getOrderDetails()){
+            System.out.println("|    " + od.getOrderID() + "       |       " + od.getProductID() + "          |       " + od.getQuantityOrdered() + "       |       " + od.getPriceEach() +"      |");
         }
     }
     public String getComment() {

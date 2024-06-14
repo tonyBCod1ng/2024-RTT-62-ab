@@ -8,16 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../MOD_307/ClassExamples/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../MOD_307/ClassExamples/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MOD_307/ClassExamples/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../MOD_307/ClassExamples/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a/storage_v2/_src_/schema/classic_models.t8b23w.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/DAOHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/JDBCDemo_OrderDAO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/DAOHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/service/DAOHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/DAOHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/service/DAOHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/service/DAOHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +171,7 @@
       <workItem from="1718210535855" duration="6419000" />
       <workItem from="1718226617055" duration="6107000" />
       <workItem from="1718315289604" duration="2535000" />
+      <workItem from="1718395518906" duration="1326000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 package ClassExamples.Database;
 
+import ClassExamples.Database.entity.Product;
 import ClassExamples.Database.service.DAOHelper;
 import ClassExamples.Database.dao.OrderDAO;
 import ClassExamples.Database.dao.OrderDetailDAO;
@@ -50,7 +51,10 @@ import java.util.Scanner;
                 System.out.println("|_____________________________________________________________|");
                 break;
             case 3:
-                orderDetailDAO.updateProductOrderDetail(orderDAO.findOrderByID(daoHelper.gracefulGetOrderId()), productDAO.findByID(daoHelper.gatherProductIDFromUser()));
+                Order order = orderDAO.findOrderByID(daoHelper.gracefulGetOrderId());
+                Product product = productDAO.findByID(daoHelper.gatherProductIDFromUser());
+                orderDetailDAO.updateProductOrderDetail(order, product);
+                daoHelper.printOrderDetails(order);
                 break;
             case 4:
                 orderDAO.commentOrder();

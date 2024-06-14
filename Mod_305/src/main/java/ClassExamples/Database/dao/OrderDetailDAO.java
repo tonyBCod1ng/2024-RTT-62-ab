@@ -4,6 +4,7 @@ import ClassExamples.Database.entity.Customer;
 import ClassExamples.Database.entity.Order;
 import ClassExamples.Database.entity.OrderDetail;
 import ClassExamples.Database.entity.Product;
+import ClassExamples.Database.service.DAOHelper;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 import org.hibernate.Session;
@@ -19,6 +20,7 @@ import java.util.Scanner;
     private Scanner scanner = new Scanner(System.in);
     private ProductDAO productDAO = new ProductDAO();
     private OrderDAO orderDAO = new OrderDAO();
+    private DAOHelper daoHelper = new DAOHelper();
     private Session session = factory.openSession();
      void insert(OrderDetail orderDetail) {
         // these 2 lines of code prepare the hibernate session for use
@@ -110,7 +112,7 @@ public void updateProductOrderDetail(Order order, Product product) {
     } else {
         foundOrderDetail.setQuantityOrdered(foundOrderDetail.getQuantityOrdered() + 1);
         System.out.println(foundOrderDetail);
-        update(foundOrderDetail, order);
+        update(foundOrderDetail);
         System.out.println("Done!");
 
     }
@@ -128,21 +130,6 @@ public void updateProductOrderDetail(Order order, Product product) {
         session.close();
 
     }
-     void update(OrderDetail orderDetail, Order order) {
-         session = factory.openSession();
-         session.getTransaction().begin();
 
-         // this is the only line that changed
-         session.merge(orderDetail);
-         session.getTransaction().commit();
-         System.out.println("________________________________________________________________________");
-         System.out.println("|    Order Id    |    Product ID    |    Amt Ordered    |     Price     |");
-         System.out.println("________________________________________________________________________");
-         for (OrderDetail od : order.getOrderDetails()){
-             System.out.println("|    " + od.getOrderID() + "       |       " + od.getProductID() + "          |       " + od.getQuantityOrdered() + "       |       " + od.getPriceEach());
-         }
-         session.close();
-
-     }
 
 }
