@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ClassExamples.Database.main_classes.EmployeeDAOTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.857 s -- in ClassExamples.Database.main_classes.EmployeeDAOTest
