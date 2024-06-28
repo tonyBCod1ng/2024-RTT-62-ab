@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body onclick="runTelThat()">
+<header id="main-header">
+    <div class="container">
+        <h1 class="headBangarz" id="header-title-1">Selecting Elements By Name 1</h1>
+        <h1 class="headBangarz" id="header-title-2">Selecting Elements By Name 2</h1>
+        <h1 class="headBangarz" id="header-title-3">Selecting Elements By Name 3</h1>
+<!--        An ID should be unique within a page. However, if more than one element with the specified ID exists, the getElementById() method returns the first element in the source code. --></div>
+</header>
+<!--<div>getElementsByName() will also return elements that have an id attribute with the specified value. For compatibility, you should be careful not to use the same string as both a name and an id. --></div>
+<input type="text" name="inputText"/>
+<input type="text" name="inputText"/>
+<script>
+    let items = document.getElementsByTagName("h1");
+    let clicked = false;
+    function runTelThat(){
+        clicked = !clicked;
+        let count = 0;
+        for (const itemsKey in items) {
+            let currentItem = items[itemsKey];
+            console.log(items[itemsKey]);
+            currentItem.innerHTML = clicked ? `Item index = ${itemsKey}` : `Selecting Elements By Name ${count + 1}`;
+            count ++;
+        }
+    }
+</script>
+</body>
+</html>

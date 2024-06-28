@@ -13,7 +13,6 @@ import java.util.Scanner;
 
 public class ProductDAO {
     private SessionFactory factory = new Configuration().configure().buildSessionFactory();
-    private String hql = "";
     private Scanner scanner = new Scanner(System.in);
     private Session session = factory.openSession();
     private DAOHelper daoHelper = new DAOHelper();

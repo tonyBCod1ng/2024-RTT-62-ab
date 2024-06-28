@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Slides_307_2</title>
+</head>
+<body>
+<!--
+The adjacent sibling combinator (+) separates two selectors, and matches the second element
+only if it immediately follows the first element and both are children of the same parent element.
+In the example, <section> is the parent element. <h2> and <p> elements are children of the same parent element.
+<h2> immediately precedes the first <p> element, but not the second, so only the first <p> element will be affected.
+ -->
+<section>
+    <h2 id="example-one">Bootstrap EX 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <div>Separator div does affect adjacent siblings.</div>
+    <p>Doloribus explicabo incidunt magnam magni nobis.</p>
+
+</section>
+<!--
+The general sibling combinator (~) separates two selectors and matches the second element only if it follows the first element
+(though not necessarily immediately), and both are children of the same parent element.
+In the example, <section> is the parent element. <h2> and <p> elements are children of the same parent element.
+<h2> precedes both of the <p> elements, so they will both be affected.
+ -->
+<section>
+    <h2 id="example-two">Bootstrap Ex 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <div>Separator div does not affect adjacent siblings.</div>
+    <p>Doloribus explicabo incidunt magnam magni nobis.</p>
+
+</section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+#example-one + p {
+    color: grey;
+}
+
+#example-two ~ p{
+    color: grey;
+}

@@ -49,19 +49,7 @@ import java.util.Scanner;
          session.getTransaction().commit();
 
          session.close();
-         System.out.println("________________________________________________________________________");
-         System.out.println("|    Order Id    |    Product ID    |    Amt Ordered    |     Price     |");
-         System.out.println("________________________________________________________________________");
-         List<OrderDetail> burnOrder = orderDetail.getOrder().getOrderDetails();
-         orderDetail.setOrderID(orderDetail.getOrder().getId());
-         orderDetail.setProductID(orderDetail.getProduct().getId());
-         orderDetail.setQuantityOrdered(orderDetail.getQuantityOrdered());
-         orderDetail.setPriceEach(orderDetail.getPriceEach());
-         orderDetail.setProduct(orderDetail.getProduct());
-         burnOrder.add(orderDetail);
-         for (OrderDetail od : orderDetail.getOrder().getOrderDetails()){
-             System.out.println("|    " + od.getOrderID() + "       |       " + od.getProductID() + "          |       " + od.getQuantityOrdered() + "       |       " + od.getPriceEach());
-         }
+
          // cleanup the session
      }
 
@@ -70,7 +58,7 @@ import java.util.Scanner;
 
 
     OrderDetail findByIdAndProductId(Integer orderId, Integer productId) {
-
+        session = factory.openSession();
         String hql = "select od from OrderDetail od where od.product.id = :productId and od.order.id = :orderId";
 
         // this is setting up the query (essentially this is using a prepared statement inside)
@@ -99,6 +87,7 @@ import java.util.Scanner;
 
 
 public void updateProductOrderDetail(Order order, Product product) {
+        session = factory.openSession();
          Customer customer = order.getCustomer();
     OrderDetail foundOrderDetail = findByIdAndProductId(order.getId(), product.getId());
     if(foundOrderDetail == null){
