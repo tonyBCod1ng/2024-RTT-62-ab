@@ -13,30 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../MOD_307/.idea/MOD_307.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/ClassExamples/AccoutInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/ClassExamples/Day2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/ClassExamples/Day3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/ClassExamples/bootstrap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/ClassExamples/cssExample.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/ClassExamples/flexWork.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/Homework/Slides_307_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/Homework/calc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/Homework/calc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/Homework/loginPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/Homework/resume.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/Homework/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/Homework/table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_307/Homework/tableStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_308/classExamples/JS_Examples.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MOD_308/classExamples/LookUp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Mod_305_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d84984f-9caa-4db1-89b0-3eab28d0a11a/storage_v2/_src_/schema/classic_models.t8b23w.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/DAOHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/OrderDetailDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassExamples/Database/dao/ProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/dao/ProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/WebApp/WEB-INF/JSP/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/WebApp/WEB-INF/JSP/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/Controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,6 +189,7 @@
       <workItem from="1718916430805" duration="2603000" />
       <workItem from="1718976266653" duration="1243000" />
       <workItem from="1719278356829" duration="580000" />
+      <workItem from="1720552211320" duration="2698000" />
     </task>
     <servers />
   </component>

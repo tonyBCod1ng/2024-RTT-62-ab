@@ -28,6 +28,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="/hirdPage">Third</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/inventory">Inventory</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/homework">Homework</a>
+            </li>
         </ul>
     </div>
 </nav>
+
+<div style="height: 10vh"></div>
