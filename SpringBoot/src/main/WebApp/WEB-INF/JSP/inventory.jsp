@@ -1,47 +1,54 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <jsp:include page="Includes/Header.jsp"></jsp:include>
 <script>
 
-    function handleChange(){
+    function handleChange() {
         let number = document.getElementById("id").value;
         window.location.assign("http://localhost:8080/item/" + number);
     }
 
 </script>
-<div class="row text-center">
-    <div class="col col-12"><label for="id">Enter ID:</label>
-        <input onchange="handleChange()" type="text" name="id" id="id"></div>
-    <h2>Total products found: ${products.size()}</h2>
-</div>
+<!-- a search form -->
+<div class="container">
+    <section>
 
-<div class="row">
-    <div class="col col-2"></div>
+        <div class="row">
+            <div class="col col-12" style="height: 10vh"></div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col col-8">
+                <form>
+                    <div>
+                        <label for="name" class="form-label"><h4>Inventory Search</h4></label>
+                        <input name="search" id="name" type="text" class="form-control" value="${name}" placeholder="Enter name here">
+                    </div>
+                    <button type="submit" class="btn btn-primary m-3">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-    <table class="col col-8" id="item-list">
-    <c:forEach items="${products}" var="product">
+    <div class="row justify-content-center">
 
-
+        <table class="table col col-5" >
             <tr>
-                <td>id</td>
-                <td>${product.id}</td>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Item Description</th>
             </tr>
-            <tr>
-                <td>code</td>
-                <td>${product.productCode}</td>
-            </tr>
-            <tr>
-                <td>name</td>
-                <td><a href="http://localhost:8080/item/${product.id}">${product.productName}</a></td>
-            </tr>
-            <tr>
-                <td>description</td>
-                <td>${product.productDescription}</td>
-            </tr>
+            <c:forEach items="${products}" var="product">
 
-        
-    </c:forEach>
-    </table>
+                <tr>
+                    <td>${product.id}</td>
+                    <td><a href="http://localhost:8080/item/${product.id}">${product.productName}</a></td>
+                    <td>${product.productDescription}</td>
+                </tr>
 
-    <div class="col col-2"></div>
+            </c:forEach>
+        </table>
+
+        <div class="col col-2"></div>
+    </div>
 </div>
 <jsp:include page="Includes/Footer.jsp"></jsp:include>

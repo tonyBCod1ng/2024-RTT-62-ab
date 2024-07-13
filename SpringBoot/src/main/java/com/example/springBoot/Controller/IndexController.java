@@ -1,6 +1,8 @@
 package com.example.springBoot.Controller;
 
+import com.example.springBoot.database.dao.EmployeeDAO;
 import com.example.springBoot.database.dao.ProductDAO;
+import com.example.springBoot.database.entity.Employee;
 import com.example.springBoot.database.entity.Product;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +30,11 @@ import java.util.List;
         return response;
     }
     @GetMapping("/inventory")
-     ModelAndView inventory(@RequestParam(required = false) Integer id) {
-        List<Product> products = productDAO.findAll();
+     ModelAndView inventory(@RequestParam(required = false) String search) {
+        List<Product> products = productDAO.findByName(search);
         ModelAndView response = new ModelAndView("inventory");
         response.addObject("products", products);
+        response.addObject("name", search);
         return response;
     }
     @GetMapping("/item/{id}")
@@ -62,4 +65,5 @@ import java.util.List;
         ModelAndView response = new ModelAndView("homework");
         return response;
     }
+
 }

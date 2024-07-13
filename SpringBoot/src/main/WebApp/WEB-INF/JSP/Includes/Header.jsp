@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,6 +34,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/homework">Homework</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/employees/employee">Employee Search</a>
             </li>
         </ul>
     </div>

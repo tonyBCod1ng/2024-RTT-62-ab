@@ -1,6 +1,6 @@
 body{
 font-family: "American Typewriter";
 }
-.cardB{
-    border: 2px solid black;
+.hidden{
+display: none;
 }
