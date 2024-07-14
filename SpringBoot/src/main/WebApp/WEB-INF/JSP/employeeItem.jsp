@@ -27,7 +27,23 @@
                     <td>${employee.extension}</td>
                 </tr>
         </table>
-        <button onclick="window.location.assign('/../employees/employee')">Back</button>
+        <div class="row text-center">
+        <h2>${employee.firstname}'s Customers ( ${employee.customers.size()} )</h2>
+        <div class="col col-2"></div>
+    </div>
+    <div class="row">
+        <table class=" table col col-5" id="item-list">
+                <tr>
+                    <th>Name</th>
+                </tr>
+            <c:forEach items="${employee.customers}" var="customer">
+                <tr>
+                    <td><a href="http://localhost:8080/customers/customer?name=${customer.id}">${customer.id}</a></td>
+                    <td>${customer.customerName}</td>
+                </tr>
+            </c:forEach>
+        </table>
+        <button onclick="window.location.assign('../employees/')">Back</button>
         <div class="col col-2"></div>
     </div>
 </div>

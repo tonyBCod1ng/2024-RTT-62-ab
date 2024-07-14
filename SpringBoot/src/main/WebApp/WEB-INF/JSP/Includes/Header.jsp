@@ -36,7 +36,13 @@
                 <a class="nav-link" href="/homework">Homework</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/employees/employee">Employee Search</a>
+                <a class="nav-link" href="/employees/">Employee Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/customers/">Customer Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/orders/">Order Search</a>
             </li>
         </ul>
     </div>

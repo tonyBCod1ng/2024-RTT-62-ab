@@ -20,7 +20,7 @@ import java.util.Optional;
     @Autowired
     private EmployeeDAO employeeDAO;
 
-    @GetMapping("/employee")
+    @GetMapping("/")
     public ModelAndView Employee(@RequestParam(required = false) String name) {
         ModelAndView response = new ModelAndView("employeeSearch");
         List<Employee> employees = employeeDAO.findByFirstname(name);

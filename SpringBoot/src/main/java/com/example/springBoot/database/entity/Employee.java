@@ -9,10 +9,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@ToString
 @Table(name = "employees")
 public class Employee {
-
+    @ToString.Exclude
+    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Customer> customers;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

@@ -13,12 +13,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/dao/ProductDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBoot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/WebApp/WEB-INF/JSP/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/WebApp/WEB-INF/JSP/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/Controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/WebApp/WEB-INF/JSP/employeeItem.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/WebApp/WEB-INF/JSP/employeeItem.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,6 +191,7 @@
       <workItem from="1718976266653" duration="1243000" />
       <workItem from="1719278356829" duration="580000" />
       <workItem from="1720552211320" duration="2698000" />
+      <workItem from="1720868063856" duration="732000" />
     </task>
     <servers />
   </component>
