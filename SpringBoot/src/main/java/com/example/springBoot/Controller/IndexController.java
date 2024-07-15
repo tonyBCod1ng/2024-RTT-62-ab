@@ -34,7 +34,7 @@ import java.util.List;
     @GetMapping("/inventory")
      ModelAndView inventory(@RequestParam(required = false) String search) {
         List<Product> products = productDAO.findByName(search);
-        ModelAndView response = new ModelAndView("inventory");
+        ModelAndView response = new ModelAndView("inventory/inventory");
         response.addObject("products", products);
         response.addObject("name", search);
         return response;
@@ -46,7 +46,7 @@ import java.util.List;
         if (productId > 110) {
             product = productDAO.findById(110);
         }
-        response = new ModelAndView("item");
+        response = new ModelAndView("/inventory/item");
         response.addObject("product", product);
         return response;
     }

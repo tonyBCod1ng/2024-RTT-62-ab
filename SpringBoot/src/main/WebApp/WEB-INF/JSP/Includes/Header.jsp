@@ -44,6 +44,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/orders/">Order Search</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/employees/create">Create Employee</a>
+            </li>
         </ul>
     </div>
 </nav>
