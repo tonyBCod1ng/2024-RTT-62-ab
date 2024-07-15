@@ -5,6 +5,7 @@ import com.example.springBoot.database.entity.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,10 +26,10 @@ import java.util.List;
         response.addObject("name", name);
         return response;
     }
-    @GetMapping("/order")
-    ModelAndView OrderItem(@RequestParam(required = false) int name){
+    @GetMapping("/order/{id}")
+    ModelAndView OrderItem(@PathVariable(required = false) int id){
         ModelAndView response = new ModelAndView("orderItem");
-        Order order = orderDAO.findOrderById(name);
+        Order order = orderDAO.findOrderById(id);
         response.addObject("order", order);
         return response;
     }

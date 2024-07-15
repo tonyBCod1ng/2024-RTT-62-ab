@@ -38,7 +38,7 @@
                 </tr>
             <c:forEach items="${employee.customers}" var="customer">
                 <tr>
-                    <td><a href="http://localhost:8080/customers/customer?name=${customer.id}">${customer.id}</a></td>
+                    <td><a href="http://localhost:8080/customers/customer/${customer.id}">${customer.id}</a></td>
                     <td>${customer.customerName}</td>
                 </tr>
             </c:forEach>

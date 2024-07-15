@@ -24,7 +24,7 @@
             </tr>
             <tr>
                 <th>Sales Rep</th>
-                <td><a href="http://localhost:8080/employees/employeeItem?name=${customer.salesRepEmployeeId}">${customer.salesRepEmployeeId}</a></td>
+                <td><a href="http://localhost:8080/employees/employee/${customer.salesRepEmployeeId}">${customer.salesRepEmployeeId}</a></td>
             </tr>
 
         </table>
@@ -42,7 +42,7 @@
                 </tr>
                 <c:forEach items="${customer.orders}" var="order">
                     <tr>
-                        <td><a href="http://localhost:8080/orders/order?name=${order.id}">${order.id}</a></td>
+                        <td><a href="http://localhost:8080/orders/order/${order.id}">${order.id}</a></td>
                         <td>${order.orderDate}</td>
                         <td>${order.requiredDate}</td>
                         <td>${order.comment}</td>

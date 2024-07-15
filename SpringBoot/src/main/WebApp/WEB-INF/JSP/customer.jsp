@@ -26,15 +26,15 @@
             <table class="table col col-5" >
                 <tr>
                     <th>Id</th>
-                    <th>Office Number</th>
-                    <th>Name</th>
-                    <th>E-mail</th>
+                    <th>Customer Name</th>
+                    <th>Country</th>
                 </tr>
                 <c:forEach items="${customers}" var="customer">
 
                     <tr>
-                        <td><a href="http://localhost:8080/customers/customer?name=${customer.id}">${customer.id}</a></td>
+                        <td><a href="http://localhost:8080/customers/customer/${customer.id}">${customer.id}</a></td>
                         <td>${customer.customerName}</td>
+                        <td>${customer.country}</td>
                     </tr>
 
                 </c:forEach>

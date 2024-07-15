@@ -33,7 +33,7 @@
                 <c:forEach items="${orders}" var="order">
 
                     <tr>
-                        <td><a href="http://localhost:8080/orders/order?name=${order.id}">${order.id}</a></td>
+                        <td><a href="http://localhost:8080/orders/order/${order.id}">${order.id}</a></td>
                         <td>${order.customerId}</td>
                         <td>${order.orderDate}</td>
                         <td>${order.shippedDate}</td>

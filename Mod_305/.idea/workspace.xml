@@ -13,13 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02539440-49ad-4cf9-9caf-8e67287645b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/Controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/dao/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/WebApp/WEB-INF/JSP/employeeItem.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/WebApp/WEB-INF/JSP/employeeItem.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/src/main/java/com/example/springBoot/database/entity/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Piano/src/main/java/org/example/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Piano/src/main/java/org/example/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Piano/src/main/java/org/example/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Piano/src/main/java/org/example/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +191,7 @@
       <workItem from="1719278356829" duration="580000" />
       <workItem from="1720552211320" duration="2698000" />
       <workItem from="1720868063856" duration="732000" />
+      <workItem from="1720992623454" duration="296000" />
     </task>
     <servers />
   </component>
