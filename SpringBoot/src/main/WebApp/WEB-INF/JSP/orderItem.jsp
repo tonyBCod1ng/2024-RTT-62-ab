@@ -1,7 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:include page="Includes/Header.jsp"></jsp:include>
-
+<script>
+    let totalSpent = 0;
+    function add(num){
+        totalSpent += num;
+    }
+</script>
 
 <div class="container">
     <div class="row text-center">
@@ -22,7 +27,6 @@
         </table>
         <div class="row text-center">
             <h2>Order Details</h2>
-            <div class="col col-2"></div>
         </div>
         <div class="row">
             <table class=" table col col-5" id="item-list">
@@ -30,18 +34,21 @@
                     <th>Item Id</th>
                     <th>Amount Ordered</th>
                     <th>Price Per Item</th>
+                    <th>Subtotal</th>
                 </tr>
                 <c:forEach items="${order.orderDetails}" var="order">
                     <tr>
                         <td><a href="http://localhost:8080/item/${order.productID}">${order.productID}</a></td>
                         <td>${order.quantityOrdered}</td>
                         <td>${order.priceEach}</td>
+                        <td onload="add(String(${order.priceEach * order.quantityOrdered}))">$${order.priceEach * order.quantityOrdered}</td>
+
                     </tr>
+
                 </c:forEach>
             </table>
             <button onclick="window.location.assign('/../orders/')">Back</button>
             <div class="col col-2"></div>
         </div>
     </div>
-
 <jsp:include page="Includes/Footer.jsp"></jsp:include>

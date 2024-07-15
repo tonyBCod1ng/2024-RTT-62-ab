@@ -9,7 +9,7 @@
         <div class="col col-2"></div>
     </div>
     <div class="row">
-        <table class=" table col col-5" >
+        <table class=" table col col-5" id="item-list">
             <tr>
                 <th>Id</th>
                 <td>${employee.id}</td>
@@ -25,10 +25,6 @@
             <tr>
                 <th>Extension</th>
                 <td>${employee.extension}</td>
-            </tr>
-            <tr>
-                <th>Manager</th>
-                <td><a href="http://localhost:8080/employees/employee/${employee.reportsTo}">${employee.reportsTo}</a></td>
             </tr>
         </table>
         <div class="row text-center">

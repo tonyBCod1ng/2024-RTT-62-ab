@@ -47,8 +47,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="/employees/create">Create Employee</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/offices/">Offices</a>
+            </li>
         </ul>
     </div>
 </nav>
 
 <div style="height: 10vh"></div>
+<div class="container">

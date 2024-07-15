@@ -9,5 +9,6 @@ import java.util.List;
 public interface EmployeeDAO extends JpaRepository<Employee, String> {
     @Query("select e from Employee e where concat(e.firstname,'',  e.lastname, '', e.id) like concat('%', :name, '%') ")
     List<Employee> findByFirstname(String name);
+    List<Employee> findByJobTitle(String title);
     Employee findEmployeeById(int id);
 }
