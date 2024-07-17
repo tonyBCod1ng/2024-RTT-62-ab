@@ -10,7 +10,7 @@
         </div>
         <div class="row justify-content-center text-center">
             <div class="col col-8">
-              <h2>Offices</h2>
+                <h2>Offices</h2>
             </div>
         </div>
     </section>
@@ -18,24 +18,24 @@
         <div class="row justify-content-center">
 
             <table class="table col col-5">
-                <tr>
-                    <th>Office Number</th>
-                    <th>Country</th>
-                    <th>City</th>
-                    <th>Territory</th>
+                <thead>
+                <tr scope="row">
+                    <th scope="col">Office Number</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Territory</th>
                 </tr>
+                </thead>
+                <tbody>
                 <c:forEach items="${offices}" var="office">
-
                     <tr>
-                        <td>
-                           ${office.id}
-                        </td>
+                        <td><a href="office/${office.id}">${office.id}</a></td>
                         <td>${office.country}</td>
                         <td>${office.city}</td>
                         <td>${office.territory}</td>
                     </tr>
-
                 </c:forEach>
+                </tbody>
             </table>
 
         </div>

@@ -5,6 +5,7 @@ import com.example.springBoot.database.entity.Office;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +22,13 @@ public class OfficeController {
         ModelAndView response = new ModelAndView();
         List<Office> offices = officeDAO.findAll();
         response.addObject("offices", offices);
+        return response;
+    }
+    @GetMapping("/office/{id}")
+    ModelAndView officeItem(@PathVariable int id){
+        ModelAndView response = new ModelAndView("officeItem");
+        Office office = officeDAO.findOfficeById(id);
+        response.addObject("office", office);
         return response;
     }
 }

@@ -12,6 +12,10 @@ import java.util.List;
 @Table(name = "employees")
 public class Employee {
     @ToString.Exclude
+    @ManyToOne(fetch = FetchType.LAZY, optional =true)
+    @JoinColumn(name = "office_id", insertable = false, updatable = false)
+    private Office office;
+    @ToString.Exclude
     @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Customer> customers;
     @Id

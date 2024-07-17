@@ -25,7 +25,7 @@
             <tr>
                 <th>Sales Rep</th>
                 <td>
-                    <a href="http://localhost:8080/employees/employee/${customer.salesRepEmployeeId}">${customer.salesRepEmployeeId}</a>
+                    <a href="http://localhost:8080/employees/employee/${customer.salesRepEmployeeId}"> ${customer.employee.lastname}, ${customer.employee.firstname}</a>
                 </td>
             </tr>
 

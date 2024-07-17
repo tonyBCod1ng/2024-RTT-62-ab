@@ -3,9 +3,7 @@
 <jsp:include page="../Includes/Header.jsp"></jsp:include>
 
 <section>
-    <div class="row">
-        <div class="col col-12" style="height: 10vh"></div>
-    </div>
+
     <div class="row justify-content-center text-center">
         <h4>Create Employee</h4>
     </div>
@@ -14,46 +12,179 @@
     <div class="row justify-content-center text-center">
         <div class="col col-10">
             <form action="http://localhost:8080/employees/createSubmit">
-                <div class="row justify-content-center m-4">
-                    <label for="officeId" class="form-label col col-1">Office Id</label>
-                    <select id="officeId" name="officeId" style="width: 75%" class="col col-9 form-control">
-                        <c:forEach items="${offices}" var="office">
-                            <option value="${office.id}">${office.city}</option>
-                        </c:forEach>
-                    </select>
+                <div class="row justify-content-center m-4 cols-2">
+                    <div class="col col-2">
+                        <label for="officeId" class="form-label">Office Id</label>
+                    </div>
+                    <div class="col col-6">
+                        <select id="officeId" name="officeId" class="form-select">
+                            <c:forEach items="${offices}" var="office">
+                                <option
+                                        <c:if test="${office.id == form.officeId}">selected</c:if>
+                                        value="${office.id}">${office.city}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
                 </div>
-                <div class="row justify-content-center m-4">
-                    <label for="firstName" class="form-label col col-1">First Name</label>
-                    <input id="firstName" name="firstName" class="col col-9" type="text"
-                           aria-description="first name input">
-                </div>
-                <div class="row justify-content-center m-4">
-                    <label for="lastname" class="form-label col col-1">Last Name</label>
-                    <input id="lastname" name="lastName" class="col col-9" type="text"
-                           aria-description="office id input">
-                </div>
-                <div class="row justify-content-center m-4">
-                    <label for="extension" class="form-label col col-1">Ext.</label>
-                    <input id="extension" name="extension" class="col col-9" type="text"
-                           aria-description="extension input">
-                </div>
-                <div class="row justify-content-center m-4">
-                    <label for="email" class="form-label col col-1">E-Mail</label>
-                    <input id="email" name="email" class="col col-9" type="email" aria-description="email input">
-                </div>
-                <div class="row justify-content-center m-4">
-                    <label for="jobTitle" class="form-label col col-1">Job Title</label>
-                    <input id="jobTitle" name="jobTitle" class="col col-9" type="text"
-                           aria-description="job title input">
-                </div>
-
-                <div class="row justify-content-center m-4">
-                    <label for="reportsTo" class="form-label col col-1 text-center">Reports To</label>
-                    <select id="reportsTo" style="width: 75%" name="reportsTo" class="col col-9 form-control">
+                <div class="row justify-content-center m-4 cols-2">
+                    <div class="col col-2">
+                        <label for="reportsTo" class="form-label">Reports To</label>
+                    </div>
+                    <div class="col col-6">
+                        <select id="reportsTo" name="reportsTo" class="form-select">
                         <c:forEach items="${reportsTo}" var="employee">
-                            <option value="${employee.id}">${employee.firstname} ${employee.lastname}</option>
+                            <option
+                                    <c:if test="${employee.id == form.reportsTo}">selected</c:if>
+                                    value="${employee.id}">${employee.firstname} ${employee.lastname}
+                            </option>
                         </c:forEach>
                     </select>
+                    </div>
+                    <div class="row justify-content-center m-4 cols-2">
+                        <div class="col col-2"><label for="firstName" class="form-label">First Name</label></div>
+                        <div class="col col-6"><input value="${form.firstName}" id="firstName" name="firstName"
+                                                class="form-control <c:if test="${bindingResult.hasFieldErrors('firstName')}">is-invalid</c:if>"
+                                                type="text"
+                                                aria-description="first name input">
+                            <div <c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('lastName')}">
+                                    style="text-align: left;
+                                    padding-left: 15px;
+                                    "
+                                    class="invalid-feedback row form-text"
+                                </c:when>
+                                <c:otherwise>
+                                    style="padding-left: 15px"
+                                    class="row form-text"
+                                </c:otherwise>
+                            </c:choose>><c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('firstName')}">
+                                    ${bindingResult.getFieldError('firstName').defaultMessage}
+                                </c:when>
+                                <c:otherwise>
+                                    Employee's First Name.
+                                </c:otherwise>
+                            </c:choose>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center m-4 cols-2">
+                        <div class="col col-2"><label for="lastname" class="form-label">Last Name</label></div>
+                        <div class="col col-6"><input value="${form.lastName}" id="lastname" name="lastName"
+                                                class="form-control <c:if test="${bindingResult.hasFieldErrors('lastName')}">is-invalid</c:if>"
+                                                type="text"
+                                                aria-description="office id input">
+                            <div
+                                    <c:choose>
+                                        <c:when test="${bindingResult.hasFieldErrors('lastName')}">
+                                            style="text-align: left;
+                                            padding-left: 15px;
+                                            "
+                                            class="invalid-feedback row form-text"
+                                        </c:when>
+                                        <c:otherwise>
+                                            style="padding-left: 15px"
+                                            class="row form-text"
+                                        </c:otherwise>
+                                    </c:choose>
+                            ><c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('lastName')}">
+                                    ${bindingResult.getFieldError('lastName').defaultMessage}
+                                </c:when>
+                                <c:otherwise>
+                                    Employee's Last Name.
+                                </c:otherwise>
+                            </c:choose></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center m-4">
+                        <div class="col col-2"><label for="extension" class="form-label">Ext.</label></div>
+                        <div class="col-6"><input value="${form.extension}" id="extension" name="extension"
+                                                class="form-control <c:if test="${bindingResult.hasFieldErrors('extension')}">is-invalid</c:if>"
+                                                type="text"
+                                                aria-description="extension input">
+                            <div <c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('extension')}">
+                                    style="text-align: left;
+                                    padding-left: 15px;
+                                    "
+                                    class="invalid-feedback row form-text"
+                                </c:when>
+                                <c:otherwise>
+                                    style="padding-left: 15px"
+                                    class="row form-text"
+                                </c:otherwise>
+                            </c:choose>><c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('extension')}">
+                                    ${bindingResult.getFieldError('extension').defaultMessage}
+                                </c:when>
+                                <c:otherwise>
+                                    Employee's Phone Extension.
+                                </c:otherwise>
+                            </c:choose>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center m-4">
+                        <div class="col col-2"><label for="email" class="form-label">E-Mail</label></div>
+                        <div class="col-6"><input value="${form.email}" id="email" name="email"
+                                                class="form-control <c:if test="${bindingResult.hasFieldErrors('email')}">is-invalid</c:if>"
+                                                type="text" aria-description="email input">
+                            <div <c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('email')}">
+                                    style="text-align: left;
+                                    padding-left: 15px;
+                                    "
+                                    class="invalid-feedback row form-text"
+                                </c:when>
+                                <c:otherwise>
+                                    style="padding-left: 15px"
+                                    class="row form-text"
+                                </c:otherwise>
+                            </c:choose>><c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('email')}">
+                                    ${bindingResult.getFieldError('email').defaultMessage}
+                                </c:when>
+                                <c:otherwise>
+                                    Employee's Company E-mail.
+                                </c:otherwise>
+                            </c:choose>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center m-4">
+                        <div class="col col-2"><label for="jobTitle" class="form-label">Job Title</label>
+                        </div>
+                        <div class="col-6">
+                            <input value="${form.jobTitle}" id="jobTitle" name="jobTitle"
+                                   class="form-control <c:if test="${bindingResult.hasFieldErrors('jobTitle')}">is-invalid</c:if>"
+                                   type="text"
+                                   aria-description="job title input">
+                            <div<c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('jobTitle')}">
+                                    style="text-align: left;
+                                    padding-left: 15px;
+                                    "
+                                    class="invalid-feedback row form-text"
+                                </c:when>
+                                <c:otherwise>
+                                    style="padding-left: 15px"
+                                    class="row form-text"
+                                </c:otherwise>
+                            </c:choose>><c:choose>
+                                <c:when test="${bindingResult.hasFieldErrors('jobTitle')}">
+                                    ${bindingResult.getFieldError('jobTitle').defaultMessage}
+                                </c:when>
+                                <c:otherwise>
+                                    Employee's Job Title.
+                                </c:otherwise>
+                            </c:choose>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <button type="submit" class="btn btn-primary m-1">Submit</button>

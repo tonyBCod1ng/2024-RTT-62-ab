@@ -12,7 +12,11 @@ import java.util.Objects;
 @ToString
 @Entity
 @Table(name = "offices")
-public class Office {
+ public class Office {
+        @ToString.Exclude
+        @OneToMany(mappedBy = "office", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+        private List<Employee> employees;
+
         @Id
         @Column(name = "id")
         private Integer id;

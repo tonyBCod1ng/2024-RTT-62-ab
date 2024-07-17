@@ -16,6 +16,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
     <a class="navbar-brand" href="/">MyNavbar</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -23,17 +24,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/SecondPage">Second</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/hirdPage">Third</a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="/inventory">Inventory</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/homework">Homework</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/employees/">Employee Search</a>
@@ -48,6 +41,9 @@
                 <a class="nav-link" href="/employees/create">Create Employee</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/customers/create">Create Customer</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/offices/">Offices</a>
             </li>
         </ul>
@@ -55,4 +51,3 @@
 </nav>
 
 <div style="height: 10vh"></div>
-<div class="container">

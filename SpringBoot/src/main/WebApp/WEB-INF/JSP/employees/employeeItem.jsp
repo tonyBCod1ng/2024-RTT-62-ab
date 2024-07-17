@@ -16,7 +16,7 @@
             </tr>
             <tr>
                 <th>Office</th>
-                <td>${employee.officeId}</td>
+                <td>${employee.office.city}</td>
             </tr>
             <tr>
                 <th>Email</th>
@@ -28,7 +28,8 @@
             </tr>
             <tr>
                 <th>Manager</th>
-                <td><a href="http://localhost:8080/employees/employee/${employee.reportsTo}">${employee.reportsTo}</a></td>
+                <td><c:if test="${employee.reportsTo > 0}"><a
+                        href="../employee/${employee.reportsTo}">${manager.lastname}, ${manager.firstname}</a></c:if></td>
             </tr>
         </table>
         <div class="row text-center">
