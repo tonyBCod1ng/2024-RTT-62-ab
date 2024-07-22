@@ -59,32 +59,7 @@ class EmployeeController {
 
     @GetMapping("/create")
     ModelAndView createEmployee(@RequestParam(required = false) Employee newEmployee) {
-        String manager = "Manager";
-        String vpSales = "VP Sales";
-        String vpMarketing = "VP Marketing";
-        String salesManagerAPAC = "Sales Manager (APAC)";
-        String salesManagerEMEA = "Sales Manager (EMEA)";
-        String salesManagerNA = "Sales Manager (NA)";
-        String salesMarketing = "Sales Marketing";
-        String president = "President";
-        List<String> titles = new ArrayList<>();
-        titles.add(vpSales);
-        titles.add(vpMarketing);
-        titles.add(salesManagerAPAC);
-        titles.add(salesManagerEMEA);
-        titles.add(salesManagerNA);
-        titles.add(salesMarketing);
-        titles.add(president);
-        titles.add(manager);
-        List<Employee> reportsTo = new ArrayList<>();
-        List<Employee> allEmployees = employeeDAO.findAll();
-        for (Employee employee : allEmployees) {
-            if (titles.contains(employee.getJobTitle())) {
-                reportsTo.add(employee);
-            } else if (employee.getId() == 1621) {
-                reportsTo.add(employee);
-            }
-        }
+        List<Employee> reportsTo = getManagerList();
         List<Office> officeList = officeDAO.findAll();
         Collections.sort(officeList, Comparator.comparing(Office::getCity));
         ModelAndView response = new ModelAndView("employees/create");
@@ -107,32 +82,7 @@ class EmployeeController {
 
             // because the page needs the list of employees for the drop down we need to add the list of employees to the model
 
-            String manager = "Manager";
-            String vpSales = "VP Sales";
-            String vpMarketing = "VP Marketing";
-            String salesManagerAPAC = "Sales Manager (APAC)";
-            String salesManagerEMEA = "Sales Manager (EMEA)";
-            String salesManagerNA = "Sales Manager (NA)";
-            String salesMarketing = "Sales Marketing";
-            String president = "President";
-            List<String> titles = new ArrayList<>();
-            titles.add(vpSales);
-            titles.add(vpMarketing);
-            titles.add(salesManagerAPAC);
-            titles.add(salesManagerEMEA);
-            titles.add(salesManagerNA);
-            titles.add(salesMarketing);
-            titles.add(president);
-            titles.add(manager);
-            List<Employee> reportsTo = new ArrayList<>();
-            List<Employee> allEmployees = employeeDAO.findAll();
-            for (Employee employee : allEmployees) {
-                if (titles.contains(employee.getJobTitle())) {
-                    reportsTo.add(employee);
-                } else if (employee.getId() == 1621) {
-                    reportsTo.add(employee);
-                }
-            }
+            List<Employee> reportsTo = getManagerList();
             response.addObject("reportsTo", reportsTo);
 
             // we need the list of offices
@@ -165,6 +115,32 @@ class EmployeeController {
     @GetMapping("/edit/{id}")
     ModelAndView editEmployee(@PathVariable Integer id) {
         ModelAndView response = new ModelAndView("employees/create");
+        List<Employee> reportsTo = getManagerList();
+        response.addObject("reportsTo", reportsTo);
+
+        // we need the list of offices
+        List<Office> offices = officeDAO.findAll();
+        response.addObject("offices", offices);
+        if (id != null) {
+            Employee employee = employeeDAO.findEmployeeById(id);
+            if (employee != null) {
+                CreateEmployeeFormBean formBean = new CreateEmployeeFormBean();
+                formBean.setId(employee.getId());
+                formBean.setFirstName(employee.getFirstname());
+                formBean.setLastName(employee.getLastname());
+                formBean.setEmail(employee.getEmail());
+                formBean.setExtension(employee.getExtension());
+                formBean.setOfficeId(employee.getOfficeId());
+                formBean.setJobTitle(employee.getJobTitle());
+                if(employee.getReportsTo() == null) { employee.setReportsTo(0);}
+                formBean.setReportsTo(employee.getReportsTo());
+                response.addObject("form", formBean);
+            }
+        }
+        return response;
+    }
+
+    private List<Employee> getManagerList() {
         String manager = "Manager";
         String vpSales = "VP Sales";
         String vpMarketing = "VP Marketing";
@@ -191,28 +167,7 @@ class EmployeeController {
                 reportsTo.add(employee);
             }
         }
-        response.addObject("reportsTo", reportsTo);
-
-        // we need the list of offices
-        List<Office> offices = officeDAO.findAll();
-        response.addObject("offices", offices);
-        if (id != null) {
-            Employee employee = employeeDAO.findEmployeeById(id);
-            if (employee != null) {
-                CreateEmployeeFormBean formBean = new CreateEmployeeFormBean();
-                formBean.setId(employee.getId());
-                formBean.setFirstName(employee.getFirstname());
-                formBean.setLastName(employee.getLastname());
-                formBean.setEmail(employee.getEmail());
-                formBean.setExtension(employee.getExtension());
-                formBean.setOfficeId(employee.getOfficeId());
-                formBean.setJobTitle(employee.getJobTitle());
-                if(employee.getReportsTo() == null) { employee.setReportsTo(0);}
-                formBean.setReportsTo(employee.getReportsTo());
-                response.addObject("form", formBean);
-            }
-        }
-        return response;
+        return reportsTo;
     }
 
     @GetMapping("/editSubmit")
@@ -230,32 +185,7 @@ class EmployeeController {
             // because the page needs the list of employees for the drop down we need to add the list of employees to the model
 
             //region populate drops
-            String manager = "Manager";
-            String vpSales = "VP Sales";
-            String vpMarketing = "VP Marketing";
-            String salesManagerAPAC = "Sales Manager (APAC)";
-            String salesManagerEMEA = "Sales Manager (EMEA)";
-            String salesManagerNA = "Sales Manager (NA)";
-            String salesMarketing = "Sales Marketing";
-            String president = "President";
-            List<String> titles = new ArrayList<>();
-            titles.add(vpSales);
-            titles.add(vpMarketing);
-            titles.add(salesManagerAPAC);
-            titles.add(salesManagerEMEA);
-            titles.add(salesManagerNA);
-            titles.add(salesMarketing);
-            titles.add(president);
-            titles.add(manager);
-            List<Employee> reportsTo = new ArrayList<>();
-            List<Employee> allEmployees = employeeDAO.findAll();
-            for (Employee employee : allEmployees) {
-                if (titles.contains(employee.getJobTitle())) {
-                    reportsTo.add(employee);
-                } else if (employee.getId() == 1621) {
-                    reportsTo.add(employee);
-                }
-            }
+            List<Employee> reportsTo = getManagerList();
             response.addObject("reportsTo", reportsTo);
             //endregion
 

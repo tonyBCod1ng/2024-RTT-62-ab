@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/orders")
@@ -31,6 +32,14 @@ import java.util.List;
         ModelAndView response = new ModelAndView("orderItem");
         Order order = orderDAO.findOrderById(id);
         response.addObject("order", order);
+        return response;
+    }
+
+    @GetMapping("/order/detail")
+    ModelAndView OrderDetail(@RequestParam(required = false) int id){
+        ModelAndView response = new ModelAndView("od");
+        List<Map<String, Object>> orderDetails = orderDAO.getOrderDetails(id);
+        response.addObject("orderDetails", orderDetails);
         return response;
     }
 }
