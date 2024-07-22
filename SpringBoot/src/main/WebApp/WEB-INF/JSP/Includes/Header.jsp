@@ -15,39 +15,46 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<div class="container">
-    <a class="navbar-brand" href="/">MyNavbar</a>
+<div class="row justify-content-center cols-1">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-            </li>
+    <div class="col">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a style="padding-left: 5px;" class="navbar-brand" href="/">Systems</a>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/inventory">Inventory</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/employees/">Employee Search</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/customers/">Customer Search</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/orders/">Order Search</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/employees/create">Create Employee</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/customers/create">Create Customer</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/offices/">Offices</a>
-            </li>
-        </ul>
+            <div class="navbar-expand" id="navbarSupportedContent">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/inventory">Inventory Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/inventory/item/create">Create Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/employees/">Employee Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/customers/">Customer Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/orders/">Order Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/employees/create">Create Employee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/customers/create">Create Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/offices/">Offices</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
     </div>
-</nav>
+</div>
+<div class="container">
 
 <div style="height: 10vh"></div>

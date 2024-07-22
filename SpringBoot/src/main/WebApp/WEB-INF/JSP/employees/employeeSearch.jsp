@@ -32,28 +32,32 @@
         </div>
     </section>
     <section>
-        <div class="row justify-content-center">
+        <div class="row text-center justify-content-center">
 
-            <table class="table col col-5">
-                <tr>
-                    <th>Id</th>
-                    <th>Office Number</th>
-                    <th>Name</th>
-                    <th>E-mail</th>
-                </tr>
-                <c:forEach items="${employees}" var="employee">
-
+            <div class="col col-6">
+                <table class="table">
                     <tr>
-                        <td>
-                            <a href="http://localhost:8080/employees/employee/${employee.id}">${employee.id}</a>
-                        </td>
-                        <td>${employee.officeId}</td>
-                        <td>${employee.firstname}, ${employee.lastname}</td>
-                        <td>${employee.email}</td>
+                        <th>Id</th>
+                        <th>Office Number</th>
+                        <th>Name</th>
+                        <th>E-mail</th>
+                        <th></th>
                     </tr>
+                    <c:forEach items="${employees}" var="employee">
 
-                </c:forEach>
-            </table>
+                        <tr>
+                            <td>
+                                <a href="http://localhost:8080/employees/employee/${employee.id}">${employee.id}</a>
+                            </td>
+                            <td>${employee.officeId}</td>
+                            <td>${employee.firstname}, ${employee.lastname}</td>
+                            <td>${employee.email}</td>
+                            <td><a href="http://localhost:8080/employees/edit/${employee.id}">Edit</a></td>
+                        </tr>
+
+                    </c:forEach>
+                </table>
+            </div>
 
         </div>
     </section>

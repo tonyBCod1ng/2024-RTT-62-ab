@@ -3,15 +3,27 @@
 <jsp:include page="../Includes/Header.jsp"></jsp:include>
 
 <section>
-
     <div class="row justify-content-center text-center">
-        <h4>Create Employee</h4>
+        <c:choose>
+            <c:when test="${form == null}">
+                <h4>Create Employee</h4>
+            </c:when>
+            <c:otherwise>
+                <h4>Edit Employee</h4>
+            </c:otherwise>
+        </c:choose>
     </div>
 </section>
 <section>
     <div class="row justify-content-center text-center">
         <div class="col col-10">
-            <form action="http://localhost:8080/employees/createSubmit">
+            <form
+<c:choose>
+    <c:when test="${form == null}">action="http://localhost:8080/employees/createSubmit"</c:when>
+    <c:otherwise>action="http://localhost:8080/employees/editSubmit"</c:otherwise>
+</c:choose>
+    >
+    <input type="hidden" name="id" value="${form.id}">
                 <div class="row justify-content-center m-4 cols-2">
                     <div class="col col-2">
                         <label for="officeId" class="form-label">Office Id</label>

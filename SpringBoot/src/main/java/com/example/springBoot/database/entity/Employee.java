@@ -13,7 +13,7 @@ import java.util.List;
 public class Employee {
     @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY, optional =true)
-    @JoinColumn(name = "office_id", insertable = false, updatable = false)
+    @JoinColumn(name = "office_id")
     private Office office;
     @ToString.Exclude
     @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -34,7 +34,7 @@ public class Employee {
     private Integer reportsTo;
     @Column(name = "job_title")
     private String jobTitle;
-    @Column(name = "office_id")
+    @Column(name = "office_id", insertable = false, updatable = false)
     private Integer officeId;
     @Column(name = "profile_image_url")
     private String profileImageUrl;

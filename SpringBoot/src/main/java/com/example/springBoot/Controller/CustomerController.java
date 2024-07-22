@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @Controller
@@ -35,7 +34,7 @@ class CustomerController {
         return response;
     }
     @GetMapping("/customer/{id}")
-    public ModelAndView customerItem(@PathVariable int id) {
+    public ModelAndView customerItem(@PathVariable Integer id) {
         ModelAndView response = new ModelAndView("customers/customerItem");
         Customer customer = customerDAO.findCustomerById(id);
         response.addObject("customer", customer);
@@ -48,10 +47,41 @@ class CustomerController {
         response.addObject("reportsTo", employees);
         return response;
     }
+    @GetMapping("/edit/{id}")
+    public ModelAndView EditCustomer(@PathVariable Integer id) {
+        ModelAndView response = new ModelAndView("customers/create");
+        List<Employee> employees = employeeDAO.findAll();
+        response.addObject("reportsTo", employees);
+        if (id != null) {
+            Customer customer = customerDAO.findCustomerById(id);
+            if (customer != null) {
+                CreateCustomerFormBean formBean = new CreateCustomerFormBean();
+                formBean.setId(customer.getId());
+                formBean.setCustomerName(customer.getCustomerName());
+                formBean.setCity(customer.getCity());
+                formBean.setCountry(customer.getCountry());
+                formBean.setPhone(customer.getPhone());
+                formBean.setContactFirstname(customer.getContactFirstname());
+                formBean.setContactLastname(customer.getContactLastname());
+                formBean.setAddressLine1(customer.getAddressLine1());
+                formBean.setAddressLine2(customer.getAddressLine2());
+                formBean.setState(customer.getState());
+                formBean.setPostalCode(customer.getPostalCode());
+                if (customer.getEmployee() == null) {
+                    formBean.setEmployee(new Employee());
+                }
+                response.addObject("form", formBean);
+            }
+        }
+        return response;
+    }
     @GetMapping("/createSubmit")
     public ModelAndView createCustomerSubmit(CreateCustomerFormBean formBean) {
         ModelAndView response = new ModelAndView("customers/createSubmit");
-        Customer customer = new Customer();
+        Customer customer = customerDAO.findCustomerById(formBean.getId());
+        if (customer == null) {
+            customer = new Customer();
+        }
         Employee employee = employeeDAO.findEmployeeById(formBean.getReportsTo());
         customer.setCustomerName(formBean.getCustomerName());
         customer.setCity(formBean.getCity());

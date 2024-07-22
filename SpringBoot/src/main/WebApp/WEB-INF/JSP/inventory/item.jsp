@@ -1,10 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="../Includes/Header.jsp"></jsp:include>
 
-<div class="container">
+
     <div class="row text-center">
-        <h2>${product.productName}</h2>
-        <div class="col col-2"></div>
+        <div class="col col-1"><a class="btn btn-primary" href="/../inventory">Back</a></div>
+
+<div class="col"><h2>${product.productName}</h2></div>
+        <div class="col col-1"><a class="btn btn-warning" href="/../inventory/item/edit/${product.id}">Edit</a></div>
     </div>
     <div class="row">
         <table class="table col col-8">
@@ -31,8 +33,6 @@
             </tr>
 
         </table>
-        <button onclick="window.location.assign('/../inventory')">Back</button>
-        <div class="col col-2"></div>
     </div>
-</div>
+
 <jsp:include page="../Includes/Footer.jsp"></jsp:include>

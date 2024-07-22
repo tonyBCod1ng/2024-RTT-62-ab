@@ -36,13 +36,15 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Item Description</th>
+                <th></th>
             </tr>
             <c:forEach items="${products}" var="product">
 
                 <tr>
                     <td>${product.id}</td>
-                    <td><a href="http://localhost:8080/item/${product.id}">${product.productName}</a></td>
+                    <td><a href="http://localhost:8080/inventory/item/${product.id}">${product.productName}</a></td>
                     <td>${product.productDescription}</td>
+                    <td><a href="http://localhost:8080/inventory/item/edit/${product.id}">Edit</a></td>
                 </tr>
 
             </c:forEach>

@@ -19,7 +19,7 @@ public class CreateCustomerFormBean {
     private String state;
     private String postalCode;
     private String country;
-    private Integer employeesId;
+    private Employee employee;
     private Double creditLimit;
     private int reportsTo;
 }
