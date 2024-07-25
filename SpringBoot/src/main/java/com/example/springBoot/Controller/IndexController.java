@@ -1,17 +1,23 @@
 package com.example.springBoot.Controller;
 
+import com.example.springBoot.database.dao.EmployeeDAO;
 import com.example.springBoot.database.dao.ProductDAO;
+import com.example.springBoot.database.entity.Employee;
 import com.example.springBoot.database.entity.Product;
+import com.example.springBoot.form.CreateEmployeeFormBean;
 import com.example.springBoot.form.CreateProductFormBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 @Slf4j
@@ -20,6 +26,8 @@ import java.util.List;
 class IndexController {
     @Autowired
     private ProductDAO productDAO;
+    @Autowired
+    private EmployeeDAO employeeDAO;
 
     @GetMapping("/")
     ModelAndView index() {
@@ -99,5 +107,53 @@ class IndexController {
         response.setViewName("redirect:http://localhost:8080/inventory/item/" + product.getId());
         return response;
     }
+
+    @GetMapping("/file_upload")
+    ModelAndView fileUpload(@RequestParam Integer id) {
+        ModelAndView response = new ModelAndView("fileUpload");
+        response.addObject("id", id);
+        return response;
+    }
+
+    @PostMapping("/file_upload")
+    public ModelAndView fileUploadSubmit(@RequestParam MultipartFile file, @RequestParam Integer id) {
+        // this page is for another page of the website which is express as "/page-url"
+        ModelAndView modelAndView = new ModelAndView("redirect:/employees/employee/" + id);
+
+        log.debug("The file name is: " + file.getOriginalFilename());
+        log.debug("The file size is: " + file.getSize());
+        log.debug("The file content type is: " + file.getContentType());
+
+        // Homework
+        // use the original file name and get a substring of the last index of . to the end of the string
+        // then restrict based on "jpg" or "png"
+        // use the model to put an error message on the page
+
+
+        // this is the location on the hard drive
+        String saveFilename = "./src/main/webapp/pub/images/" + file.getOriginalFilename();
+
+        // this Files.copy is a utility that will read the stream one chunk at a time and write it to a file.
+        // first arg is the input stream to read from the uploaded file
+        // 2nd is the filename where we want to write the file
+        // 3rd says to overwrite if existing.
+        try {
+            Files.copy(file.getInputStream(), Paths.get(saveFilename), StandardCopyOption.REPLACE_EXISTING);
+        } catch ( Exception e ) {
+            log.error("Unable to finish reading file", e);
+        }
+
+        // we can load the record from the database based on the incoming employeeId
+        Employee employee = employeeDAO.findEmployeeById(id);
+
+        // this is the URL to get the image
+        String url = "/pub/images/" + file.getOriginalFilename();
+        employee.setProfileImageUrl(url);
+
+        employeeDAO.save(employee);
+
+        return modelAndView;
+    }
+
 }
 

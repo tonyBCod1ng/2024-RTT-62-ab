@@ -15,7 +15,9 @@
         </c:choose></div>
 </section>
 <section>
-    <div class="row justify-content-center text-center">
+
+
+    <div class="row justify-content-center">
         <div class="col col-10">
             <form action="http://localhost:8080/customers/createSubmit">
                 <input class="hidden" name="id" value="${form.id}">
@@ -26,7 +28,9 @@
                     <div class="col col-6">
                         <select id="reportsTo" name="reportsTo" class="form-select">
                             <c:forEach items="${reportsTo}" var="employee">
-                                <option <c:if test="${employee.id == form.employee.id}">selected</c:if> value="${employee.id}">${employee.firstname} ${employee.lastname}</option>
+                                <option
+                                        <c:if test="${employee.id == form.employee.id}">selected</c:if>
+                                        value="${employee.id}">${employee.firstname} ${employee.lastname}</option>
                             </c:forEach>
                         </select>
                     </div>
@@ -36,16 +40,18 @@
                         <label for="customerName" class="form-label">Company Name</label>
                     </div>
                     <div class="col-6">
-                        <input value="${form.customerName}" id="customerName" name="customerName" class="form-control" type="text"
+                        <input value="${form.customerName}" id="customerName" name="customerName" class="form-control"
+                               type="text"
                                aria-description="company name input">
                     </div>
                 </div>
                 <div class="row justify-content-center m-4 cols-2">
                     <div class="col col-2">
-                        <label  for="contactFirstname" class="form-label">First Name</label>
+                        <label for="contactFirstname" class="form-label">First Name</label>
                     </div>
                     <div class="col-6">
-                        <input value="${form.contactFirstname}" id="contactFirstname" name="contactFirstname" class="form-control" type="text"
+                        <input value="${form.contactFirstname}" id="contactFirstname" name="contactFirstname"
+                               class="form-control" type="text"
                                aria-description="contact firstname input">
                     </div>
                 </div>
@@ -54,7 +60,8 @@
                         <label for="contactLastname" class="form-label">Last Name</label>
                     </div>
                     <div class="col-6">
-                        <input value="${form.contactLastname}" id="contactLastname" name="contactLastname" class="form-control" type="text"
+                        <input value="${form.contactLastname}" id="contactLastname" name="contactLastname"
+                               class="form-control" type="text"
                                aria-description="contact firstname input">
                     </div>
                 </div>
@@ -64,7 +71,8 @@
                         <label for="phone" class="form-label">Phone</label>
                     </div>
                     <div class="col-6">
-                        <input value="${form.phone}" id="phone" name="phone" class="form-control" type="tel" aria-description="phone input">
+                        <input value="${form.phone}" id="phone" name="phone" class="form-control" type="tel"
+                               aria-description="phone input">
                     </div>
                 </div>
                 <div class="row justify-content-center m-4 cols-2">
@@ -72,7 +80,8 @@
                         <label for="addressLine1" class="form-label">Address Line 1</label>
                     </div>
                     <div class="col-6">
-                        <input value="${form.addressLine1}" id="addressLine1" name="addressLine1" class="form-control" type="text"
+                        <input value="${form.addressLine1}" id="addressLine1" name="addressLine1" class="form-control"
+                               type="text"
                                aria-description="address line 1 input">
                     </div>
                 </div>
@@ -81,7 +90,8 @@
                         <label for="addressLine2" class="form-label">Address Line 1</label>
                     </div>
                     <div class="col-6">
-                        <input value="${form.addressLine2}" id="addressLine2" name="addressLine2" class="form-control" type="text"
+                        <input value="${form.addressLine2}" id="addressLine2" name="addressLine2" class="form-control"
+                               type="text"
                                aria-description="address line 1 input">
                     </div>
                 </div>
@@ -90,7 +100,8 @@
                         <label for="postalCode" class="form-label">Postal Code</label>
                     </div>
                     <div class="col-6">
-                        <input value="${form.postalCode}" id="postalCode" name="postalCode" class="form-control" type="number"
+                        <input value="${form.postalCode}" id="postalCode" name="postalCode" class="form-control"
+                               type="number"
                                aria-description="address line 1 input">
                     </div>
                 </div>
@@ -121,8 +132,12 @@
                                aria-description="state input">
                     </div>
                 </div>
+                <div class="row justify-content-center cols-1">
+                    <div class="col col-1">
+                        <button type="submit" class="btn btn-primary m-1">Submit</button>
+                    </div>
+                </div>
 
-                <button type="submit" class="btn btn-primary m-1">Submit</button>
             </form>
         </div>
     </div>

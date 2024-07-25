@@ -7,13 +7,14 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
 @ToString
 public class CreateEmployeeFormBean {
-    private int id;
-    private int officeId;
+    private Integer id;
+    private Integer officeId;
     @Length(max = 100, message = "Email must be less than 100 characters")
     @NotEmpty(message = "Email is required.")
     //@EmailUniqueCheck(message = "Email is in use.")
@@ -32,6 +33,7 @@ public class CreateEmployeeFormBean {
     @Length(max = 10, message = "Must be a maximum of 10 characters")
     @NotEmpty(message = "Must Provide an Extension")
     private String extension;
-    private int reportsTo;
+    private Integer reportsTo;
     private Employee employee;
+    private MultipartFile file;
 }

@@ -12,13 +12,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -67,8 +68,7 @@ class EmployeeController {
         response.addObject("reportsTo", reportsTo);
         return response;
     }
-
-    @GetMapping("/createSubmit")
+    @RequestMapping(value = "/createSubmit", method = {RequestMethod.POST, RequestMethod.GET})
     ModelAndView createEmployeeSubmit(@Valid CreateEmployeeFormBean formBean, BindingResult bindingResult) {
         ModelAndView response = new ModelAndView("employees/createSubmit");
         if (bindingResult.hasErrors()) {
@@ -96,20 +96,30 @@ class EmployeeController {
             response.addObject("form", formBean);
 
             return response;
-        } else {
-            Employee employee = new Employee();
-            employee.setFirstname(formBean.getFirstName());
-            employee.setLastname(formBean.getLastName());
-            employee.setEmail(formBean.getEmail());
-            employee.setExtension(formBean.getExtension());
-            employee.setOfficeId(formBean.getOfficeId());
-            employee.setJobTitle(formBean.getJobTitle());
-            employee.setReportsTo(formBean.getReportsTo());
+        }
+        else {
+            Employee employee = getEmployee(formBean);
             employeeDAO.save(employee);
             response.addObject("form", formBean);
-            response.setViewName("redirect:http://localhost:8080/employees/employee/" + employee.getId());
+            //response.setViewName("redirect:http://localhost:8080/employees/employee/" + employee.getId());
+            getManagerList();
+            response.setViewName("employees/createSubmit");
+
             return response;
         }
+    }
+
+    private static Employee getEmployee(CreateEmployeeFormBean formBean) {
+        Employee employee = new Employee();
+        employee.setFirstname(formBean.getFirstName());
+        employee.setLastname(formBean.getLastName());
+        employee.setEmail(formBean.getEmail());
+        employee.setExtension(formBean.getExtension());
+        employee.setOfficeId(formBean.getOfficeId());
+        employee.setJobTitle(formBean.getJobTitle());
+        employee.setReportsTo(formBean.getReportsTo());
+        employee.setProfileImageUrl("/public/images/"+ formBean.getFile().getOriginalFilename());
+        return employee;
     }
 
     @GetMapping("/edit/{id}")
@@ -170,9 +180,10 @@ class EmployeeController {
         return reportsTo;
     }
 
-    @GetMapping("/editSubmit")
+    @RequestMapping(value = "/editSubmit", method = {RequestMethod.POST, RequestMethod.GET})
     ModelAndView editEmployeeSubmit(@Valid CreateEmployeeFormBean formBean, BindingResult bindingResult) {
         ModelAndView response = new ModelAndView();
+        MultipartFile file = formBean.getFile();
         if (bindingResult.hasErrors()) {
             for (ObjectError error : bindingResult.getAllErrors()) {
                 log.debug("Validation error : " + ((FieldError) error).getField() + " = " + error.getDefaultMessage());
@@ -207,18 +218,34 @@ class EmployeeController {
 
             // first, I am going to take a shot at looking up the record in the database based on the incoming employeeId
             // this is from the hidden input field and is not something the user actually entered themselves
-            Employee employee = employeeDAO.findEmployeeById(formBean.getId());
+            Employee employee = null;
+            if (formBean.getId() != null) {
+                employee = employeeDAO.findEmployeeById(formBean.getId());
+            }
             if (employee == null) {
                 /// this means it was not found in the database so we are going to consider this a create
                 employee = new Employee();
             }
+            String saveFilename = "./src/main/webapp/public/images/" + file.getOriginalFilename();
+
+            // this Files.copy is a utility that will read the stream one chunk at a time and write it to a file.
+            // first arg is the input stream to read from the uploaded file
+            // 2nd is the filename where we want to write the file
+            // 3rd says to overwrite if existing.
+            try {
+                Files.copy(file.getInputStream(), Paths.get(saveFilename), StandardCopyOption.REPLACE_EXISTING);
+            } catch ( Exception e ) {
+                log.error("Unable to finish reading file", e);
+            }
+            String urlString = "/public/images/" + formBean.getFile().getOriginalFilename();
+
             employee.setEmail(formBean.getEmail());
             employee.setFirstname(formBean.getFirstName());
             employee.setLastname(formBean.getLastName());
             employee.setReportsTo(formBean.getReportsTo());
             employee.setExtension(formBean.getExtension());
             employee.setJobTitle(formBean.getJobTitle());
-
+            employee.setProfileImageUrl(urlString);
             Office office = officeDAO.findOfficeById(formBean.getOfficeId());
 
             employee.setOffice(office);

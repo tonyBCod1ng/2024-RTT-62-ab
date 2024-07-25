@@ -17,12 +17,23 @@
 <section>
     <div class="row justify-content-center text-center">
         <div class="col col-10">
-            <form
+            <form method="post"
 <c:choose>
     <c:when test="${form == null}">action="http://localhost:8080/employees/createSubmit"</c:when>
     <c:otherwise>action="http://localhost:8080/employees/editSubmit"</c:otherwise>
 </c:choose>
-    >
+    enctype="multipart/form-data">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-1">
+                        <label for="file" class="col-form-label">File</label>
+                    </div>
+                    <div class="col-5">
+                        <input type="file" id="file" name="file" class="form-control">
+                    </div>
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </div>
+                </div>
     <input type="hidden" name="id" value="${form.id}">
                 <div class="row justify-content-center m-4 cols-2">
                     <div class="col col-2">
@@ -196,9 +207,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <button type="submit" class="btn btn-primary m-1">Submit</button>
             </form>
         </div>
