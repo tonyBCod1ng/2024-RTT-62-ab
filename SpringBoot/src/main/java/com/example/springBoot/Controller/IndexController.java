@@ -8,6 +8,7 @@ import com.example.springBoot.form.CreateEmployeeFormBean;
 import com.example.springBoot.form.CreateProductFormBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.autoconfigure.cloudfoundry.servlet.CloudFoundryActuatorAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -28,6 +29,7 @@ class IndexController {
     private ProductDAO productDAO;
     @Autowired
     private EmployeeDAO employeeDAO;
+    @Autowired
 
     @GetMapping("/")
     ModelAndView index() {

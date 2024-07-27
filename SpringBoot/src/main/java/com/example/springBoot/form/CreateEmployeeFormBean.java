@@ -36,4 +36,5 @@ public class CreateEmployeeFormBean {
     private Integer reportsTo;
     private Employee employee;
     private MultipartFile file;
+    private String profilePicture;
 }

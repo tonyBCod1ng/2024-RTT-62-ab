@@ -96,8 +96,7 @@ class EmployeeController {
             response.addObject("form", formBean);
 
             return response;
-        }
-        else {
+        } else {
             Employee employee = getEmployee(formBean);
             employeeDAO.save(employee);
             response.addObject("form", formBean);
@@ -142,6 +141,7 @@ class EmployeeController {
                 formBean.setExtension(employee.getExtension());
                 formBean.setOfficeId(employee.getOfficeId());
                 formBean.setJobTitle(employee.getJobTitle());
+                formBean.setProfilePicture(employee.getProfileImageUrl());
                 if(employee.getReportsTo() == null) { employee.setReportsTo(0);}
                 formBean.setReportsTo(employee.getReportsTo());
                 response.addObject("form", formBean);
@@ -218,10 +218,7 @@ class EmployeeController {
 
             // first, I am going to take a shot at looking up the record in the database based on the incoming employeeId
             // this is from the hidden input field and is not something the user actually entered themselves
-            Employee employee = null;
-            if (formBean.getId() != null) {
-                employee = employeeDAO.findEmployeeById(formBean.getId());
-            }
+            Employee employee = employeeDAO.findEmployeeById(formBean.getId());
             if (employee == null) {
                 /// this means it was not found in the database so we are going to consider this a create
                 employee = new Employee();
@@ -232,12 +229,16 @@ class EmployeeController {
             // first arg is the input stream to read from the uploaded file
             // 2nd is the filename where we want to write the file
             // 3rd says to overwrite if existing.
-            try {
-                Files.copy(file.getInputStream(), Paths.get(saveFilename), StandardCopyOption.REPLACE_EXISTING);
-            } catch ( Exception e ) {
-                log.error("Unable to finish reading file", e);
+            if (formBean.getFile() != null) {
+                try {
+                    Files.copy(file.getInputStream(), Paths.get(saveFilename), StandardCopyOption.REPLACE_EXISTING);
+                    formBean.setProfilePicture("/public/images/" + file.getOriginalFilename());
+                } catch ( Exception e ) {
+                    log.error("Unable to finish reading file", e);
+                }
             }
-            String urlString = "/public/images/" + formBean.getFile().getOriginalFilename();
+
+                employee.setProfileImageUrl(formBean.getProfilePicture());
 
             employee.setEmail(formBean.getEmail());
             employee.setFirstname(formBean.getFirstName());
@@ -245,7 +246,8 @@ class EmployeeController {
             employee.setReportsTo(formBean.getReportsTo());
             employee.setExtension(formBean.getExtension());
             employee.setJobTitle(formBean.getJobTitle());
-            employee.setProfileImageUrl(urlString);
+            employee.setProfileImageUrl(formBean.getProfilePicture());
+
             Office office = officeDAO.findOfficeById(formBean.getOfficeId());
 
             employee.setOffice(office);

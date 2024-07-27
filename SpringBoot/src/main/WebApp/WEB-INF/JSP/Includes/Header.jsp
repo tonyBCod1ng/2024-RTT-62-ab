@@ -47,6 +47,9 @@
                         <a class="nav-link" href="/customers/create">Create Customer</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/account/create-account">Create Account</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/offices/">Offices</a>
                     </li>
                 </ul>

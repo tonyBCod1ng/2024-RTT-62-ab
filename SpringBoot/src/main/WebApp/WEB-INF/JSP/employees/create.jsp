@@ -23,18 +23,16 @@
     <c:otherwise>action="http://localhost:8080/employees/editSubmit"</c:otherwise>
 </c:choose>
     enctype="multipart/form-data">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-1">
+                <div class="row align-items-center justify-content-center m-4">
+                    <div class="col-2">
                         <label for="file" class="col-form-label">File</label>
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <input type="file" id="file" name="file" class="form-control">
-                    </div>
-                    <div class="col-1">
-                        <button type="submit" class="btn btn-primary">Upload</button>
                     </div>
                 </div>
     <input type="hidden" name="id" value="${form.id}">
+                <input type="hidden" name = "profilePicture" value="${form.profilePicture}">
                 <div class="row justify-content-center m-4 cols-2">
                     <div class="col col-2">
                         <label for="officeId" class="form-label">Office Id</label>
